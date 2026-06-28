@@ -1,0 +1,432 @@
+#!/usr/bin/env python3
+"""
+Japan Car Direct - Auction Spec & Price Tracker
+================================================
+Builds a private dataset of every car (for chosen models) that appears on the
+live auction board, with full specs + the direct lot link. Runs daily and
+accumulates. After a lot's auction time passes, re-checks it to try to capture
+the final sold (hammer) price - if the lot page is still alive.
+
+Outputs (in ./data):
+  lots_state.json  - every lot ever seen, with latest known values + status
+  events.json      - append-only log of changes (new lot, sold price captured, gone)
+  snapshots/DATE.json - daily snapshot of the live board
+
+Run:
+  export JCD_USERNAME="..."   export JCD_PASSWORD="..."
+  python3 tracker.py
+"""
+import json, os, re, sys, time
+from datetime import datetime, timezone
+from pathlib import Path
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
+
+BASE = "https://auc.japancardirect.com"
+DATA_DIR = Path(__file__).parent / "data"
+SNAP_DIR = DATA_DIR / "snapshots"
+STATE_FILE = DATA_DIR / "lots_state.json"
+EVENTS_FILE = DATA_DIR / "events.json"
+
+USER = os.environ.get("JCD_USERNAME", "")
+PW   = os.environ.get("JCD_PASSWORD", "")
+
+# Models to track: (maker_id, model_name_token). maker_id 3 = MAZDA.
+# model_submit(maker_id, model_name, 1) drives the board.
+# ============================================================================
+#  WHAT TO TRACK  —  edit this section anytime, nothing else needs to change
+# ============================================================================
+#
+#  maker_id reference:
+#    1=TOYOTA  2=NISSAN  3=MAZDA  4=MITSUBISHI  5=HONDA
+#    6=SUZUKI  7=SUBARU  8=ISUZU  9=DAIHATSU   23=LEXUS
+#
+#  Each line = one model board to scrape. To add a model, copy a line and
+#  change the maker_id + model token. To remove one, delete its line.
+#
+#  NOTE on tokens: the site uses its own spelling. If a line returns 0 cars
+#  on a run, the token is slightly off (e.g. "MAZDA2" vs older "DEMIO", or
+#  "PRADO" vs "LAND CRUISER PRADO"). Just fix that one line. A wrong token
+#  only affects its own line; everything else still scrapes fine.
+#
+#  Current shape and older shape can be SEPARATE entries on the site
+#  (e.g. MAZDA2 is the current car, DEMIO is the older body — both kept here).
+# ----------------------------------------------------------------------------
+
+MODELS = [
+    # Toyota
+    {"maker_id": "1", "model": "AQUA"},
+    {"maker_id": "1", "model": "FIELDER"},          # Corolla Fielder
+    {"maker_id": "1", "model": "VITZ"},
+    {"maker_id": "1", "model": "HARRIER"},
+    {"maker_id": "1", "model": "LAND CRUISER PRADO"},
+    # Nissan
+    {"maker_id": "2", "model": "NOTE"},
+    {"maker_id": "2", "model": "X-TRAIL"},
+    {"maker_id": "2", "model": "SERENA"},
+    {"maker_id": "2", "model": "DAYZ"},
+    # Mazda
+    {"maker_id": "3", "model": "MAZDA2"},            # current shape
+    {"maker_id": "3", "model": "DEMIO"},             # older shape (separate entry)
+    {"maker_id": "3", "model": "CX-5"},
+    # Honda
+    {"maker_id": "5", "model": "FIT"},
+    {"maker_id": "5", "model": "VEZEL"},
+    {"maker_id": "5", "model": "FREED"},
+    {"maker_id": "5", "model": "N BOX"},
+    # Subaru
+    {"maker_id": "7", "model": "FORESTER"},
+    {"maker_id": "7", "model": "IMPREZA"},
+]
+
+# ----------------------------------------------------------------------------
+#  EXPAND TO FULL SITE
+#  Set SCRAPE_ALL = True to scrape EVERY model on the site instead of the list
+#  above. This is heavy (tens of thousands of cars, ~50 makers), much slower,
+#  and more likely to hit rate-limits. Use only when you deliberately want the
+#  whole catalogue. When False (default), the MODELS list above is used.
+# ----------------------------------------------------------------------------
+SCRAPE_ALL = False
+
+
+def now_iso():
+    return datetime.now(timezone.utc).isoformat()
+
+def load_json(path, default):
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return default
+
+def save_json(path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+# ---------------------------------------------------------------------------
+def parse_board(html):
+    soup = BeautifulSoup(html, "lxml")
+    out = soup.find(id="aj_out_poisk")
+    if not out:
+        return []
+    rows = out.find_all("tr", id=re.compile(r"^aj_view\d+"))
+    lots = []
+    for r in rows:
+        link = r.find("a", href=re.compile(r"aj-"))
+        if not link:
+            continue
+        href = link.get("href")
+        lot_uid = re.sub(r"^aj-|\.htm$", "", href)
+        cells = r.find_all("td", recursive=False)
+        def ct(i):
+            return " ".join(cells[i].get_text(" ", strip=True).split()) if i < len(cells) else ""
+        c2 = ct(2)
+        m_date = re.search(r"(\d{2}\.\d{2}\.\d{4})", c2)
+        m_time = re.search(r"\[(\d{2}:\d{2})\]", c2)
+        auction = c2
+        if m_date:
+            auction = c2.split(m_date.group(1))[-1]
+        auction = re.sub(r"^\s*\[\d{2}:\d{2}\]\s*", "", auction).strip()
+        auction = re.sub(r"\s+", " ", auction)
+        # the lot number sometimes leads the cell; strip it if duplicated
+        lotnum = link.get_text(strip=True)
+        auction = re.sub(r"^" + re.escape(lotnum) + r"\s*", "", auction).strip()
+        c3 = ct(3)
+        m_year = re.match(r"(\d{4})\s+(\S+)\s*(.*)", c3)
+        c4 = ct(4)
+        m_cc = re.search(r"(\d+)\s*cc", c4)
+        c5 = ct(5)
+        m_km = re.search(r"(\d+)\s*km", c5)
+        m_cond = re.search(r"km\s+(\S+)\s+(\S+)\s*$", c5)
+        c7 = ct(7)
+        m_avg = re.search(r"yen\|(\d+)\|(\d+)\|(\d+)", c7)
+        start_yen = sold_yen = avg_yen = None
+        if m_avg:
+            start_yen, sold_yen, avg_yen = m_avg.group(1), m_avg.group(2), m_avg.group(3)
+        lots.append({
+            "lot_uid": lot_uid,
+            "lot_url": BASE + "/" + href,
+            "lot_number": link.get_text(strip=True),
+            "auction": auction,
+            "auction_date": m_date.group(1) if m_date else None,
+            "auction_time": m_time.group(1) if m_time else None,
+            "year": m_year.group(1) if m_year else None,
+            "chassis": m_year.group(2) if m_year else None,
+            "grade": (m_year.group(3).strip() or None) if m_year else None,
+            "engine_cc": m_cc.group(1) if m_cc else None,
+            "spec_raw": c4,
+            "mileage_km": m_km.group(1) if m_km else None,
+            "condition": m_cond.group(2) if m_cond else None,
+            "start_yen": start_yen,
+            "sold_yen": sold_yen,
+            "avg_yen": avg_yen,
+        })
+    return lots
+
+def get_page_count(html):
+    """How many result pages exist. Read the pagination control specifically:
+    it uses navi(this,N) onclick calls. Fall back to total-count / 20."""
+    soup = BeautifulSoup(html, "lxml")
+    out = soup.find(id="aj_out_poisk")
+    if not out:
+        return 1
+    navi_nums = [int(n) for n in re.findall(r"navi\(this,(\d+)\)", str(out))]
+    if navi_nums:
+        return max(navi_nums)
+    span = out.find("span")
+    if span and span.get_text(strip=True).isdigit():
+        total = int(span.get_text(strip=True))
+        return max(1, -(-total // 20))  # ceil division
+    return 1
+
+
+def get_usd_per_yen(html):
+    """The site publishes its own rate table: tpl_curr={"yen":[{"usd":"160.9",...}]}
+    That number is yen-per-usd. Return usd-per-yen (1/that). Fallback None."""
+    m = re.search(r'"yen"\s*:\s*\[\s*\{[^}]*"usd"\s*:\s*"([\d.]+)"', html)
+    if m:
+        try:
+            yen_per_usd = float(m.group(1))
+            if yen_per_usd > 0:
+                return round(1.0 / yen_per_usd, 6)
+        except ValueError:
+            pass
+    return None
+
+# ---------------------------------------------------------------------------
+def login(page):
+    page.goto(BASE + "/", wait_until="domcontentloaded")
+    page.wait_for_timeout(1200)
+    try: page.evaluate("aj_login()")
+    except Exception: pass
+    page.wait_for_timeout(600)
+    page.fill("input[name=username]", USER)
+    page.fill("input[name=password]", PW)
+    try: page.evaluate("doLoad_login()")
+    except Exception: pass
+    page.wait_for_timeout(3000)
+    return USER.lower() in page.content().lower()
+
+def discover_all_models(page):
+    """For SCRAPE_ALL: enumerate every (maker_id, model) board on the site.
+
+    The board page exposes makers and, once a maker is chosen, that maker's
+    model list. We read those selectors to build the full work list.
+
+    NOTE: this path drives the site's own maker/model controls. The exact
+    selector names should be confirmed on the first live full run — if it
+    returns an empty or tiny list, the selector below needs adjusting to match
+    the live DOM. The curated MODELS list does not depend on this function.
+    """
+    work = []
+    for maker_id, maker_name in MAKER_NAME.items():
+        try:
+            # ask the site for this maker's model list via its own JS
+            models = page.evaluate(
+                """(mk) => {
+                    // the board exposes a model dropdown per maker; collect its options
+                    const sel = document.querySelector('select[name="model"], #model, #aj_model');
+                    if(!sel) return [];
+                    return Array.from(sel.options)
+                        .map(o => o.value || o.textContent.trim())
+                        .filter(v => v && v.toLowerCase() !== 'all');
+                }""", maker_id)
+            for mdl in (models or []):
+                work.append({"maker_id": maker_id, "model": mdl})
+        except Exception as e:
+            print(f"  ! could not list models for {maker_name}: {e}", file=sys.stderr)
+    return work
+
+
+def scrape_model(page, maker_id, model):
+    """Load a model board, walk all result pages, return all lots.
+    Walks pages by clicking the next-higher page-number link each time,
+    which is robust to the site's windowed pagination strip."""
+    page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
+    page.wait_for_timeout(1500)
+    page.evaluate(f"model_submit('{maker_id}','{model}',1)")
+    page.wait_for_timeout(3000)
+    html = page.content()
+    all_lots = parse_board(html)
+    total_pages = get_page_count(html)
+
+    current = 1
+    guard = 0
+    while current < total_pages and guard < 100:
+        guard += 1
+        target = current + 1
+        try:
+            link = page.locator(
+                f"#aj_out_poisk a[onclick*='navi(this,{target})']"
+            ).first
+            if link.count() == 0:
+                print(f"   page {target}: link not present, stopping", file=sys.stderr)
+                break
+            link.click(timeout=5000)
+            page.wait_for_timeout(2500)
+            page_lots = parse_board(page.content())
+            if page_lots:
+                all_lots += page_lots
+                current = target
+            else:
+                print(f"   page {target}: no rows parsed, stopping", file=sys.stderr)
+                break
+        except Exception as e:
+            print(f"   page {target} failed: {str(e)[:120]}", file=sys.stderr)
+            break
+
+    # de-dupe by lot_uid
+    seen, uniq = set(), []
+    for lot in all_lots:
+        if lot["lot_uid"] not in seen:
+            seen.add(lot["lot_uid"]); uniq.append(lot)
+    return uniq
+
+# ---------------------------------------------------------------------------
+def run():
+    if not USER or not PW:
+        print("ERROR: set JCD_USERNAME and JCD_PASSWORD", file=sys.stderr); sys.exit(1)
+    state = load_json(STATE_FILE, {})       # lot_uid -> record
+    events = load_json(EVENTS_FILE, [])
+    today = datetime.now().strftime("%Y-%m-%d")
+    ts = now_iso()
+    snapshot = []
+    usd_per_yen = None
+    # maker name lookup from MODELS config
+    MAKER_NAME = {"1":"TOYOTA","2":"NISSAN","3":"MAZDA","4":"MITSUBISHI","5":"HONDA",
+                  "6":"SUZUKI","7":"SUBARU","8":"ISUZU","9":"DAIHATSU","23":"LEXUS"}
+
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        page = browser.new_page()
+        print("Logging in...")
+        if not login(page):
+            print("LOGIN FAILED", file=sys.stderr); browser.close(); sys.exit(1)
+        print("Login OK.")
+
+        # Build the work list: either the curated MODELS, or every model on the
+        # site (discovered per maker) when SCRAPE_ALL is on.
+        if SCRAPE_ALL:
+            print("SCRAPE_ALL on — discovering all models per maker...")
+            work = discover_all_models(page)
+            print(f"  discovered {len(work)} model boards across all makers")
+        else:
+            work = MODELS
+
+        for m in work:
+            print(f"Scraping {m['model']} (maker {m['maker_id']})...")
+            try:
+                lots = scrape_model(page, m["maker_id"], m["model"])
+            except Exception as e:
+                print(f"  ! error on {m['model']}: {e}", file=sys.stderr)
+                lots = []
+            print(f"  {len(lots)} lots")
+            if usd_per_yen is None:
+                usd_per_yen = get_usd_per_yen(page.content())
+            for lot in lots:
+                lot["model_tracked"] = m["model"]
+                lot["maker"] = MAKER_NAME.get(m["maker_id"], m["maker_id"])
+                lot["last_seen"] = ts
+                snapshot.append(lot)
+        browser.close()
+
+    # ---- SANITY GUARD ----
+    # Protect the dataset: if this run came back with far fewer cars than the
+    # previous live count, something went wrong (HTML change, rate-limit,
+    # partial/blocked scrape). Do NOT overwrite good data with junk.
+    prev_live = sum(1 for r in state.values() if r.get("status") == "live")
+    this_count = len(snapshot)
+    MIN_OK = 50            # absolute floor: a real run of these models returns hundreds
+    DROP_RATIO = 0.5       # flag if we got under half of last run's live count
+    if state and prev_live > 0:
+        if this_count < MIN_OK or this_count < prev_live * DROP_RATIO:
+            print(f"SANITY GUARD TRIPPED: scraped {this_count} lots vs {prev_live} "
+                  f"previously live. Refusing to overwrite data. "
+                  f"Likely a site change, rate-limit, or partial scrape.",
+                  file=sys.stderr)
+            # write a marker so the run is visibly flagged, but leave data intact
+            save_json(DATA_DIR / "last_run_status.json", {
+                "ts": ts, "ok": False, "scraped": this_count,
+                "prev_live": prev_live, "reason": "low_count_guard"})
+            sys.exit(2)
+    else:
+        # first ever run: just require a non-trivial count
+        if this_count < MIN_OK:
+            print(f"SANITY GUARD: first run returned only {this_count} lots "
+                  f"(expected hundreds). Not saving. Check login/scrape.",
+                  file=sys.stderr)
+            save_json(DATA_DIR / "last_run_status.json", {
+                "ts": ts, "ok": False, "scraped": this_count,
+                "reason": "first_run_too_small"})
+            sys.exit(2)
+    print(f"Sanity OK: {this_count} lots scraped (prev live {prev_live}).")
+
+    # Merge into state + log events
+    seen_today = set()
+    for lot in snapshot:
+        uid = lot["lot_uid"]; seen_today.add(uid)
+        if uid not in state:
+            lot["first_seen"] = ts; lot["status"] = "live"
+            state[uid] = lot
+            events.append({"ts": ts, "type": "new_lot", "lot_uid": uid,
+                           "lot_number": lot["lot_number"], "model": lot["model_tracked"],
+                           "auction_date": lot["auction_date"], "auction_time": lot["auction_time"]})
+        else:
+            prev = state[uid]
+            # capture a newly appearing sold price
+            if (prev.get("sold_yen") in (None, "0")) and lot.get("sold_yen") not in (None, "0"):
+                events.append({"ts": ts, "type": "sold_price", "lot_uid": uid,
+                               "lot_number": lot["lot_number"], "sold_yen": lot["sold_yen"]})
+                prev["status"] = "sold"
+            prev.update({k: lot[k] for k in lot if k != "first_seen"})
+            prev["last_seen"] = ts
+
+    # mark lots no longer on the board
+    for uid, rec in state.items():
+        if uid not in seen_today and rec.get("status") == "live":
+            rec["status"] = "off_board"
+            rec["off_board_since"] = ts
+            events.append({"ts": ts, "type": "off_board", "lot_uid": uid,
+                           "lot_number": rec.get("lot_number")})
+
+    save_json(STATE_FILE, state)
+    save_json(EVENTS_FILE, events)
+    save_json(SNAP_DIR / f"{today}.json", snapshot)
+
+    # ---- dashboard.json: pre-computed view the static page reads ----
+    lots_list = list(state.values())
+    def to_int(v):
+        try: return int(v)
+        except (TypeError, ValueError): return None
+    sold_lots = [l for l in lots_list if to_int(l.get("sold_yen"))]
+    by_model = {}
+    for l in lots_list:
+        by_model.setdefault(l.get("model_tracked", "?"), 0)
+        by_model[l.get("model_tracked", "?")] += 1
+    by_maker = {}
+    for l in lots_list:
+        by_maker.setdefault(l.get("maker", "?"), 0)
+        by_maker[l.get("maker", "?")] += 1
+    dashboard = {
+        "generated": ts,
+        "usd_per_yen": usd_per_yen,
+        "totals": {
+            "tracked": len(lots_list),
+            "live": sum(1 for l in lots_list if l.get("status") == "live"),
+            "sold_captured": len(sold_lots),
+            "off_board": sum(1 for l in lots_list if l.get("status") == "off_board"),
+            "by_model": by_model,
+            "by_maker": by_maker,
+        },
+        "lots": lots_list,
+        "recent_events": events[-200:],
+    }
+    save_json(DATA_DIR / "dashboard.json", dashboard)
+    save_json(DATA_DIR / "last_run_status.json", {
+        "ts": ts, "ok": True, "scraped": len(snapshot),
+        "total_tracked": len(state)})
+
+    live = sum(1 for r in state.values() if r.get("status") == "live")
+    print(f"\nDone. {len(snapshot)} lots on board today | {len(state)} total tracked | {live} live")
+    print(f"Saved: {STATE_FILE.name}, {EVENTS_FILE.name}, dashboard.json, snapshots/{today}.json")
+
+if __name__ == "__main__":
+    run()

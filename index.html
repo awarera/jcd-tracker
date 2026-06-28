@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Auction Tracker — Peach Cars Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --peach:#F33A6A;--pd:#D42255;--p10:rgba(243,58,106,.08);--p20:rgba(243,58,106,.18);
+  --bg:#FAFAF8;--wh:#FFF;--s2:#F6F4F1;--s3:#EEECEA;
+  --bd:#E4E0DB;--bd2:#D0CBC4;
+  --ink:#0D120A;--ink2:#2D3748;--ink3:#5A6478;--ink4:#A0AABA;
+  --g:#15803D;--gbg:#F0FDF4;--gbd:#BBF7D0;
+  --am:#B45309;--abg:#FFFBEB;--abd:#FDE68A;
+  --rd:#DC2626;--rbg:#FEF2F2;--rbd:#FECACA;
+  --bl:#2563EB;--bbg:#EFF6FF;--bbd:#BFDBFE;
+  --r:10px;--rs:7px;
+  --sh:0 1px 3px rgba(0,0,0,.05),0 4px 12px rgba(0,0,0,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased}
+.hdr{background:var(--wh);border-bottom:1px solid var(--bd);padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300;box-shadow:var(--sh)}
+.logo{display:flex;align-items:center;gap:8px}
+.lmark{width:30px;height:30px;background:var(--peach);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff}
+.lbrand{font-size:14px;font-weight:700}.lsep{width:3px;height:3px;border-radius:50%;background:var(--bd2)}.lsub{font-size:11px;color:var(--ink3)}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.rate-pill{background:var(--s2);border:1px solid var(--bd);border-radius:20px;padding:3px 10px;font-size:11px;font-family:'DM Mono',monospace;color:var(--ink2)}
+.kpis{display:flex;gap:14px}
+.kpi{font-family:'DM Mono',monospace;font-size:12px;color:var(--ink3)}
+.kpi b{color:var(--ink);font-size:13px}
+.pg{max-width:1380px;margin:0 auto;padding:16px 20px 40px}
+.browse{display:grid;grid-template-columns:228px 1fr;gap:16px;align-items:start}
+.rail{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:14px;box-shadow:var(--sh);position:sticky;top:70px;max-height:calc(100vh - 86px);overflow-y:auto}
+.rail h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--ink3);margin:11px 0 5px}
+.rail h4:first-child{margin-top:0}
+.sel,.inp{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rs);padding:7px 9px;font-family:inherit;font-size:12.5px;color:var(--ink);outline:none;width:100%}
+.sel{appearance:none;cursor:pointer;padding-right:24px;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235A6478' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.sel:focus,.inp:focus{border-color:var(--peach)}
+.range{display:flex;gap:6px;align-items:center}.range .inp{padding:6px 8px}
+.range span{font-size:11px;color:var(--ink4)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;border:1px solid var(--bd);background:var(--wh);color:var(--ink3);cursor:pointer;font-family:'DM Mono',monospace}
+.chip.on{background:var(--p10);border-color:var(--p20);color:var(--peach)}
+.seg{display:flex;border:1px solid var(--bd);border-radius:var(--rs);overflow:hidden}
+.seg button{flex:1;padding:6px 4px;font-family:inherit;font-size:11.5px;font-weight:600;background:var(--wh);color:var(--ink3);border:none;cursor:pointer;border-right:1px solid var(--bd)}
+.seg button:last-child{border-right:none}
+.seg button.on{background:var(--peach);color:#fff}
+.datepresets{display:flex;flex-direction:column;gap:3px}
+.dp{text-align:left;padding:5px 9px;border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);font-family:inherit;font-size:11.5px;font-weight:600;color:var(--ink2);cursor:pointer}
+.dp.on{background:var(--p10);border-color:var(--p20);color:var(--peach)}
+.dp small{display:block;font-weight:400;color:var(--ink4);font-size:9.5px;margin-top:1px}
+.rail-foot{margin-top:14px}
+.btn{padding:8px 12px;border-radius:var(--rs);font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border:none;width:100%;text-align:center}
+.bg{background:var(--s2);color:var(--ink2);border:1px solid var(--bd)}.bg:hover{background:var(--s3)}
+.fsrch{display:flex;align-items:center;gap:7px;background:var(--wh);border:1.5px solid var(--bd);border-radius:var(--rs);padding:9px 12px;margin-bottom:12px}
+.fsrch:focus-within{border-color:var(--peach)}
+.fsrch input{background:none;border:none;outline:none;font-family:inherit;font-size:13px;color:var(--ink);width:100%}
+.fsrch input::placeholder{color:var(--ink4)}
+.result-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:12px;color:var(--ink3);flex-wrap:wrap;gap:6px}
+.result-meta b{color:var(--ink);font-family:'DM Mono',monospace}
+.activef{display:flex;gap:5px;flex-wrap:wrap}
+.aftag{font-size:10.5px;font-family:'DM Mono',monospace;background:var(--p10);color:var(--peach);border:1px solid var(--p20);border-radius:20px;padding:2px 8px}
+.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bd);background:var(--wh);box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{padding:10px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink3);border-bottom:1px solid var(--bd);background:var(--s2);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--ink)}
+th .arr{color:var(--peach);font-size:9px}
+td{padding:10px;border-bottom:1px solid var(--bd);vertical-align:middle;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr.trow{cursor:pointer}
+tr.trow:hover td{background:var(--p10)}
+.mono{font-family:'DM Mono',monospace}.bold{font-weight:600}
+.sub{font-size:10px;color:var(--ink3)}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+.b-live{background:var(--p10);color:var(--peach);border:1px solid var(--p20)}
+.b-sold{background:var(--gbg);color:var(--g);border:1px solid var(--gbd)}
+.b-noprice{background:var(--abg);color:var(--am);border:1px solid var(--abd)}
+.cond{display:inline-block;min-width:26px;text-align:center;font-family:'DM Mono',monospace;font-weight:600;padding:1px 5px;border-radius:5px;background:var(--s2);color:var(--ink2)}
+.openx{color:var(--peach);font-weight:600;font-size:11px}
+.empty{padding:50px 20px;text-align:center;color:var(--ink3)}
+.empty b{display:block;font-size:15px;color:var(--ink2);margin-bottom:6px}
+.foot{max-width:1380px;margin:0 auto;padding:8px 20px 30px;font-size:11px;color:var(--ink4);font-family:'DM Mono',monospace}
+@media(max-width:900px){.browse{grid-template-columns:1fr}.rail{position:static}.kpis{display:none}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="logo">
+    <div class="lmark">JCD</div><div class="lbrand">Auction Tracker</div>
+    <div class="lsep"></div><div class="lsub">Peach Cars Intelligence</div>
+  </div>
+  <div class="hdr-right">
+    <div class="kpis">
+      <span class="kpi"><b id="k-tracked">—</b> tracked</span>
+      <span class="kpi"><b id="k-live">—</b> live</span>
+      <span class="kpi"><b id="k-sold">—</b> sold</span>
+      <span class="kpi" id="k-rate"></span>
+    </div>
+    <span class="rate-pill" id="updated">loading…</span>
+  </div>
+</div>
+
+<div class="pg">
+  <div class="browse">
+    <aside class="rail">
+      <h4>Status</h4>
+      <div class="seg" id="f-status">
+        <button data-v="" class="on">All</button>
+        <button data-v="live">Live</button>
+        <button data-v="sold">Sold</button>
+      </div>
+      <h4>Auction date</h4>
+      <div class="datepresets" id="f-datepreset">
+        <button class="dp on" data-v="all">All dates</button>
+        <button class="dp" data-v="today">Today</button>
+        <button class="dp" data-v="3d">Next 3 days</button>
+        <button class="dp" data-v="week">This week</button>
+        <button class="dp" data-v="past">Already auctioned<small>where sold prices appear</small></button>
+        <button class="dp" data-v="customtoggle" id="dp-custom">Custom range…</button>
+      </div>
+      <div class="range" id="custom-range" style="margin-top:6px;display:none"><input class="inp" id="f-date-from" type="date" title="from"><span>–</span><input class="inp" id="f-date-to" type="date" title="to"></div>
+      <h4>Maker</h4>
+      <select class="sel" id="f-maker"><option value="">All makers</option></select>
+      <h4>Model</h4>
+      <select class="sel" id="f-model"><option value="">All models</option></select>
+      <h4>Year</h4>
+      <div class="range"><input class="inp" id="f-year-min" type="number" placeholder="from"><span>–</span><input class="inp" id="f-year-max" type="number" placeholder="to"></div>
+      <h4>Mileage (km)</h4>
+      <div class="range"><input class="inp" id="f-km-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-km-max" type="number" placeholder="max"></div>
+      <h4>Price ¥ (start)</h4>
+      <div class="range"><input class="inp" id="f-price-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-price-max" type="number" placeholder="max"></div>
+      <h4>Condition</h4>
+      <div class="chips" id="f-cond"></div>
+      <h4>Auction house</h4>
+      <select class="sel" id="f-auction"><option value="">All auctions</option></select>
+      <div class="rail-foot"><button class="btn bg" id="reset">Reset filters</button></div>
+    </aside>
+
+    <div>
+      <div class="fsrch">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AABA" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search" placeholder="Search lot, chassis, grade, auction, colour…">
+      </div>
+      <div class="result-meta">
+        <span><b id="result-count">0</b> cars match</span>
+        <span class="activef" id="active-filters"></span>
+        <span id="result-hint"></span>
+      </div>
+      <div class="tbl-wrap"><table id="t">
+        <thead><tr>
+          <th data-s="lot_number">Lot</th>
+          <th data-s="maker">Make</th>
+          <th data-s="model_tracked">Model</th>
+          <th data-s="year">Year</th>
+          <th data-s="mileage_km">Mileage (km)</th>
+          <th data-s="condition">Cond</th>
+          <th data-s="start_yen">Start ¥</th>
+          <th data-s="sold_yen">Sold ¥</th>
+          <th data-s="auction_date">Auction</th>
+          <th data-s="status">Status</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+<div class="foot" id="foot"></div>
+
+<script>
+let DATA=null, SORT={key:'auction_date',dir:1}, COND_ORDER=['3','3.5','4','4.5','5','R'];
+let USD_RATE=0.0062; // yen->usd; overridden by data.usd_per_yen when present
+const F={status:'',date:'all',dfrom:'',dto:'',maker:'',model:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
+const yen=v=>{const n=parseInt(v);return(!n||isNaN(n))?'—':n.toLocaleString('en-US');};
+const usd=v=>{const n=parseInt(v);if(!n||isNaN(n))return '';const d=Math.round(n*USD_RATE);return '$'+d.toLocaleString('en-US');};
+const priceCell=v=>{const n=parseInt(v);if(!n||isNaN(n))return '<span class="mono">—</span>';return `<span class="mono">${yen(v)}</span><div class="sub mono">${usd(v)}</div>`;};
+const km=v=>v?Number(v).toLocaleString():'—';
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dnum=d=>d?d.split('.').reverse().join(''):'';
+const condRank=c=>{const i=COND_ORDER.indexOf(c);return i<0?-1:i;};
+const toDate=d=>{if(!d)return null;const[dd,mm,yy]=d.split('.');return new Date(`${yy}-${mm}-${dd}`);};
+
+// derive a status: live (auction not yet passed) / sold (passed + price) / ended_no_price (passed, no price)
+function derivedStatus(l){
+  const ad=toDate(l.auction_date);
+  const today=new Date(new Date().toDateString());
+  const passed = ad ? ad < today : false;
+  const hasSold = parseInt(l.sold_yen)>0;
+  if(hasSold) return 'sold';
+  if(passed) return 'ended_no_price';
+  return 'live';
+}
+
+async function load(){
+  try{const r=await fetch('data/dashboard.json?_='+Date.now());DATA=await r.json();}
+  catch(e){document.getElementById('foot').textContent='No data yet — run the scraper.';return;}
+  DATA.lots.forEach(l=>{
+    if(!l.maker)l.maker='—';
+    l._status=derivedStatus(l);
+    // ended lots: the aj- page dies and redirects to the st- (result) page.
+    // build the right link from the lot id.
+    const id=l.lot_uid||(l.lot_url?l.lot_url.replace(/.*aj-|\.htm.*/g,''):'');
+    if(id){
+      l._live_url='https://auc.japancardirect.com/aj-'+id+'.htm';
+      l._result_url='https://auc.japancardirect.com/st-'+id+'.htm';
+    }
+    l._link=(l._status==='live')?(l._live_url||l.lot_url):(l._result_url||l.lot_url);
+  });
+  if(DATA.usd_per_yen){USD_RATE=DATA.usd_per_yen;}
+  const rateEl=document.getElementById('k-rate');
+  if(rateEl)rateEl.innerHTML='¥1 ≈ <b>$'+USD_RATE.toFixed(4)+'</b>';
+  const t=DATA.totals||{};
+  document.getElementById('k-tracked').textContent=DATA.lots.length;
+  document.getElementById('k-live').textContent=DATA.lots.filter(l=>l._status==='live').length;
+  document.getElementById('k-sold').textContent=DATA.lots.filter(l=>l._status==='sold').length;
+  const gen=DATA.generated?new Date(DATA.generated):null;
+  document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
+  document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
+  initFilters(); render();
+}
+
+function initFilters(){
+  const makers=[...new Set(DATA.lots.map(l=>l.maker).filter(x=>x&&x!=='—'))].sort();
+  document.getElementById('f-maker').insertAdjacentHTML('beforeend',makers.map(m=>`<option>${esc(m)}</option>`).join(''));
+  const auctions=[...new Set(DATA.lots.map(l=>l.auction).filter(Boolean))].sort();
+  document.getElementById('f-auction').insertAdjacentHTML('beforeend',auctions.map(a=>`<option>${esc(a)}</option>`).join(''));
+  document.getElementById('f-cond').innerHTML=COND_ORDER.map(c=>`<span class="chip" data-c="${c}">${c}</span>`).join('');
+  refreshModels();
+
+  document.getElementById('f-status').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+    document.querySelectorAll('#f-status button').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.status=b.dataset.v;render();});
+  document.getElementById('f-datepreset').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+    if(b.dataset.v==='customtoggle'){
+      document.querySelectorAll('#f-datepreset .dp').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+      document.getElementById('custom-range').style.display='flex';F.date='custom';render();return;
+    }
+    document.querySelectorAll('#f-datepreset .dp').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.date=b.dataset.v;
+    document.getElementById('custom-range').style.display='none';
+    F.dfrom='';F.dto='';document.getElementById('f-date-from').value='';document.getElementById('f-date-to').value='';render();});
+  ['f-date-from','f-date-to'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+    F.dfrom=document.getElementById('f-date-from').value;F.dto=document.getElementById('f-date-to').value;F.date='custom';render();}));
+  document.getElementById('f-maker').addEventListener('change',e=>{F.maker=e.target.value;refreshModels();F.model='';document.getElementById('f-model').value='';render();});
+  document.getElementById('f-model').addEventListener('change',e=>{F.model=e.target.value;render();});
+  document.getElementById('f-auction').addEventListener('change',e=>{F.auction=e.target.value;render();});
+  ['f-year-min','f-year-max','f-km-min','f-km-max','f-price-min','f-price-max'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+    F.ymin=document.getElementById('f-year-min').value;F.ymax=document.getElementById('f-year-max').value;
+    F.kmin=document.getElementById('f-km-min').value;F.kmax=document.getElementById('f-km-max').value;
+    F.pmin=document.getElementById('f-price-min').value;F.pmax=document.getElementById('f-price-max').value;render();}));
+  document.getElementById('search').addEventListener('input',e=>{F.q=e.target.value.toLowerCase();render();});
+  document.getElementById('f-cond').addEventListener('click',e=>{const chip=e.target.closest('.chip');if(!chip)return;
+    const c=chip.dataset.c;
+    if(F.cond.has(c)){F.cond.delete(c);chip.classList.remove('on');}
+    else{F.cond.add(c);chip.classList.add('on');}render();});
+  document.getElementById('reset').addEventListener('click',()=>{
+    Object.assign(F,{status:'',date:'all',dfrom:'',dto:'',maker:'',model:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',auction:'',q:''});
+    F.cond=new Set();
+    document.querySelectorAll('.rail select,.rail input').forEach(el=>el.value='');
+    document.getElementById('search').value='';
+    document.getElementById('custom-range').style.display='none';
+    document.querySelectorAll('#f-cond .chip').forEach(c=>c.classList.remove('on'));
+    document.querySelectorAll('#f-status button').forEach((x,i)=>x.classList.toggle('on',i===0));
+    document.querySelectorAll('#f-datepreset .dp').forEach((x,i)=>x.classList.toggle('on',i===0));
+    refreshModels();render();});
+}
+
+function refreshModels(){
+  const pool=F.maker?DATA.lots.filter(l=>l.maker===F.maker):DATA.lots;
+  const models=[...new Set(pool.map(l=>l.model_tracked).filter(Boolean))].sort();
+  document.getElementById('f-model').innerHTML='<option value="">All models</option>'+models.map(m=>`<option>${esc(m)}</option>`).join('');
+}
+
+function dateMatch(l){
+  if(F.date==='all')return true;
+  const ad=toDate(l.auction_date);if(!ad)return false;
+  const today=new Date(new Date().toDateString());
+  if(F.date==='today')return ad.getTime()===today.getTime();
+  if(F.date==='3d'){const e=new Date(today);e.setDate(e.getDate()+3);return ad>=today&&ad<=e;}
+  if(F.date==='week'){const e=new Date(today);e.setDate(e.getDate()+7);return ad>=today&&ad<=e;}
+  if(F.date==='past')return ad<today;
+  if(F.date==='custom'){
+    if(F.dfrom&&ad<new Date(F.dfrom))return false;
+    if(F.dto&&ad>new Date(F.dto))return false;
+    return true;
+  }
+  return true;
+}
+
+function applyFilters(){
+  return DATA.lots.filter(l=>{
+    if(F.status&&l._status!==F.status)return false;
+    if(!dateMatch(l))return false;
+    if(F.maker&&l.maker!==F.maker)return false;
+    if(F.model&&l.model_tracked!==F.model)return false;
+    if(F.auction&&l.auction!==F.auction)return false;
+    const y=parseInt(l.year)||0;if(F.ymin&&y<+F.ymin)return false;if(F.ymax&&y>+F.ymax)return false;
+    const k=parseInt(l.mileage_km)||0;if(F.kmin&&k<+F.kmin)return false;if(F.kmax&&k>+F.kmax)return false;
+    const p=parseInt(l.start_yen)||0;if(F.pmin&&p<+F.pmin)return false;if(F.pmax&&p>+F.pmax)return false;
+    if(F.cond.size && !F.cond.has(l.condition))return false;
+    if(F.q){const hay=[l.lot_number,l.chassis,l.grade,l.auction,l.maker,l.model_tracked,l.colour,l.spec_raw].join(' ').toLowerCase();if(!hay.includes(F.q))return false;}
+    return true;
+  });
+}
+
+function sortLots(lots){
+  const k=SORT.key,d=SORT.dir,numeric=['lot_number','year','mileage_km','start_yen','sold_yen'];
+  return [...lots].sort((a,b)=>{
+    if(k==='condition')return(condRank(a.condition)-condRank(b.condition))*d;
+    if(k==='auction_date')return dnum(a.auction_date).localeCompare(dnum(b.auction_date))*d;
+    if(k==='status')return (a._status||'').localeCompare(b._status||'')*d;
+    let x=a[k],y=b[k];
+    if(numeric.includes(k)){x=parseFloat(x)||0;y=parseFloat(y)||0;return(x-y)*d;}
+    return(x||'').toString().localeCompare((y||'').toString())*d;
+  });
+}
+
+function statusCell(l){
+  if(l._status==='sold')return '<span class="badge b-sold">SOLD</span>';
+  if(l._status==='ended_no_price')return '<span class="badge b-noprice">ENDED · no price</span>';
+  return '<span class="badge b-live">LIVE</span>';
+}
+
+function activeFilterTags(){
+  const tags=[];
+  if(F.status)tags.push(F.status);
+  if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today','3d':'next 3 days',week:'this week',past:'past'}[F.date]||F.date));
+  if(F.maker)tags.push(F.maker);
+  if(F.model)tags.push(F.model);
+  if(F.ymin||F.ymax)tags.push('yr '+(F.ymin||'')+'-'+(F.ymax||''));
+  if(F.kmin||F.kmax)tags.push('km '+(F.kmin||'')+'-'+(F.kmax||''));
+  if(F.pmin||F.pmax)tags.push('¥'+(F.pmin||'')+'-'+(F.pmax||''));
+  if(F.cond.size)tags.push('cond '+[...F.cond].join(', '));
+  if(F.auction)tags.push(F.auction);
+  if(F.q)tags.push('“'+F.q+'”');
+  return tags.map(t=>`<span class="aftag">${esc(t)}</span>`).join('');
+}
+
+function render(){
+  const lots=sortLots(applyFilters());
+  document.getElementById('result-count').textContent=lots.length;
+  document.getElementById('active-filters').innerHTML=activeFilterTags();
+  const body=document.getElementById('tbody');
+  if(!lots.length){body.innerHTML='<tr><td colspan="11" class="empty"><b>No matches</b>Adjust or reset the filters.</td></tr>';return;}
+  body.innerHTML=lots.slice(0,500).map(l=>`<tr class="trow" onclick="window.open('${esc(l._link)}','_blank')">
+    <td class="mono bold">${esc(l.lot_number)}</td>
+    <td>${esc(l.maker)}</td>
+    <td>${esc(l.model_tracked)}<div class="sub">${esc(l.chassis)||''}${l.grade?' · '+esc(l.grade):''}</div></td>
+    <td class="mono">${esc(l.year)}</td>
+    <td class="mono">${km(l.mileage_km)}</td>
+    <td><span class="cond">${esc(l.condition)||'—'}</span></td>
+    <td>${priceCell(l.start_yen)}</td>
+    <td class="${parseInt(l.sold_yen)?'bold':''}" style="${parseInt(l.sold_yen)?'color:var(--g)':''}">${parseInt(l.sold_yen)?priceCell(l.sold_yen):'<span class="mono">—</span>'}</td>
+    <td>${esc(l.auction_date)||'—'} <span class="sub mono">${esc(l.auction_time)||''}</span><div class="sub">${esc(l.auction)}</div></td>
+    <td>${statusCell(l)}</td>
+    <td><span class="openx">${l._status==='live'?'open ↗':'result ↗'}</span></td>
+  </tr>`).join('');
+  document.getElementById('result-hint').textContent=lots.length>500?'showing first 500 — narrow filters to see more':'';
+}
+
+document.querySelectorAll('#t th[data-s]').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.s;SORT.dir=(SORT.key===k)?-SORT.dir:1;SORT.key=k;
+  document.querySelectorAll('#t th .arr').forEach(a=>a.remove());
+  th.insertAdjacentHTML('beforeend',` <span class="arr">${SORT.dir>0?'▲':'▼'}</span>`);
+  render();
+}));
+load();
+</script>
+</body>
+</html>
