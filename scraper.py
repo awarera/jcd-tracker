@@ -56,7 +56,7 @@ PW   = os.environ.get("JCD_PASSWORD", "")
 MODELS = [
     # Toyota
     {"maker_id": "1", "model": "AQUA"},
-    {"maker_id": "1", "model": "FIELDER"},          # Corolla Fielder
+    {"maker_id": "1", "model": "COROLLA FIELDER"},          # Corolla Fielder
     {"maker_id": "1", "model": "VITZ"},
     {"maker_id": "1", "model": "HARRIER"},
     {"maker_id": "1", "model": "LAND CRUISER PRADO"},
