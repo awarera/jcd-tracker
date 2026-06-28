@@ -35,7 +35,8 @@ jobs:
         env:
           JCD_USERNAME: ${{ secrets.JCD_USERNAME }}
           JCD_PASSWORD: ${{ secrets.JCD_PASSWORD }}
-        run: python scraper.py
+          PYTHONUNBUFFERED: "1"
+        run: python -u scraper.py
         continue-on-error: true
 
       - name: Commit updated data
