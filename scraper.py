@@ -189,6 +189,22 @@ def parse_board(html):
     out = soup.find(id="aj_out_poisk")
     if not out:
         return []
+    # Whole-maker boards group cars under a model header like
+    # <font style="font-size:13px">AUDI A1</font>. Walk in document order so we
+    # can tag each row with the model header that precedes it. (Per-model boards
+    # simply won't have these headers, which is fine — model is known anyway.)
+    row_model = {}
+    current_model = None
+    for el in out.descendants:
+        nm = getattr(el, "name", None)
+        if nm == "font" and "font-size:13px" in (el.get("style") or ""):
+            txt = el.get_text(strip=True)
+            if txt:
+                current_model = txt
+        elif nm == "tr" and (el.get("id") or "").startswith("aj_view"):
+            lk = el.find("a", href=re.compile(r"aj-"))
+            if lk:
+                row_model[id(el)] = current_model
     rows = out.find_all("tr", id=re.compile(r"^aj_view\d+"))
     lots = []
     for r in rows:
@@ -223,6 +239,13 @@ def parse_board(html):
         start_yen = sold_yen = avg_yen = None
         if m_avg:
             start_yen, sold_yen, avg_yen = m_avg.group(1), m_avg.group(2), m_avg.group(3)
+        # model header for this row (whole-maker boards). Strip leading maker
+        # word so "AUDI A1" -> "A1" (the maker is stored separately).
+        hdr = row_model.get(id(r))
+        model_row = None
+        if hdr:
+            parts = hdr.split(None, 1)
+            model_row = parts[1] if len(parts) == 2 else hdr
         lots.append({
             "lot_uid": lot_uid,
             "lot_url": BASE + "/" + href,
@@ -240,6 +263,7 @@ def parse_board(html):
             "start_yen": start_yen,
             "sold_yen": sold_yen,
             "avg_yen": avg_yen,
+            "model_row": model_row,
         })
     return lots
 
