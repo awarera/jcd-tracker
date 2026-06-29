@@ -42,6 +42,22 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .range{display:flex;gap:6px;align-items:center}.range .inp{padding:6px 8px}
 .range span{font-size:11px;color:var(--ink4)}
 .chips{display:flex;flex-wrap:wrap;gap:5px}
+.msel{border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);overflow:hidden}
+.dd{position:relative}
+.dd-btn{width:100%;text-align:left;background:var(--wh);border:1px solid var(--bd);border-radius:var(--rs);padding:7px 9px;font-family:inherit;font-size:12.5px;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.dd-btn:hover{border-color:var(--bd2)}
+.dd-btn.active{border-color:var(--peach)}
+.dd-arrow{color:var(--ink3);font-size:10px}
+.dd-panel{margin-top:5px;border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);overflow:hidden;box-shadow:var(--sh)}
+.msel-bar{display:flex;gap:4px;padding:5px 6px;border-bottom:1px solid var(--bd);background:var(--s2)}
+.msel-act{flex:1;font-family:inherit;font-size:10.5px;font-weight:600;padding:3px;border:1px solid var(--bd);border-radius:5px;background:var(--wh);color:var(--ink3);cursor:pointer}
+.msel-act:hover{color:var(--peach);border-color:var(--p20)}
+.msel-list{max-height:160px;overflow-y:auto;padding:4px}
+.msel-opt{display:flex;align-items:center;gap:7px;padding:4px 6px;border-radius:5px;cursor:pointer;font-size:12.5px;color:var(--ink2)}
+.msel-opt:hover{background:var(--p10)}
+.msel-opt input{accent-color:var(--peach);cursor:pointer;margin:0}
+.msel-opt .cnt{margin-left:auto;font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4)}
+.msel-empty{padding:8px;font-size:11px;color:var(--ink4);text-align:center}
 .chip{font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;border:1px solid var(--bd);background:var(--wh);color:var(--ink3);cursor:pointer;font-family:'DM Mono',monospace}
 .chip.on{background:var(--p10);border-color:var(--p20);color:var(--peach)}
 .seg{display:flex;border:1px solid var(--bd);border-radius:var(--rs);overflow:hidden}
@@ -123,9 +139,21 @@ tr.trow:hover td{background:var(--p10)}
       </select>
       <div class="range" id="custom-range" style="margin-top:6px;display:none"><input class="inp" id="f-date-from" type="date" title="from"><span>–</span><input class="inp" id="f-date-to" type="date" title="to"></div>
       <h4>Maker</h4>
-      <select class="sel" id="f-maker"><option value="">All makers</option></select>
+      <div class="dd" id="dd-maker">
+        <button type="button" class="dd-btn" id="dd-maker-btn">All makers <span class="dd-arrow">▾</span></button>
+        <div class="dd-panel" id="dd-maker-panel" style="display:none">
+          <div class="msel-bar"><button type="button" class="msel-act" data-act="all">Select all</button><button type="button" class="msel-act" data-act="none">Clear</button></div>
+          <div class="msel-list" id="ms-maker-list"></div>
+        </div>
+      </div>
       <h4>Model</h4>
-      <select class="sel" id="f-model"><option value="">All models</option></select>
+      <div class="dd" id="dd-model">
+        <button type="button" class="dd-btn" id="dd-model-btn">All models <span class="dd-arrow">▾</span></button>
+        <div class="dd-panel" id="dd-model-panel" style="display:none">
+          <div class="msel-bar"><button type="button" class="msel-act" data-act="all">Select all</button><button type="button" class="msel-act" data-act="none">Clear</button></div>
+          <div class="msel-list" id="ms-model-list"></div>
+        </div>
+      </div>
       <h4>Year</h4>
       <div class="range"><input class="inp" id="f-year-min" type="number" placeholder="from"><span>–</span><input class="inp" id="f-year-max" type="number" placeholder="to"></div>
       <h4>Mileage (km)</h4>
@@ -173,7 +201,8 @@ tr.trow:hover td{background:var(--p10)}
 <script>
 let DATA=null, SORT={key:'auction_date',dir:1}, COND_ORDER=['3','3.5','4','4.5','5','R'];
 let USD_RATE=0.0062; // yen->usd; overridden by data.usd_per_yen when present
-const F={status:'',date:'all',dfrom:'',dto:'',maker:'',model:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
+const F={status:'',date:'all',dfrom:'',dto:'',maker:new Set(),model:new Set(),ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
+let DD_OPEN=null;
 const yen=v=>{const n=parseInt(v);return(!n||isNaN(n))?'—':n.toLocaleString('en-US');};
 const usd=v=>{const n=parseInt(v);if(!n||isNaN(n))return '';const d=Math.round(n*USD_RATE);return '$'+d.toLocaleString('en-US');};
 const priceCell=v=>{const n=parseInt(v);if(!n||isNaN(n))return '<span class="mono">—</span>';return `<span class="mono">${yen(v)}</span><div class="sub mono">${usd(v)}</div>`;};
@@ -227,12 +256,11 @@ async function load(){
   const gen=DATA.generated?new Date(DATA.generated):null;
   document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
   document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
-  initFilters(); render();
+  initFilters(); updateDDLabels(); render();
 }
 
 function initFilters(){
-  const makers=[...new Set(DATA.lots.map(l=>l.maker).filter(x=>x&&x!=='—'))].sort();
-  document.getElementById('f-maker').insertAdjacentHTML('beforeend',makers.map(m=>`<option>${esc(m)}</option>`).join(''));
+  buildMakerList();
   const auctions=[...new Set(DATA.lots.map(l=>l.auction).filter(Boolean))].sort();
   document.getElementById('f-auction').insertAdjacentHTML('beforeend',auctions.map(a=>`<option>${esc(a)}</option>`).join(''));
   document.getElementById('f-cond').innerHTML=COND_ORDER.map(c=>`<span class="chip" data-c="${c}">${c}</span>`).join('');
@@ -247,8 +275,33 @@ function initFilters(){
     render();});
   ['f-date-from','f-date-to'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
     F.dfrom=document.getElementById('f-date-from').value;F.dto=document.getElementById('f-date-to').value;F.date='custom';render();}));
-  document.getElementById('f-maker').addEventListener('change',e=>{F.maker=e.target.value;refreshModels();F.model='';document.getElementById('f-model').value='';render();});
-  document.getElementById('f-model').addEventListener('change',e=>{F.model=e.target.value;render();});
+  // Maker dropdown toggle
+  document.getElementById('dd-maker-btn').addEventListener('click',()=>{
+    const p=document.getElementById('dd-maker-panel');const open=p.style.display==='none';
+    p.style.display=open?'block':'none';document.getElementById('dd-maker-btn').classList.toggle('active',open);});
+  document.getElementById('dd-maker-panel').addEventListener('click',e=>{
+    const act=e.target.closest('.msel-act');
+    if(act){const all=[...new Set(DATA.lots.map(l=>l.maker).filter(x=>x&&x!=='—'))];
+      if(act.dataset.act==='all'){all.forEach(m=>F.maker.add(m));}else{F.maker.clear();}
+      F.model.clear();buildMakerList();refreshModels();updateDDLabels();render();return;}
+  });
+  document.getElementById('ms-maker-list').addEventListener('change',e=>{
+    const cb=e.target.closest('input[type=checkbox]');if(!cb)return;
+    if(cb.checked)F.maker.add(cb.value);else F.maker.delete(cb.value);
+    F.model.clear();refreshModels();updateDDLabels();render();});
+  // Model dropdown toggle
+  document.getElementById('dd-model-btn').addEventListener('click',()=>{
+    const p=document.getElementById('dd-model-panel');const open=p.style.display==='none';
+    p.style.display=open?'block':'none';document.getElementById('dd-model-btn').classList.toggle('active',open);});
+  document.getElementById('dd-model-panel').addEventListener('click',e=>{
+    const act=e.target.closest('.msel-act');
+    if(act){const avail=modelPool();
+      if(act.dataset.act==='all'){avail.forEach(m=>F.model.add(m));}else{F.model.clear();}
+      refreshModels();updateDDLabels();render();return;}
+  });
+  document.getElementById('ms-model-list').addEventListener('change',e=>{
+    const cb=e.target.closest('input[type=checkbox]');if(!cb)return;
+    if(cb.checked)F.model.add(cb.value);else F.model.delete(cb.value);updateDDLabels();render();});
   document.getElementById('f-auction').addEventListener('change',e=>{F.auction=e.target.value;render();});
   ['f-year-min','f-year-max','f-km-min','f-km-max','f-price-min','f-price-max'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
     F.ymin=document.getElementById('f-year-min').value;F.ymax=document.getElementById('f-year-max').value;
@@ -260,21 +313,51 @@ function initFilters(){
     if(F.cond.has(c)){F.cond.delete(c);chip.classList.remove('on');}
     else{F.cond.add(c);chip.classList.add('on');}render();});
   document.getElementById('reset').addEventListener('click',()=>{
-    Object.assign(F,{status:'',date:'all',dfrom:'',dto:'',maker:'',model:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',auction:'',q:''});
-    F.cond=new Set();
+    Object.assign(F,{status:'',date:'all',dfrom:'',dto:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',auction:'',q:''});
+    F.cond=new Set();F.maker=new Set();F.model=new Set();
     document.querySelectorAll('.rail select,.rail input').forEach(el=>el.value='');
     document.getElementById('search').value='';
     document.getElementById('custom-range').style.display='none';
     document.getElementById('f-datesel').value='all';
+    document.getElementById('dd-maker-panel').style.display='none';
+    document.getElementById('dd-model-panel').style.display='none';
     document.querySelectorAll('#f-cond .chip').forEach(c=>c.classList.remove('on'));
     document.querySelectorAll('#f-status button').forEach((x,i)=>x.classList.toggle('on',i===0));
-    refreshModels();render();});
+    buildMakerList();refreshModels();updateDDLabels();render();});
 }
 
+// reflect selection counts on the dropdown buttons
+function updateDDLabels(){
+  const mk=document.getElementById('dd-maker-btn');
+  mk.firstChild.textContent=F.maker.size?(F.maker.size+' maker'+(F.maker.size>1?'s':'')+' '):'All makers ';
+  const md=document.getElementById('dd-model-btn');
+  md.firstChild.textContent=F.model.size?(F.model.size+' model'+(F.model.size>1?'s':'')+' '):'All models ';
+}
+
+// ---- multi-select maker/model panels ----
+function buildMakerList(){
+  const counts={};
+  DATA.lots.forEach(l=>{if(l.maker&&l.maker!=='—')counts[l.maker]=(counts[l.maker]||0)+1;});
+  let makers=Object.keys(counts).sort();
+  const box=document.getElementById('ms-maker-list');
+  if(!makers.length){box.innerHTML='<div class="msel-empty">no makers</div>';return;}
+  box.innerHTML=makers.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.maker.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]}</span></label>`).join('');
+}
+function modelPool(){
+  const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
+  return [...new Set(pool.map(l=>l.model_tracked).filter(Boolean))].sort();
+}
 function refreshModels(){
-  const pool=F.maker?DATA.lots.filter(l=>l.maker===F.maker):DATA.lots;
-  const models=[...new Set(pool.map(l=>l.model_tracked).filter(Boolean))].sort();
-  document.getElementById('f-model').innerHTML='<option value="">All models</option>'+models.map(m=>`<option>${esc(m)}</option>`).join('');
+  // drop any selected models no longer valid for the chosen makers
+  const valid=new Set(modelPool());
+  [...F.model].forEach(m=>{if(!valid.has(m))F.model.delete(m);});
+  let models=modelPool();
+  const counts={};
+  const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
+  pool.forEach(l=>{if(l.model_tracked)counts[l.model_tracked]=(counts[l.model_tracked]||0)+1;});
+  const box=document.getElementById('ms-model-list');
+  if(!models.length){box.innerHTML='<div class="msel-empty">select a maker first</div>';return;}
+  box.innerHTML=models.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.model.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]||0}</span></label>`).join('');
 }
 
 function dateMatch(l){
@@ -297,8 +380,8 @@ function applyFilters(){
   return DATA.lots.filter(l=>{
     if(F.status&&l._status!==F.status)return false;
     if(!dateMatch(l))return false;
-    if(F.maker&&l.maker!==F.maker)return false;
-    if(F.model&&l.model_tracked!==F.model)return false;
+    if(F.maker.size&&!F.maker.has(l.maker))return false;
+    if(F.model.size&&!F.model.has(l.model_tracked))return false;
     if(F.auction&&l.auction!==F.auction)return false;
     const y=parseInt(l.year)||0;if(F.ymin&&y<+F.ymin)return false;if(F.ymax&&y>+F.ymax)return false;
     const k=parseInt(l.mileage_km)||0;if(F.kmin&&k<+F.kmin)return false;if(F.kmax&&k>+F.kmax)return false;
@@ -332,8 +415,8 @@ function activeFilterTags(){
   const tags=[];
   if(F.status)tags.push(F.status);
   if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today','3d':'next 3 days',week:'this week',past:'past'}[F.date]||F.date));
-  if(F.maker)tags.push(F.maker);
-  if(F.model)tags.push(F.model);
+  if(F.maker.size)tags.push(F.maker.size<=2?[...F.maker].join(', '):F.maker.size+' makers');
+  if(F.model.size)tags.push(F.model.size<=2?[...F.model].join(', '):F.model.size+' models');
   if(F.ymin||F.ymax)tags.push('yr '+(F.ymin||'')+'-'+(F.ymax||''));
   if(F.kmin||F.kmax)tags.push('km '+(F.kmin||'')+'-'+(F.kmax||''));
   if(F.pmin||F.pmax)tags.push('¥'+(F.pmin||'')+'-'+(F.pmax||''));
