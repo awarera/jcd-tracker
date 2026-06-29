@@ -276,15 +276,25 @@ def get_usd_per_yen(html):
 # ---------------------------------------------------------------------------
 def login(page):
     page.goto(BASE + "/", wait_until="domcontentloaded")
-    page.wait_for_timeout(1200)
     try: page.evaluate("aj_login()")
     except Exception: pass
-    page.wait_for_timeout(600)
+    # wait for the login form to actually appear before filling (robust +
+    # faster than a blind fixed sleep; also avoids transient field-missing)
+    try:
+        page.wait_for_selector("input[name=username]", timeout=15000)
+    except Exception:
+        page.wait_for_timeout(1500)
     page.fill("input[name=username]", USER)
     page.fill("input[name=password]", PW)
     try: page.evaluate("doLoad_login()")
     except Exception: pass
-    page.wait_for_timeout(3000)
+    # wait for login to take effect (username appears in page) instead of fixed 3s
+    try:
+        page.wait_for_function(
+            "(u) => document.body && document.body.innerHTML.toLowerCase().includes(u)",
+            arg=USER.lower(), timeout=8000)
+    except Exception:
+        page.wait_for_timeout(2000)
     return USER.lower() in page.content().lower()
 
 def resolve_maker_ids(page):
@@ -355,14 +365,31 @@ def discover_all_models(page):
     return work
 
 
-def scrape_model(page, maker_id, model):
+def scrape_model(page, maker_id, model, fresh_nav=True):
     """Load a model board, walk all result pages, return all lots.
-    Walks pages by clicking the next-higher page-number link each time,
-    which is robust to the site's windowed pagination strip."""
-    page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
-    page.wait_for_timeout(1500)
+
+    Speed notes (same request volume, just less idle waiting):
+    - We only navigate to /aj_neo once per maker-session; subsequent models
+      reuse the loaded page and just call model_submit again (fresh_nav=False).
+    - We wait for the results container to be present rather than sleeping a
+      fixed time, then a short polite gap.
+    """
+    if fresh_nav:
+        page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
+        try:
+            page.wait_for_selector("#aj_out_poisk", timeout=8000)
+        except Exception:
+            page.wait_for_timeout(1200)
     page.evaluate(f"model_submit('{maker_id}','{model}',1)")
-    page.wait_for_timeout(3000)
+    # wait for the board to render results (or settle) instead of fixed 3s
+    try:
+        page.wait_for_function(
+            "() => { const o=document.getElementById('aj_out_poisk');"
+            "return o && o.innerHTML && o.innerHTML.length > 50; }",
+            timeout=8000)
+    except Exception:
+        page.wait_for_timeout(1500)
+    page.wait_for_timeout(400)  # small polite settle
     html = page.content()
     all_lots = parse_board(html)
     total_pages = get_page_count(html)
@@ -380,7 +407,16 @@ def scrape_model(page, maker_id, model):
                 print(f"   page {target}: link not present, stopping", file=sys.stderr)
                 break
             link.click(timeout=5000)
-            page.wait_for_timeout(2500)
+            # wait for the page-number link we clicked to no longer be the
+            # 'next' target (i.e. content advanced), then a short settle
+            try:
+                page.wait_for_function(
+                    "(t) => { const o=document.getElementById('aj_out_poisk');"
+                    "return o && o.innerHTML && o.innerHTML.length > 50; }",
+                    arg=str(target), timeout=6000)
+            except Exception:
+                page.wait_for_timeout(1200)
+            page.wait_for_timeout(300)  # small polite gap between page turns
             page_lots = parse_board(page.content())
             if page_lots:
                 all_lots += page_lots
@@ -441,11 +477,11 @@ def run():
                     else:
                         print(f"  ! could not resolve maker id for '{mk}' — skipping", file=sys.stderr)
 
-        for m in work:
+        for idx, m in enumerate(work):
             label = m["model"] or f"(all {m.get('maker_name', m['maker_id'])})"
             print(f"Scraping {label} (maker {m['maker_id']})...")
             try:
-                lots = scrape_model(page, m["maker_id"], m["model"])
+                lots = scrape_model(page, m["maker_id"], m["model"], fresh_nav=(idx == 0))
             except Exception as e:
                 print(f"  ! error on {label}: {e}", file=sys.stderr)
                 lots = []
