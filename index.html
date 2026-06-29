@@ -184,13 +184,25 @@ const dnum=d=>d?d.split('.').reverse().join(''):'';
 const condRank=c=>{const i=COND_ORDER.indexOf(c);return i<0?-1:i;};
 const toDate=d=>{if(!d)return null;const[dd,mm,yy]=d.split('.');return new Date(`${yy}-${mm}-${dd}`);};
 
-// derive a status: live (auction not yet passed) / sold (passed + price) / ended_no_price (passed, no price)
+// Build the auction's moment in real time. Board date is DD.MM.YYYY and time is
+// HH:MM in JST (Japan, UTC+9). We construct that instant and compare to now, so
+// an auction earlier *today* correctly counts as already passed.
+const auctionMoment=l=>{
+  if(!l.auction_date)return null;
+  const [dd,mm,yy]=l.auction_date.split('.');
+  const t=l.auction_time && /^\d{2}:\d{2}$/.test(l.auction_time)?l.auction_time:'23:59';
+  const [hh,mi]=t.split(':');
+  // JST = UTC+9, so the UTC instant is the wall-clock minus 9h
+  return new Date(Date.UTC(+yy,+mm-1,+dd,+hh-9,+mi));
+};
+
+// derive a status: live (auction moment still ahead) / sold (price captured) /
+// ended_no_price (auction moment passed, no price — could be not-sold/cancelled/removed)
 function derivedStatus(l){
-  const ad=toDate(l.auction_date);
-  const today=new Date(new Date().toDateString());
-  const passed = ad ? ad < today : false;
   const hasSold = parseInt(l.sold_yen)>0;
   if(hasSold) return 'sold';
+  const m=auctionMoment(l);
+  const passed = m ? m.getTime() < Date.now() : false;
   if(passed) return 'ended_no_price';
   return 'live';
 }
