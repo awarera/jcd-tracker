@@ -63,3 +63,28 @@ Date: 2026-06-29
 - Watch the run log: any model line showing 0 lots = token needs a small fix.
 - Confirm FULL_MAKERS resolved (look for "could not resolve maker id" warnings).
 - Run will be much longer than v1's 13 min; if it nears 60 min, trim models.
+
+## v4 , scraper speed-up
+Date: 2026-06-29
+
+Problem: the expanded run (97 model/maker boards) exceeded the job time limit
+and was cancelled mid-run (died at the 30-min default because the 60-min
+timeout file hadn't been pushed). Nothing got committed.
+
+Fixes (scraper.py , SAME request volume, no added block risk):
+- Only navigate to /aj_neo ONCE per run; subsequent models reuse the loaded
+  page and just call model_submit again (was a full page reload per model).
+- Replace fixed sleeps with "wait until the results container is ready, then a
+  short polite gap" — removes idle waiting, not politeness.
+- login() now waits for the username field to exist before filling (more
+  robust; also fixes the transient "field not found" timeout seen earlier).
+- Per-model errors are caught so one bad model can't abort the whole run.
+Estimated full run: ~28 min -> ~11 min (about 60% faster).
+
+Also (.github/workflows/scrape.yml):
+- timeout-minutes raised 30 -> 60 (MUST be pushed; the earlier cancel at
+  exactly 30m means this file had not been committed).
+
+Tokens seen returning 0 lots in the v3 run (fix individually if wanted):
+ASX, MAZDA6, ATENZA — likely need the site's exact spelling. They don't break
+anything; only their own line returns empty.
