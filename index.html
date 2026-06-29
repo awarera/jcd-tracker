@@ -110,8 +110,7 @@ tr.trow:hover td{background:var(--p10)}
       <div class="seg" id="f-status">
         <button data-v="" class="on">All</button>
         <button data-v="live">Live</button>
-        <button data-v="sold">Sold</button>
-        <button data-v="ended_no_price">No sale</button>
+        <button data-v="ended">Ended</button>
       </div>
       <h4>Auction date</h4>
       <select class="sel" id="f-datesel">
@@ -196,16 +195,17 @@ const auctionMoment=l=>{
   return new Date(Date.UTC(+yy,+mm-1,+dd,+hh-9,+mi));
 };
 
-// derive a status: live (auction moment still ahead) / sold (price captured) /
-// ended_no_price (auction moment passed, no price — could be not-sold/cancelled/removed)
+// Honest two-state model. The board reliably tells us only whether an auction
+// is upcoming (live) or has happened (ended). Whether an ended car sold, didn't
+// sell, was cancelled, or simply hasn't had its price scraped yet is NOT
+// reliably knowable in real time — so we don't claim it. We show the sold price
+// when we have one; otherwise it's blank. We never label absence as "no sale".
 function derivedStatus(l){
-  const hasSold = parseInt(l.sold_yen)>0;
-  if(hasSold) return 'sold';
   const m=auctionMoment(l);
   const passed = m ? m.getTime() < Date.now() : false;
-  if(passed) return 'ended_no_price';
-  return 'live';
+  return passed ? 'ended' : 'live';
 }
+const hasSoldPrice=l=>parseInt(l.sold_yen)>0;
 
 async function load(){
   try{const r=await fetch('data/dashboard.json?_='+Date.now());DATA=await r.json();}
@@ -223,7 +223,7 @@ async function load(){
   const t=DATA.totals||{};
   document.getElementById('k-tracked').textContent=DATA.lots.length;
   document.getElementById('k-live').textContent=DATA.lots.filter(l=>l._status==='live').length;
-  document.getElementById('k-sold').textContent=DATA.lots.filter(l=>l._status==='sold').length;
+  document.getElementById('k-sold').textContent=DATA.lots.filter(l=>hasSoldPrice(l)).length;
   const gen=DATA.generated?new Date(DATA.generated):null;
   document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
   document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
@@ -322,14 +322,15 @@ function sortLots(lots){
 }
 
 function statusCell(l){
-  if(l._status==='sold')return '<span class="badge b-sold">SOLD</span>';
-  if(l._status==='ended_no_price')return '<span class="badge b-noprice" title="Auction passed, no sold price recorded — may be unsold, withdrawn, or removed. Click to check the lot page.">no sale</span>';
-  return '<span class="badge b-live">LIVE</span>';
+  if(l._status==='live')return '<span class="badge b-live">LIVE</span>';
+  // ended: if we captured a price, it sold; otherwise just "ended" (don't claim no-sale)
+  if(hasSoldPrice(l))return '<span class="badge b-sold">SOLD</span>';
+  return '<span class="badge b-noprice" title="Auction has happened. No sold price captured yet — it may have sold (price not yet scraped), or not sold / been cancelled. Click to check the lot page.">ended</span>';
 }
 
 function activeFilterTags(){
   const tags=[];
-  if(F.status)tags.push(F.status==='ended_no_price'?'no sale':F.status);
+  if(F.status)tags.push(F.status);
   if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today','3d':'next 3 days',week:'this week',past:'past'}[F.date]||F.date));
   if(F.maker)tags.push(F.maker);
   if(F.model)tags.push(F.model);
