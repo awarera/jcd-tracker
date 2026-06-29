@@ -94791,5 +94791,7104 @@
     "type": "off_board",
     "lot_uid": "iL0E9shE7IdNk",
     "lot_number": "3252"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "656rIF9ARMNuXF",
+    "lot_number": "4141",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "TW22idMU7cpgyg",
+    "lot_number": "36395",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:24"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "j67zRifFmslw19",
+    "lot_number": "1250",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9pgVSQZ8eyVwIb",
+    "lot_number": "6064",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "71A8XC4d3n0NjIQ",
+    "lot_number": "10285",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:22"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jsdnoQGehXw9Zp",
+    "lot_number": "1299",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jpWUegtTQrhJhI",
+    "lot_number": "1294",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7uOxt1XH4PE80N",
+    "lot_number": "534",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z5fIOekUBdPECi",
+    "lot_number": "30599",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3D4t19RIGqD3ba",
+    "lot_number": "2180",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "j0bqmKd4LbXRtb",
+    "lot_number": "1266",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:56"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z0CwQpHrLac35O",
+    "lot_number": "30687",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:59"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2nHaV4kPUew2RBc",
+    "lot_number": "544",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z7je4yNgYii13B",
+    "lot_number": "30613",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:17"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "xF7iYfBesT7WbR",
+    "lot_number": "2133",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:05"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "dpVLYRYlToDwH",
+    "lot_number": "237",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6abDueB2fGtzy1",
+    "lot_number": "4247",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jlS4IOwvrHFnOF",
+    "lot_number": "1288",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sOjaQrXERCF47D",
+    "lot_number": "10431",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:36"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "TVJJoy9hkW3vvK",
+    "lot_number": "36380",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:18"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7FeHEv5OiP8dNA",
+    "lot_number": "551",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "64qnXGXmj3aWJW",
+    "lot_number": "4128",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "89GOS6F75A9BXB",
+    "lot_number": "501",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "igVE15LupAvKIc",
+    "lot_number": "11042",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:18"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CNcmxqjVFCAhDx",
+    "lot_number": "2553",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iRXQFvuXbDNvIj",
+    "lot_number": "1237",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:43"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6WfLTqaxprZGbX",
+    "lot_number": "4068",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:20"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eUJbq7b880VbCf",
+    "lot_number": "4036",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YOOmsEqxEmXCai",
+    "lot_number": "30318",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sy2WNR6pCYGJGq",
+    "lot_number": "10162",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:45"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "f2lbAT5eF1v1F",
+    "lot_number": "271",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iXR5vPdpxANMWI",
+    "lot_number": "1247",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "A4JazlQs0pJwhS",
+    "lot_number": "2326",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gSkwOxHcd2H22P",
+    "lot_number": "29057",
+    "sold_yen": "295000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iJZv2tIQqtzFp",
+    "lot_number": "3248",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "eQxfy7qvCwM7Q",
+    "lot_number": "269",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2vqlKKhCTK89G44",
+    "lot_number": "5083",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:27"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "w3wML3jcyrBBp",
+    "lot_number": "5592",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:22"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2Vzm2bIYR0d5CxR",
+    "lot_number": "75063",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sxKEUbqMRIjYDU",
+    "lot_number": "10157",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "syjeHwK3of4uIW",
+    "lot_number": "10160",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iV9vvwzOBLITiG",
+    "lot_number": "1241",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:45"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "szdqmXCzmQKsBC",
+    "lot_number": "10180",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:50"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8YNLnAMufeQeD",
+    "lot_number": "147",
+    "model": "AQUA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZasoxqFk4Qv3gM",
+    "lot_number": "30605",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:15"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mOWYEn21letKsEE",
+    "lot_number": "60175",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "szsyhqjRMHOSgz",
+    "lot_number": "10194",
+    "model": "AQUA",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:54"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Ze0tbA77EcERuc",
+    "lot_number": "30757",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:22"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "eHLo2z645xumkBJ",
+    "lot_number": "44024",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZedNa11Ll2fyfk",
+    "lot_number": "30759",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Za5CG99Ift3w20",
+    "lot_number": "30697",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:02"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8CcxfN2Ojs5c5Z1",
+    "lot_number": "2353",
+    "model": "COROLLA FIELDER",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jrBXn4yzNhHue7Z",
+    "lot_number": "50111",
+    "model": "COROLLA FIELDER",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmAUBP8vRfiLW9N",
+    "lot_number": "70052",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2mQ0UstnN3WZmvz",
+    "lot_number": "538",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:09"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Zv5JdqHei5EI0U",
+    "lot_number": "3003",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZdD4nrKbt6dGMJ",
+    "lot_number": "30745",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:18"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "325pczTQryIgNC7",
+    "lot_number": "7034",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:19"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CIFqcfVgMA8se0",
+    "lot_number": "2546",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "HtUZCdNd4GCcO",
+    "lot_number": "74",
+    "model": "COROLLA FIELDER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "THCuyUAntO18vH",
+    "lot_number": "36138",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:56"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2VzJN42vsWHkpJ5",
+    "lot_number": "75071",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmAsvZp5AKZVscs",
+    "lot_number": "70051",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CIdkmxu1ihgYhO",
+    "lot_number": "2545",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmBmHEPX8JBCq69",
+    "lot_number": "70053",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mORxwmpJ0mPAFmA",
+    "lot_number": "60166",
+    "model": "VITZ",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZdyJp2PwMgD12B",
+    "lot_number": "30743",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:18"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "THTMsAf1f5mSyd",
+    "lot_number": "36143",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:59"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06nyvI4VRmS0nV3",
+    "lot_number": "29117",
+    "sold_yen": "325000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9O6CNEiL5V7tND",
+    "lot_number": "7191",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3DgqVoBGKSp7sy",
+    "lot_number": "2193",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "79el7XbHCIPR37G",
+    "lot_number": "1080",
+    "model": "VITZ",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:37"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6sCdjlTDjDZTim5",
+    "lot_number": "1811",
+    "model": "VITZ",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:03"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mP3RSdkINAqKJT4",
+    "lot_number": "60185",
+    "model": "VITZ",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06XO3rp89tbS2c9",
+    "lot_number": "29179",
+    "sold_yen": "133000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Zgs7lnfLr9bCzs",
+    "lot_number": "30708",
+    "model": "VITZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Zu3VmSrK6wThRF",
+    "lot_number": "30018",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "xBtyiw67ysl5F0",
+    "lot_number": "2128",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:54"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "xue3X43QJANlBJ",
+    "lot_number": "2115",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "wVYEpHiYddOgdd7",
+    "lot_number": "9022",
+    "model": "HARRIER",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:55"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mP6Pa42QMeuKO69",
+    "lot_number": "6018",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:38"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "f8P0dL4gSTx0m",
+    "lot_number": "274",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z0REKSoKb2grJL",
+    "lot_number": "30691",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "e80wa1xg4jx8Z",
+    "lot_number": "251",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eW6sVfuUA5sDrg",
+    "lot_number": "4039",
+    "model": "HARRIER",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3DvyPRiZaJtw8v",
+    "lot_number": "2190",
+    "model": "LAND CRUISER PRADO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "y4zo1XlA810pz5",
+    "lot_number": "2175",
+    "model": "LAND CRUISER PRADO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "fkN5tv2lkFBqK",
+    "lot_number": "270",
+    "model": "LAND CRUISER PRADO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6Z1Ws7l0ftquwe6",
+    "lot_number": "1014",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95NDsMKDX8qCbyT",
+    "lot_number": "2525",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:47"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6YV4eg2qN8tueZG",
+    "lot_number": "1013",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:32"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6Z7PFWERHPnuNsu",
+    "lot_number": "1015",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2nvotmHoZwC2j9o",
+    "lot_number": "542",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "94buFrlsb7fxsC3",
+    "lot_number": "2511",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:40"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "94nh88YT6O0y25Q",
+    "lot_number": "2513",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:41"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2t9wiEVYEKYbwx3",
+    "lot_number": "5802",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:53"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95HKeWqVuLtBUku",
+    "lot_number": "2524",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95TwGD5mptnCsNi",
+    "lot_number": "2526",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:47"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2n2Wm07OHKQZUYn",
+    "lot_number": "530",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:05"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2mmHNeSNvhbXYly",
+    "lot_number": "533",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2mgOzoz63VeXH80",
+    "lot_number": "532",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mZxNIS1J6bbfnDu",
+    "lot_number": "6001",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8DfkI5wHllxf9xr",
+    "lot_number": "2361",
+    "model": "NOTE",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:53"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "n1d3hMeKhEQhkgj",
+    "lot_number": "6008",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2nN59TEymAt39PB",
+    "lot_number": "545",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2msB26cvXD9YfzX",
+    "lot_number": "534",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZcgLSiqo1aGeXI",
+    "lot_number": "30715",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06PElqvclFIDkg3",
+    "lot_number": "29164",
+    "sold_yen": "271000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gdSAsDkv6iArIwr",
+    "lot_number": "4084",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:59"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gd8sFSMLqsYpuFd",
+    "lot_number": "4079",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:57"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "4ThFvws0o8ayA2",
+    "lot_number": "31",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:28"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gbdEd1qqhnWjW20",
+    "lot_number": "4062",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gbpqEH4Rc6QkutX",
+    "lot_number": "4064",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gaaQKIVxfutgSsI",
+    "lot_number": "4054",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2tvTpAQ15RAPSY",
+    "lot_number": "126",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gbjxqQK9JJTkdfy",
+    "lot_number": "4063",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2vrfWpIvqIIPDVJ",
+    "lot_number": "5085",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:28"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CTxGdstEvSr3Oh",
+    "lot_number": "2564",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06rbgnNrZhiVfrK",
+    "lot_number": "29122",
+    "sold_yen": "73000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6pxf1BVt4lf1it",
+    "lot_number": "44",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "5Epsg5bOdJcMrf",
+    "lot_number": "39",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:32"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLeHzoW2YOOVLU",
+    "lot_number": "50142",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "IAZ5Qxv6KYHIKt",
+    "lot_number": "2014",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gaypE7cp5UhhZok",
+    "lot_number": "4058",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "07f2C9DPf3K3mX1",
+    "lot_number": "29108",
+    "sold_yen": "115000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gcVGec0kvL5oWcp",
+    "lot_number": "4077",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:56"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gagJYzffHQqh0H8",
+    "lot_number": "4055",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ga5XwSBON9wgBej",
+    "lot_number": "4053",
+    "model": "NOTE",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:43"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6ZiC8DiiCxhvlVi",
+    "lot_number": "1017",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95ZpUto5RPkCK2H",
+    "lot_number": "2527",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95BR278d3pwBD76",
+    "lot_number": "2523",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "94WCsbTbPVRzGtg",
+    "lot_number": "2519",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2mEnsLPWSl3YO3L",
+    "lot_number": "536",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mOW5sHA8OfS4uLY",
+    "lot_number": "60173",
+    "model": "X-TRAIL",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jswB9k0y3nHiAJk",
+    "lot_number": "50109",
+    "model": "X-TRAIL",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gdGO1WH5aAGra4D",
+    "lot_number": "4082",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:58"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jsvGWEIFvp6BCQE",
+    "lot_number": "50107",
+    "model": "X-TRAIL",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uM2nvuudI8cX20",
+    "lot_number": "5015",
+    "sold_yen": "159000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uUb5wop1vArDXf",
+    "lot_number": "5020",
+    "sold_yen": "157000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "5aXl3tBwrYbohe",
+    "lot_number": "34",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:29"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mMUEDptlCWvHfQ",
+    "lot_number": "20220",
+    "sold_yen": "359000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uNnF1DO2b2KoQa",
+    "lot_number": "5018",
+    "sold_yen": "300000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "5ywepKtlRMcvcQ",
+    "lot_number": "38",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:31"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmExmuR2Z5POv4k",
+    "lot_number": "70050",
+    "model": "X-TRAIL",
+    "auction_date": "03.07.2026",
+    "auction_time": "10:26"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mW2QsEfcaZ51Eo4",
+    "lot_number": "6073",
+    "model": "X-TRAIL",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:41"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLpvvrIFHRiEFJ",
+    "lot_number": "50147",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gbMZy5kJ2vElBpz",
+    "lot_number": "4068",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:51"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n7QNkWP49jKWEK",
+    "lot_number": "20262",
+    "sold_yen": "170000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "5mJMJ83r0SbWK3",
+    "lot_number": "36",
+    "model": "X-TRAIL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n4e3FdiVdSZ693",
+    "lot_number": "20257",
+    "sold_yen": "168000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "953vG3cUihOzXHF",
+    "lot_number": "2510",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:39"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "96EEtnC75iZEGEw",
+    "lot_number": "2531",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:50"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "96h6A1leeTbDzIU",
+    "lot_number": "2520",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "94takYiBya7yijf",
+    "lot_number": "2514",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:41"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "96bcma2vMxeDiuv",
+    "lot_number": "2529",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "95vXNfNuA4zBlRG",
+    "lot_number": "2522",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:45"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2nBhHd28rSz2AmN",
+    "lot_number": "543",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2lpNyNHCVJFVc2w",
+    "lot_number": "526",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:03"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZcAdLb3l7QllnN",
+    "lot_number": "30721",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:10"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2lBA1ul4QrzVKuk",
+    "lot_number": "528",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:04"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2mKgGC0FkGZZ6ha",
+    "lot_number": "537",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z1ukbEZtigFGuU",
+    "lot_number": "30515",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:02"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2ogwg8f9Eme4wZC",
+    "lot_number": "540",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:10"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2myueVwepZ6YwOm",
+    "lot_number": "535",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2maVlyfmAzhXpSK",
+    "lot_number": "531",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:05"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2L8FStUg0D4pZcB",
+    "lot_number": "6046",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:10"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06LzuV4eXgZ1YMZ",
+    "lot_number": "29158",
+    "sold_yen": "810000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2VA4eVU8q4mZw00",
+    "lot_number": "75070",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Ze1PeKgNgzttXW",
+    "lot_number": "30753",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:21"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "68RztEM6ZueaBg",
+    "lot_number": "41",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "76Lbj1V4Jw6JO5c",
+    "lot_number": "1060",
+    "model": "SERENA",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:31"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "78z7y3XGqfaP6tR",
+    "lot_number": "1083",
+    "model": "SERENA",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:38"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "p5rqCNiwcRBdLMa",
+    "lot_number": "75067",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2QwxpUBfFCTK9ig",
+    "lot_number": "7194",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6jE2aid1HoeJ55",
+    "lot_number": "43",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "76zoRkhCOObJfBo",
+    "lot_number": "1068",
+    "model": "SERENA",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gaswqfSGCykhI0V",
+    "lot_number": "4057",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:45"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9OkKI814uMaTsA",
+    "lot_number": "7198",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6doyFQbxcVoRh0k",
+    "lot_number": "17109",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gbYLZKY0Wdym0Sn",
+    "lot_number": "4060",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:47"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "gdAUN7nlIeJqSPe",
+    "lot_number": "4081",
+    "model": "SERENA",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:58"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "bafoo8yvsy5EeFo",
+    "lot_number": "3415",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:47"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ba4BWqV5xQaDGcA",
+    "lot_number": "3413",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cMzYbdnIor4nJZc",
+    "lot_number": "3048",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "baraPObWnfYEN9c",
+    "lot_number": "3417",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "blsuJH68qknb35Y",
+    "lot_number": "3406",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:43"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "b0RPuKhDD9gD8JM",
+    "lot_number": "3411",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:45"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cNCLDuSBqkwqNxD",
+    "lot_number": "3056",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:17"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cP02cZY5JZKvfg6",
+    "lot_number": "3069",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:24"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "QC5iTPVPdV4kx4",
+    "lot_number": "3379",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cNIERlcjSGtr5M3",
+    "lot_number": "3057",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:18"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7L8VuONhninEsY",
+    "lot_number": "561",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "NDbUzovjGM3vIR",
+    "lot_number": "3124",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cN0jwhi29yLppnC",
+    "lot_number": "3051",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:15"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "bxqIS20t3WhK4lM",
+    "lot_number": "3572",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cMFRp4HqQN1o2dB",
+    "lot_number": "3049",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:14"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "bxCvjHMTXEbKBOA",
+    "lot_number": "3574",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0lPykmvRx1nJipE",
+    "lot_number": "20159",
+    "model": "DAYZ",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06x5ue8arDfVwG0",
+    "lot_number": "29132",
+    "sold_yen": "104000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "n1iVvCysK1NhBuI",
+    "lot_number": "6009",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mOU3ImopRwAKfCk",
+    "lot_number": "6016",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:37"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "bxOhLoqkSm6Laho",
+    "lot_number": "3576",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "78nk7mkfvxgOx24",
+    "lot_number": "1081",
+    "model": "DAYZ",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:38"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7xx7tjBiDIXy96",
+    "lot_number": "530",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06trJynEjIP0F0r",
+    "lot_number": "29127",
+    "sold_yen": "92000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06Af059fj4nQUgw",
+    "lot_number": "29139",
+    "sold_yen": "98000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cOXeLjkDPhQuGNh",
+    "lot_number": "3067",
+    "model": "DAYZ",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "f4vaNQoA5iQoe",
+    "lot_number": "272",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Zukdgy7mQNg3Ub",
+    "lot_number": "30023",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h3KH12Ojs2a8FC",
+    "lot_number": "29074",
+    "sold_yen": "154000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "tJFCv7M7QUaezyX",
+    "lot_number": "80089",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:53"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6iXcvbhlha2BSA",
+    "lot_number": "430",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8AoC1KZbCIZ7Nzl",
+    "lot_number": "2330",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:36"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xdh49fY5iHsjAh",
+    "lot_number": "9038",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9emxUQBOG35VSqN",
+    "lot_number": "25027",
+    "sold_yen": "219000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xgrHYh3VIPnHaE",
+    "lot_number": "9042",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01pSCknkhutnu24",
+    "lot_number": "28014",
+    "sold_yen": "229000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "vYHJo83hBnLt7",
+    "lot_number": "5575",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "oi3lph8TPvTZhmb",
+    "lot_number": "72041",
+    "model": "DEMIO",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jrVrpVnucUoYR11",
+    "lot_number": "50145",
+    "sold_yen": "254000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Zd3jATtBB0bPk9",
+    "lot_number": "30731",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:14"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZUFNAaFf2R107m",
+    "lot_number": "60050",
+    "sold_yen": "229000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iQDLFlv9BxyGn",
+    "lot_number": "3279",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iQj0DlUCHbEVP",
+    "lot_number": "3277",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z5hSNrieWD8ZZR",
+    "lot_number": "30590",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:09"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6aKdhzUgMdd6D3",
+    "lot_number": "4250",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32I6xPrgeKbP4FB",
+    "lot_number": "70016",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32bEHVmSHgsaJMa",
+    "lot_number": "7047",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:33"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32LKsunJH3ouXYQ",
+    "lot_number": "70097",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:24"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJX3hOKcpxYfs5C",
+    "lot_number": "69060",
+    "sold_yen": "77000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mTuH9Q8wiZb9r7",
+    "lot_number": "2023",
+    "sold_yen": "94000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7FZF4ZGCqkcoO5",
+    "lot_number": "79068",
+    "sold_yen": "116000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "27A0UuYPV5Z1IB9",
+    "lot_number": "4360",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myMEvfwe3HuNyj5",
+    "lot_number": "69163",
+    "sold_yen": "104000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "il3erj7bnJ8SRDk",
+    "lot_number": "55074",
+    "sold_yen": "159000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6aFTj0ZC6oCoRU",
+    "lot_number": "4258",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "66EH05cmmE1K9C",
+    "lot_number": "4177",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nchVly7eZXUJWO",
+    "lot_number": "20271",
+    "sold_yen": "103000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9edW8ZZsCJR01qv",
+    "lot_number": "25011",
+    "model": "DEMIO",
+    "auction_date": "03.07.2026",
+    "auction_time": "10:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0odXOXi0Vgjf2GK",
+    "lot_number": "2034",
+    "sold_yen": "55000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jn4EKo1B6nXdekq",
+    "lot_number": "59052",
+    "sold_yen": "117000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mypxHHXNtLZCVjN",
+    "lot_number": "69124",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CuCvl3i2stpOcW",
+    "lot_number": "2521",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6TX9C3WkO8zGj8t",
+    "lot_number": "19038",
+    "sold_yen": "94000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Jqu2LVj8YzlHmk",
+    "lot_number": "20017",
+    "model": "DEMIO",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:34"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xRPq52j65q9I5f",
+    "lot_number": "90075",
+    "model": "DEMIO",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ykkRStCqWy9SOG",
+    "lot_number": "2103",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:29"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "675CZzGivxySHo",
+    "lot_number": "4186",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9AFLqmkncZs8o",
+    "lot_number": "15",
+    "model": "DEMIO",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLzhFM3XgtYDwU",
+    "lot_number": "5014",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJOquY8Qmgcahcb",
+    "lot_number": "69054",
+    "sold_yen": "65000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "324v1UsXUA7zPJq",
+    "lot_number": "7032",
+    "model": "DEMIO",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:01"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cTiC2NpOFhUrbjF",
+    "lot_number": "30018",
+    "model": "CX-5",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cTpprjapECt9qqK",
+    "lot_number": "30020",
+    "model": "CX-5",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "eXKnOPEPIAQs0fA",
+    "lot_number": "45017",
+    "model": "CX-5",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9eXWm5MmT1g6Vq3",
+    "lot_number": "2508",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:38"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "TI1gqd7ZhifUGU",
+    "lot_number": "36146",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eYO2Vy9vvTxx6i",
+    "lot_number": "4042",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "TIjIj6IWnXV27Z",
+    "lot_number": "36152",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:02"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CUTXIBNrYMYuDi",
+    "lot_number": "2567",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDrLVxJWOX1IkIz",
+    "lot_number": "39030",
+    "sold_yen": "159000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cU5bUnFZAqfEuqN",
+    "lot_number": "30099",
+    "sold_yen": "211000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "oi3Nv7Ql71cPLiw",
+    "lot_number": "72042",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wyin421ED4qSmm",
+    "lot_number": "20017",
+    "sold_yen": "305000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJWAbZ2L04FoY9h",
+    "lot_number": "69069",
+    "sold_yen": "290000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9f8dBLr8509Q3cV",
+    "lot_number": "25006",
+    "sold_yen": "106000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uXBCboxDOa41bf",
+    "lot_number": "26083",
+    "sold_yen": "226000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mPb2zeeDz2juJQN",
+    "lot_number": "60190",
+    "sold_yen": "373000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eJoPzbbsH6SZiw",
+    "lot_number": "4017",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:58"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6EHIxAo8wIWyVJ",
+    "lot_number": "476",
+    "sold_yen": "210000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tz6ufgTjJA4VMmN",
+    "lot_number": "80214",
+    "sold_yen": "216000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mPfyvzp3dUlXzgb",
+    "lot_number": "60107",
+    "sold_yen": "386000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mIPO8XvXecTlMN",
+    "lot_number": "20221",
+    "sold_yen": "238000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7a8sLar86hY9wuH",
+    "lot_number": "10040",
+    "sold_yen": "281000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2zKBsyBYjM0o3UV",
+    "lot_number": "6110",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06zkXoHmM5M0WnQ",
+    "lot_number": "29137",
+    "sold_yen": "271000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uwpY9o0GtVg2IV",
+    "lot_number": "26038",
+    "sold_yen": "244000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jDAbvnCVoAAns4Z",
+    "lot_number": "50001",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2eiZL1uj6j7nVhs",
+    "lot_number": "49018",
+    "sold_yen": "232000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mKgYqwhy84luHtw",
+    "lot_number": "69002",
+    "sold_yen": "236000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJtAaB0C8Mde4UB",
+    "lot_number": "69010",
+    "sold_yen": "167000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gZ8WkiibxAog9U",
+    "lot_number": "29069",
+    "sold_yen": "235000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xgTNNZucfuPSNa",
+    "lot_number": "9043",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jDuihxjcW0i9PzQ",
+    "lot_number": "50091",
+    "sold_yen": "294000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7arQZHGU4hEefPW",
+    "lot_number": "10083",
+    "sold_yen": "171000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "5BF3QauZ7Glky2a",
+    "lot_number": "14037",
+    "sold_yen": "422000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7au8sSh7nJasFxD",
+    "lot_number": "10088",
+    "sold_yen": "345000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wEDGJ4antjhDx7",
+    "lot_number": "20028",
+    "sold_yen": "168000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7alvG2EKkronuFc",
+    "lot_number": "10072",
+    "sold_yen": "254000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bBOOHvxhtGB73PL",
+    "lot_number": "35001",
+    "sold_yen": "379000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tyC394iJrOiUocM",
+    "lot_number": "80194",
+    "sold_yen": "276000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bBQD5Qp3xDOtYB8",
+    "lot_number": "35005",
+    "sold_yen": "127000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibqmHpxSEZoJPhV",
+    "lot_number": "55202",
+    "sold_yen": "249000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z0kdb2AsK9Nc6K",
+    "lot_number": "3067",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZuQr3jB6awKCt4",
+    "lot_number": "60015",
+    "sold_yen": "304000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01pqwuET21ax15I",
+    "lot_number": "28013",
+    "sold_yen": "422000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "n1brhrGW687k1UT",
+    "lot_number": "60088",
+    "sold_yen": "221000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06wCoooJb9X63JO",
+    "lot_number": "29131",
+    "sold_yen": "196000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "3Ghq3RoSB1q1XS",
+    "lot_number": "222",
+    "sold_yen": "171000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q81PZqXUQUj9C6E",
+    "lot_number": "79002",
+    "sold_yen": "186000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72ggIbI7KTybe5b",
+    "lot_number": "10327",
+    "sold_yen": "303000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "xyiTsv1f9kpH5M",
+    "lot_number": "2121",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:51"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgEIjG8m8dFGc4I",
+    "lot_number": "59520",
+    "sold_yen": "138000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmq3lNUXtf6yBBE",
+    "lot_number": "70034",
+    "sold_yen": "298000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mEKXCvyyPth1jK",
+    "lot_number": "20215",
+    "sold_yen": "211000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0xd5Q8wAACpCl3Q",
+    "lot_number": "20086",
+    "sold_yen": "309000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9eqaFwlkNIgq0OK",
+    "lot_number": "25032",
+    "sold_yen": "295000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZtWfmSIybV4EAn",
+    "lot_number": "60013",
+    "sold_yen": "228000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wNHzpnXHfodilS",
+    "lot_number": "20042",
+    "sold_yen": "192000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejYgEl7gYwFzVg",
+    "lot_number": "49030",
+    "sold_yen": "268000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bBSrsbgNBB2RUmt",
+    "lot_number": "35009",
+    "sold_yen": "151000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6oqkFyN0wu7e13r",
+    "lot_number": "17090",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "70YoSu7jLvTcRFV",
+    "lot_number": "10033",
+    "sold_yen": "249000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZznnntZK4zdrSr",
+    "lot_number": "60022",
+    "sold_yen": "171000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJCE4hupryi0IJn",
+    "lot_number": "69034",
+    "sold_yen": "95000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmg5hs0hCuoVYUc",
+    "lot_number": "70018",
+    "sold_yen": "253000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDkYw2ZlPCs26Bu",
+    "lot_number": "39028",
+    "sold_yen": "111000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cE5K2hnLGZ0vRDH",
+    "lot_number": "39005",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sfG55LMGmI2m5RC",
+    "lot_number": "85126",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:19"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDp4mxrje2bDr5x",
+    "lot_number": "39034",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "il0W3uhEU3ih5D6",
+    "lot_number": "55088",
+    "sold_yen": "179000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mK8ss1ejwMXIyIp",
+    "lot_number": "69087",
+    "sold_yen": "146000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sNIr4TH5ZGDbE3",
+    "lot_number": "10410",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:31"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bB8LLgrvdfIGarA",
+    "lot_number": "35020",
+    "sold_yen": "129000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgB6z1nPZjeUkx1",
+    "lot_number": "59522",
+    "sold_yen": "234000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fxZAP97Y4mZFRt",
+    "lot_number": "40027",
+    "sold_yen": "195000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "swy0zmrgBakql3",
+    "lot_number": "1012",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:04"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7ank4mwvooBLqqy",
+    "lot_number": "10076",
+    "sold_yen": "232000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "07e8qtcWI59lp5k",
+    "lot_number": "29106",
+    "sold_yen": "148000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gVvbEyM4D0CoCc",
+    "lot_number": "29061",
+    "sold_yen": "145000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOSTNRz3Vt0Dqdf",
+    "lot_number": "60169",
+    "sold_yen": "108000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejpGQZN2rZW4Qe",
+    "lot_number": "49027",
+    "sold_yen": "76000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6dlQ7PSTBZzMnvi",
+    "lot_number": "17103",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:16"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZUToHPbOXCqmVR",
+    "lot_number": "10215",
+    "sold_yen": "345000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ty2MBjXyaHZbKVG",
+    "lot_number": "80132",
+    "sold_yen": "344000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jnwELLSK7Fpo9y7",
+    "lot_number": "59001",
+    "sold_yen": "138000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7azyASSnzAOCsPH",
+    "lot_number": "10097",
+    "sold_yen": "615000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7vIJ9rQdVjHi9t",
+    "lot_number": "536",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTSRywKZWcEupUk",
+    "lot_number": "30070",
+    "sold_yen": "205000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "70Zj50xciuuTPyB",
+    "lot_number": "10035",
+    "sold_yen": "180000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "071YHhqbZTjNoMv",
+    "lot_number": "29183",
+    "sold_yen": "160000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "wjeRfvPvoMS1S",
+    "lot_number": "563",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJrLNghR4OZQ90f",
+    "lot_number": "69016",
+    "sold_yen": "239000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nfUG2hCmUoGBtw",
+    "lot_number": "20279",
+    "sold_yen": "241000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "70RBsYlIMbkvCyQ",
+    "lot_number": "10021",
+    "sold_yen": "304000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzjxa97WYJuaKxi",
+    "lot_number": "80239",
+    "sold_yen": "253000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06SmUqNPWBxIdU5",
+    "lot_number": "29160",
+    "sold_yen": "172000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "jrCpsTh24M1kI4k",
+    "lot_number": "50112",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CJ8w2Ymx7cvgjM",
+    "lot_number": "2547",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:24"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzy3aP42undgcE9",
+    "lot_number": "80262",
+    "sold_yen": "295000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7a6EnPzm2kKKAJl",
+    "lot_number": "10046",
+    "sold_yen": "320000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaL99vjRsvJHSF7",
+    "lot_number": "55232",
+    "sold_yen": "174000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72jrn2JbCjG7BEy",
+    "lot_number": "10331",
+    "sold_yen": "271000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgK0rGIDj6jPZlM",
+    "lot_number": "59539",
+    "sold_yen": "129000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mK77av5ZJk4b7To",
+    "lot_number": "69084",
+    "sold_yen": "155000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmO4l1Ugz0cqctB",
+    "lot_number": "70075",
+    "sold_yen": "297000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "27tmuZeeVKqjtu4",
+    "lot_number": "4358",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uoImXcGaaKROJa",
+    "lot_number": "26024",
+    "sold_yen": "253000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzAiDZDdOOJuClP",
+    "lot_number": "80267",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ikSgmXkvwYrgeVS",
+    "lot_number": "55058",
+    "sold_yen": "201000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9unm6s4mmHQkmU0",
+    "lot_number": "26021",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaBa50ybBL46fXE",
+    "lot_number": "55216",
+    "sold_yen": "187000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gNluDERgPGnHG7",
+    "lot_number": "29049",
+    "sold_yen": "214000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sz3CqUPVDOgJHN",
+    "lot_number": "10185",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:52"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6oe793rhlhTmXDi",
+    "lot_number": "17079",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:10"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06UbhLFB1yL70Fq",
+    "lot_number": "29171",
+    "sold_yen": "232000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Zh28iKupWRVS94",
+    "lot_number": "10178",
+    "sold_yen": "234000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9k6lAYQ0UvQsq4f",
+    "lot_number": "26100",
+    "sold_yen": "128000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTFgJvfNXxx6VGa",
+    "lot_number": "30056",
+    "sold_yen": "208000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejcIVK44ny0ZyQ",
+    "lot_number": "49021",
+    "sold_yen": "223000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jCQq19evx9xEkM3",
+    "lot_number": "50024",
+    "sold_yen": "276000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLlbx2O223HXUB",
+    "lot_number": "50145",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:03"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7JajU1LtQs8Mor",
+    "lot_number": "79072",
+    "sold_yen": "212000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tyx46SpTwqXB5R4",
+    "lot_number": "80186",
+    "sold_yen": "234000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xmUxnEx1KR5EOw",
+    "lot_number": "90542",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:53"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "n1gqjCzM1urDkgC",
+    "lot_number": "60096",
+    "sold_yen": "258000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jhnzDg5TrBLu1df",
+    "lot_number": "59505",
+    "sold_yen": "159000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "60FdG7f75z3oQx",
+    "lot_number": "4235",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qcuetcPj3ZZajRl",
+    "lot_number": "70220",
+    "sold_yen": "241000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2vt5jKAguFWdzH6",
+    "lot_number": "5089",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:29"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uZpZwgiHLnqVWB",
+    "lot_number": "26087",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2eiMN6ez8eEBR15",
+    "lot_number": "49012",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myHdneUWQPQDL21",
+    "lot_number": "69154",
+    "sold_yen": "206000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tz8KIrtw52Aac5u",
+    "lot_number": "80219",
+    "sold_yen": "282000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZWHM3GWSUPOiHd",
+    "lot_number": "10219",
+    "sold_yen": "282000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wDhpdTQA1oKbI6",
+    "lot_number": "20025",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7adlZ1KPxDV9NJ7",
+    "lot_number": "10050",
+    "sold_yen": "144000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6a8jvOGmyRSSMS",
+    "lot_number": "4245",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDrjPI2vysHRQMe",
+    "lot_number": "39039",
+    "sold_yen": "72000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZaeoQssZIKu0Yq",
+    "lot_number": "3069",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Uc6IzAQAfBCfaE",
+    "lot_number": "19062",
+    "sold_yen": "187000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mK5JSZVFVR9DF5n",
+    "lot_number": "69081",
+    "sold_yen": "140000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7gaiw9CsyZWSaL",
+    "lot_number": "79023",
+    "sold_yen": "125000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "il8FzjHszAM3EVo",
+    "lot_number": "55083",
+    "sold_yen": "94000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gXLEP9Yo5FQOjT",
+    "lot_number": "29066",
+    "sold_yen": "148000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "70MakXKrByg11Ic",
+    "lot_number": "10012",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72klyHa50ihNzxe",
+    "lot_number": "10333",
+    "sold_yen": "109000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmfa6MIp6vNf22w",
+    "lot_number": "70016",
+    "sold_yen": "157000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0he63QWNXFCkcc6",
+    "lot_number": "29093",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jD7Joa3l7Ju8IEe",
+    "lot_number": "50051",
+    "sold_yen": "136000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejJ9JSoYyFBagj",
+    "lot_number": "49033",
+    "sold_yen": "172000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2v6Xwd2PVga5mS0",
+    "lot_number": "5040",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wzEEyaks6XYkbn",
+    "lot_number": "20010",
+    "sold_yen": "102000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2eiTh3Rr7gSuT9L",
+    "lot_number": "49015",
+    "sold_yen": "139000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mzcVXD6Jt48TySI",
+    "lot_number": "69109",
+    "sold_yen": "137000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myS6Dg8vez9XlB9",
+    "lot_number": "69172",
+    "sold_yen": "134000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6EoEZZky2y1rLa5",
+    "lot_number": "1808",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:02"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "iJuzYul5yWJ3A",
+    "lot_number": "3245",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ib6wn3zEqvpNC1l",
+    "lot_number": "55268",
+    "sold_yen": "196000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "n1f538qsd2x6SrB",
+    "lot_number": "60093",
+    "sold_yen": "165000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Unq5qvQetcMjH8",
+    "lot_number": "19081",
+    "sold_yen": "115000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "70XuGOFrexhvTNf",
+    "lot_number": "10031",
+    "sold_yen": "123000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "t7lAsZbhLUcMjL",
+    "lot_number": "1073",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDtAiSBHSUe7gtV",
+    "lot_number": "39041",
+    "sold_yen": "66000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sLnDUTA6RlO6bd",
+    "lot_number": "10398",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:29"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgSLexkZmn6Vaed",
+    "lot_number": "59552",
+    "sold_yen": "120000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jDBZSIuGsssx3zB",
+    "lot_number": "50005",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0neyow9izru00Ev",
+    "lot_number": "20276",
+    "sold_yen": "184000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Uzcw80h0b7MS0V",
+    "lot_number": "19001",
+    "sold_yen": "196000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "99zVHV4SU9Yb4",
+    "lot_number": "14",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jrTD3AvJ9XbAVeE",
+    "lot_number": "50141",
+    "sold_yen": "136000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h8hDlccYl4CX61",
+    "lot_number": "29081",
+    "sold_yen": "172000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmYVB37OWSuJN4J",
+    "lot_number": "70093",
+    "sold_yen": "144000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ekDkpjhvxhi99Z",
+    "lot_number": "49053",
+    "sold_yen": "82000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2en7Lv0dO4fiC95",
+    "lot_number": "49009",
+    "sold_yen": "67000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72e1f28Uqs2WOmu",
+    "lot_number": "10322",
+    "sold_yen": "162000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sKTo6Ybv2DFfRj",
+    "lot_number": "10387",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:26"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6TPr1RKRhOpi78I",
+    "lot_number": "19024",
+    "sold_yen": "136000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9v4WVRqHmEpTLlZ",
+    "lot_number": "26094",
+    "sold_yen": "143000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejjcTmV3pM42Hx",
+    "lot_number": "49024",
+    "sold_yen": "139000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myiKicdcurqVGcI",
+    "lot_number": "69112",
+    "sold_yen": "134000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmuzi06m9992r23",
+    "lot_number": "70041",
+    "sold_yen": "67000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myUm7qHHz1FbLiP",
+    "lot_number": "69177",
+    "sold_yen": "197000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "4faFh4glyyXdr5",
+    "lot_number": "281",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "73UsBHny1TxBt77",
+    "lot_number": "1046",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:24"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mywl8dIot7ykaqS",
+    "lot_number": "69136",
+    "sold_yen": "134000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZviwS33lEPB7po",
+    "lot_number": "60016",
+    "sold_yen": "102000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaevmrIcjjQL7UI",
+    "lot_number": "55108",
+    "sold_yen": "243000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZOMzJQWMFTZRRX",
+    "lot_number": "60040",
+    "sold_yen": "304000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibid1oDXSbVv9lP",
+    "lot_number": "55280",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "072SSWR5wRVumFb",
+    "lot_number": "29185",
+    "sold_yen": "100000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "67o5SsifCddZ8t",
+    "lot_number": "4192",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32JAthqplAJxT1S",
+    "lot_number": "70040",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejRMGIehWiMxMz",
+    "lot_number": "49037",
+    "sold_yen": "88000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z7h55lPWCSZEF3",
+    "lot_number": "30612",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:16"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7GrKTI8SUD3SKp",
+    "lot_number": "79069",
+    "sold_yen": "113000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cE4PPBWTa1xOTL2",
+    "lot_number": "39003",
+    "sold_yen": "63000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jn57QdJ3lSg4IgL",
+    "lot_number": "59053",
+    "sold_yen": "117000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "27CStvhtw1O6Cfa",
+    "lot_number": "4373",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6TIDBm1gitQAR1D",
+    "lot_number": "19012",
+    "sold_yen": "142000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTEmxPOVqyVoXNu",
+    "lot_number": "30054",
+    "sold_yen": "112000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7al4AbWj4X6x1IR",
+    "lot_number": "10071",
+    "sold_yen": "183000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6av6n8cYmm9FY6",
+    "lot_number": "4253",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n7oHvenME1UsIp",
+    "lot_number": "20261",
+    "sold_yen": "138000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "711MCy9UhjzqEag",
+    "lot_number": "10225",
+    "sold_yen": "108000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "i0sVtRs2nZVSp80",
+    "lot_number": "55127",
+    "sold_yen": "114000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06WTQLYeBuAb4js",
+    "lot_number": "29177",
+    "sold_yen": "112000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDeb7weKQhTjQup",
+    "lot_number": "39016",
+    "sold_yen": "87000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32EEJjf2I2QXCm8",
+    "lot_number": "7096",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Dlr3r5k4Op87I",
+    "lot_number": "473",
+    "sold_yen": "132000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0lRONx74Q3DQQHa",
+    "lot_number": "20161",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xiIb9RfgcIdOyw",
+    "lot_number": "9047",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01TMPnGlPKxfm8p",
+    "lot_number": "28065",
+    "sold_yen": "115000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jmRSiHnaaG4cFRC",
+    "lot_number": "59032",
+    "sold_yen": "144000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgHSYw9qYDNBzE6",
+    "lot_number": "59534",
+    "sold_yen": "87000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UA7HMA0G0ItQ3B",
+    "lot_number": "19003",
+    "sold_yen": "61000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6TMgm2JMqohmIxl",
+    "lot_number": "19010",
+    "sold_yen": "136000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgKBxwr5zzCGti8",
+    "lot_number": "59530",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0hj562PDT3XDvxO",
+    "lot_number": "29001",
+    "sold_yen": "142000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6U9V4JzLIPtGRAh",
+    "lot_number": "19058",
+    "sold_yen": "127000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Z3YcrwRaNrGTXy",
+    "lot_number": "10153",
+    "sold_yen": "133000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mVYxjKgFp2rm5C",
+    "lot_number": "20244",
+    "sold_yen": "198000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cTrFUtKBZZRHPWM",
+    "lot_number": "30032",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06oUNddfEPMGPK4",
+    "lot_number": "29110",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aGm1oCYyVnjHWM",
+    "lot_number": "10009",
+    "sold_yen": "147000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tJcCtITXO3Lu9Dz",
+    "lot_number": "80030",
+    "sold_yen": "169000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOGdavuJtMDVTRL",
+    "lot_number": "60147",
+    "sold_yen": "141000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uXlJmptRYnZbZI",
+    "lot_number": "5034",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uTgSQXwtzEmQwF",
+    "lot_number": "5028",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "24CbHPYhXnS1g1H",
+    "lot_number": "4117",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h4cMPKfzWk1BBX",
+    "lot_number": "29075",
+    "sold_yen": "124000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UB1Ts23d9kaNVh",
+    "lot_number": "19005",
+    "sold_yen": "118000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jn8hv4K8dinZ6R9",
+    "lot_number": "59050",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "07cL9Y4CUBdNXfj",
+    "lot_number": "29103",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJTRCYJ8y8Qk5uf",
+    "lot_number": "69063",
+    "sold_yen": "137000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xoiYS1O9zaUs27",
+    "lot_number": "90573",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72xWnIFg8Xpc4Lo",
+    "lot_number": "10357",
+    "sold_yen": "121000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "i0HSAo7xa8XOlak",
+    "lot_number": "55151",
+    "sold_yen": "121000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jDDOg4mrwpFUYkX",
+    "lot_number": "50009",
+    "sold_yen": "142000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "26CluomMOyRgYoq",
+    "lot_number": "4298",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "i0s2ic29R2kbret",
+    "lot_number": "55125",
+    "sold_yen": "141000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xayu8XktmSnpWf",
+    "lot_number": "9032",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myVgi79A6ZgSJbv",
+    "lot_number": "69179",
+    "sold_yen": "146000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mySZOVynLxKEjtO",
+    "lot_number": "69174",
+    "sold_yen": "137000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "i0qF1GRP4ypDZps",
+    "lot_number": "55122",
+    "sold_yen": "144000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UdU6UsBEcP1aW1",
+    "lot_number": "19066",
+    "sold_yen": "124000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "Z7YhOwYvx3Uygk",
+    "lot_number": "30629",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "14:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n2pFklxRgFB0mG",
+    "lot_number": "20253",
+    "sold_yen": "126000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgNMcms0qZKBQSu",
+    "lot_number": "59544",
+    "sold_yen": "135000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "vXcYf9SY1NdAD",
+    "lot_number": "5569",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDf6ibFDngv1On6",
+    "lot_number": "39018",
+    "sold_yen": "57000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eNtG5D9R6PvkLz",
+    "lot_number": "4023",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7xnSdnkz9y8dVD",
+    "lot_number": "79052",
+    "sold_yen": "170000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gsvagGD3lHruow",
+    "lot_number": "29012",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "07fVNO5HM2lJkPG",
+    "lot_number": "29100",
+    "sold_yen": "103000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xT8nAKIdQw6t99",
+    "lot_number": "90003",
+    "model": "FIT",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:00"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sREDCvPa1N50AP",
+    "lot_number": "10406",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9ujheWBoYj7I2r7",
+    "lot_number": "26015",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "37sOEaSoIjIBmtS",
+    "lot_number": "8181",
+    "sold_yen": "123000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jDkkdbxx6oBwcSo",
+    "lot_number": "50075",
+    "sold_yen": "141000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06GAsKap2TDHFrg",
+    "lot_number": "29140",
+    "sold_yen": "100000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Z4So7XJHM4nRQe",
+    "lot_number": "10155",
+    "sold_yen": "180000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tyEKH4Bn3K8ZhQO",
+    "lot_number": "80190",
+    "sold_yen": "153000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2PSd3FO818Qp0y8",
+    "lot_number": "7126",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h2QvkAVMtpt0MW",
+    "lot_number": "29072",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "275TpWwuzm1BoFL",
+    "lot_number": "4316",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ikVT8D52ESS37sA",
+    "lot_number": "55063",
+    "sold_yen": "177000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gSMCEg9sHkxuYa",
+    "lot_number": "29058",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZVNAng5lWe8kOx",
+    "lot_number": "10217",
+    "sold_yen": "189000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sfzIL6KwDRLvjGS",
+    "lot_number": "85115",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:15"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n4G9uVKbIbPz5n",
+    "lot_number": "20258",
+    "sold_yen": "198000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9OgqJH6oNXAcHs",
+    "lot_number": "7196",
+    "model": "FIT",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sQWo7CeeJKto0D",
+    "lot_number": "1048",
+    "model": "FIT",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:22"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6U8yMeqrVmz0pLg",
+    "lot_number": "19055",
+    "sold_yen": "139000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mVwru2PoUIAS9h",
+    "lot_number": "20243",
+    "sold_yen": "186000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJvQDLJOsdJstCi",
+    "lot_number": "69022",
+    "sold_yen": "140000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0lVrycPzXX5CIdS",
+    "lot_number": "20169",
+    "sold_yen": "169000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UCnaXam1BeIfKi",
+    "lot_number": "19008",
+    "sold_yen": "190000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9v6LjcisqBDhH8l",
+    "lot_number": "26098",
+    "sold_yen": "128000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bBRZmlyml7J2qq9",
+    "lot_number": "35008",
+    "sold_yen": "103000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cDcOP26r3OYMoFo",
+    "lot_number": "39013",
+    "sold_yen": "108000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "3him7n99QGd83XQ",
+    "lot_number": "8051",
+    "sold_yen": "150000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gQYfjonoK80zcO",
+    "lot_number": "29054",
+    "sold_yen": "169000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gxWihhUedlBhGA",
+    "lot_number": "29021",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mOZf8xBcFFZYSml",
+    "lot_number": "60170",
+    "model": "VEZEL",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "PZK9HFNei4DTVI",
+    "lot_number": "33134",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:51"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YMA4hhbxyg2xQa",
+    "lot_number": "30299",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:28"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "szgIzF5RwZpjZ5",
+    "lot_number": "1018",
+    "model": "VEZEL",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7jubC6Y52fjk7A",
+    "lot_number": "515",
+    "model": "VEZEL",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YPtqdCBMd8Aao2",
+    "lot_number": "30331",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:40"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "PZmmQngCuzo7Kv",
+    "lot_number": "33126",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "PZsQO19BwNh9Tc",
+    "lot_number": "33129",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:50"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "PZDEK3VffPKRN2",
+    "lot_number": "33131",
+    "model": "VEZEL",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:50"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZeI3YVpmaJonze",
+    "lot_number": "30760",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ia9a3LG3AtAUlJY",
+    "lot_number": "55197",
+    "sold_yen": "1594000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibfurolkhg7qeHN",
+    "lot_number": "55284",
+    "sold_yen": "1620000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaNoBFU4MXfWimN",
+    "lot_number": "55237",
+    "sold_yen": "1038000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0n1vtEUFki4Ubu1",
+    "lot_number": "20251",
+    "sold_yen": "1825000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaH4hZRU5816xc4",
+    "lot_number": "55226",
+    "sold_yen": "1762000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibtxmfyXwpwFcSi",
+    "lot_number": "55209",
+    "sold_yen": "1924000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2ALoL4SeYK1hSw",
+    "lot_number": "139",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "rHYxFcvVxJlQm",
+    "lot_number": "491",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "09:50"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jD0U414pY0C47eB",
+    "lot_number": "50058",
+    "sold_yen": "1205000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOBe9kBTypiCAw3",
+    "lot_number": "60139",
+    "sold_yen": "1132000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wPY3zYa2GUrI4z",
+    "lot_number": "20047",
+    "sold_yen": "742000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZkbM9LzhmZRfIq",
+    "lot_number": "10182",
+    "sold_yen": "1164000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "71938TBWyK0XlBs",
+    "lot_number": "10238",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:52"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "71iUnUOuURJhXNO",
+    "lot_number": "10256",
+    "sold_yen": "1644000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "4RezlgcHhWHLsp",
+    "lot_number": "317",
+    "sold_yen": "702000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "typNAwWRgC74lND",
+    "lot_number": "80173",
+    "sold_yen": "827000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Z9pks99mF6QHfC",
+    "lot_number": "10162",
+    "sold_yen": "717000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qbCjgWwYoPOqQT3",
+    "lot_number": "70168",
+    "sold_yen": "737000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fBEvu5Aqjd4SLK",
+    "lot_number": "40008",
+    "sold_yen": "332000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZCy3dv5BtH9PsO",
+    "lot_number": "60029",
+    "sold_yen": "685000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ikYBGDmFfOH817C",
+    "lot_number": "55069",
+    "sold_yen": "1999000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZeiyirQP23QYu2",
+    "lot_number": "10172",
+    "sold_yen": "982000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tz7QwM3Dx3YtebO",
+    "lot_number": "80217",
+    "sold_yen": "1262000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "i0OFZTR90swvAhp",
+    "lot_number": "55163",
+    "sold_yen": "1561000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "swy0zmrgWxfMBE",
+    "lot_number": "1012",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01y3jlhf5hWCaX0",
+    "lot_number": "28029",
+    "sold_yen": "1350000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0o23sLPm2K1IPkK",
+    "lot_number": "20329",
+    "sold_yen": "1271000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qddZYsdIUmGF6Ty",
+    "lot_number": "70207",
+    "sold_yen": "1165000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "TI7KnPYYjw9WPB",
+    "lot_number": "36149",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:01"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ye70K9SuQ4PUV",
+    "lot_number": "506",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "09:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cLeOeJOKltEqjcL",
+    "lot_number": "30370",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:04"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01wdW1pu1kJefbN",
+    "lot_number": "28025",
+    "sold_yen": "732000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZrTnjX3NGafsIb",
+    "lot_number": "10196",
+    "sold_yen": "641000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tJrzAfytAaNq5GK",
+    "lot_number": "80064",
+    "sold_yen": "805000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmJwoFJRUg0Xn5d",
+    "lot_number": "70068",
+    "sold_yen": "1486000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9esr9GVx90MEzwr",
+    "lot_number": "25037",
+    "sold_yen": "560000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uBp1jgZBRgzl5E",
+    "lot_number": "26046",
+    "sold_yen": "369000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTtuhOCn3PD6ndm",
+    "lot_number": "30036",
+    "sold_yen": "659000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8zPgFH5SSBh69aV",
+    "lot_number": "2334",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:39"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "n1fYdMRkK19MQkh",
+    "lot_number": "60095",
+    "sold_yen": "834000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2LFOBLdwLpbJEHF",
+    "lot_number": "60043",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:26"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0oa7lsa0lw6Eu0w",
+    "lot_number": "20343",
+    "sold_yen": "577000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "UaylGxfP9IFjz",
+    "lot_number": "96",
+    "sold_yen": "63000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wHOlz5feTrd28t",
+    "lot_number": "20032",
+    "sold_yen": "1053000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2fdj3Cud2mYHPzu",
+    "lot_number": "4068",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qbhV3phbsq5UEfv",
+    "lot_number": "70132",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:08"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "PZfSSKoDslv5BO",
+    "lot_number": "33123",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:47"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "71enrzE7fYGP9oq",
+    "lot_number": "10249",
+    "sold_yen": "954000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmk08XBf260ILI6",
+    "lot_number": "70024",
+    "model": "FREED",
+    "auction_date": "03.07.2026",
+    "auction_time": "10:16"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fxvl1cIndEQQxz",
+    "lot_number": "40016",
+    "sold_yen": "571000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7agYJGulFylUFfO",
+    "lot_number": "10065",
+    "sold_yen": "570000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8bhLHgVKxuvtyv",
+    "lot_number": "5078",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72pkAS3U5FD7SSX",
+    "lot_number": "10341",
+    "sold_yen": "894000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qmoG5iLDFYcbB8t",
+    "lot_number": "70031",
+    "model": "FREED",
+    "auction_date": "03.07.2026",
+    "auction_time": "10:19"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "71gDUKeiAqd4y78",
+    "lot_number": "10251",
+    "sold_yen": "1264000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "71hy7pFb8oOKvYN",
+    "lot_number": "10253",
+    "sold_yen": "645000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72B83yGkZnx8rlL",
+    "lot_number": "10361",
+    "sold_yen": "721000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tyEiBdSVMfP9NUt",
+    "lot_number": "80199",
+    "sold_yen": "611000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fxBOXPAmfSJSGg",
+    "lot_number": "40019",
+    "sold_yen": "1128000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mMsyNH369DFdjv",
+    "lot_number": "20229",
+    "sold_yen": "757000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2STa8JsSwTRBw5",
+    "lot_number": "160",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iayTAYXZhjwQQfX",
+    "lot_number": "55211",
+    "sold_yen": "624000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaFH1uIAgE6y6n3",
+    "lot_number": "55223",
+    "sold_yen": "345000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mLyn9g0ya2YfqP",
+    "lot_number": "20227",
+    "sold_yen": "595000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uLPauL7J7g3rIr",
+    "lot_number": "26063",
+    "sold_yen": "426000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZT62mXqL1p3rav",
+    "lot_number": "10211",
+    "sold_yen": "402000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ozjujX8qK3wX0A",
+    "lot_number": "5511",
+    "sold_yen": "75000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "4c11r3buOhFOPA",
+    "lot_number": "277",
+    "sold_yen": "397000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibhiOJd6ldjOat0",
+    "lot_number": "55288",
+    "sold_yen": "721000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aAsMyjg7zqjqIn",
+    "lot_number": "10099",
+    "sold_yen": "872000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "B9BjA55mNPR35",
+    "lot_number": "63",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "IGSiGRdx9GLiLv",
+    "lot_number": "2024",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "5vhUMNtvcthbrvO",
+    "lot_number": "14516",
+    "sold_yen": "850000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "xBVE9ewn3LbyBu",
+    "lot_number": "2129",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:54"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wVpaAzrdyyBvlD",
+    "lot_number": "20056",
+    "sold_yen": "1145000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uO6DFlj4xMgRq9",
+    "lot_number": "26068",
+    "sold_yen": "914000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9ukDwrKILM2ftg8",
+    "lot_number": "26018",
+    "sold_yen": "1031000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cU4hIIf84rDXwy8",
+    "lot_number": "30097",
+    "sold_yen": "330000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qbdo757MLX6Si9p",
+    "lot_number": "70125",
+    "sold_yen": "958000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tza2bC4Iot7oBMb",
+    "lot_number": "80221",
+    "sold_yen": "982000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aEZITtELssMg8L",
+    "lot_number": "10006",
+    "sold_yen": "799000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uvvMsXh0vjz4Qf",
+    "lot_number": "26036",
+    "sold_yen": "855000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72qeMxtMBEeNQLD",
+    "lot_number": "10343",
+    "sold_yen": "428000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0xjq0NyKjsFt7dA",
+    "lot_number": "20097",
+    "sold_yen": "1132000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTTynbRVEpCvMUx",
+    "lot_number": "3007",
+    "sold_yen": "970000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mONsFQXLKY6YjTx",
+    "lot_number": "60150",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cU22fxEUJ18J7Qq",
+    "lot_number": "30092",
+    "sold_yen": "484000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOM7olOrW9AWb7a",
+    "lot_number": "60157",
+    "sold_yen": "289000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTWujcuw586ghr3",
+    "lot_number": "30085",
+    "sold_yen": "440000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibsDaA95ZqUYeZC",
+    "lot_number": "55207",
+    "sold_yen": "1014000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0xi4SipqvZKVEoz",
+    "lot_number": "20094",
+    "sold_yen": "1289000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ty545uxKv0vqaDn",
+    "lot_number": "80137",
+    "sold_yen": "737000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iad05WySvQWdF6H",
+    "lot_number": "55105",
+    "sold_yen": "1055000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7az7v40Wj7vLYTm",
+    "lot_number": "10096",
+    "sold_yen": "388000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0gLi7ZVglbBiw",
+    "lot_number": "175",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "712eInRlxNSh97B",
+    "lot_number": "10226",
+    "sold_yen": "267000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nwe546rWvl0ZlI",
+    "lot_number": "20206",
+    "sold_yen": "749000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0mXMUEC2JmePhPY",
+    "lot_number": "20248",
+    "sold_yen": "376000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOyvzkjfXttxGS1",
+    "lot_number": "60133",
+    "sold_yen": "871000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nvjSnEzpwJt2t3",
+    "lot_number": "20204",
+    "sold_yen": "258000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3243V5KwE6NJlN6",
+    "lot_number": "7031",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:58"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "27FB3vA87WDavTc",
+    "lot_number": "4379",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jCJauMLthjG7BIC",
+    "lot_number": "50011",
+    "sold_yen": "731000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YP6Emk6aoK8EhJ",
+    "lot_number": "30323",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sfKB27X62B4OUh1",
+    "lot_number": "85133",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:21"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "77wj6LsNq0TD8Ce",
+    "lot_number": "1075",
+    "sold_yen": "353000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmViQmniOY4XVx2",
+    "lot_number": "70088",
+    "sold_yen": "138000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOt5rjHYLBPnTzW",
+    "lot_number": "60124",
+    "sold_yen": "207000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cU3PCSwFMXl83BM",
+    "lot_number": "30096",
+    "sold_yen": "552000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nupGIdGSy8M4Am",
+    "lot_number": "20202",
+    "sold_yen": "364000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZzAYv9wjZkDFHW",
+    "lot_number": "10100",
+    "sold_yen": "324000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzXRxmU6EexvJhr",
+    "lot_number": "80207",
+    "sold_yen": "378000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2PYymlQgIY7fUIR",
+    "lot_number": "7137",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "07ftHYmgvx3SQTl",
+    "lot_number": "29109",
+    "sold_yen": "223000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "il5uUtGnIaE8hl2",
+    "lot_number": "55079",
+    "sold_yen": "827000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTWWp3cXkBo7Lnn",
+    "lot_number": "30086",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0hlME39htYMIpbQ",
+    "lot_number": "29007",
+    "sold_yen": "253000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7av2ExHYUHM0Dqj",
+    "lot_number": "10080",
+    "sold_yen": "1483000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uRUBlOcG55defy",
+    "lot_number": "5025",
+    "sold_yen": "33000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "DgEtL1UdTSaNPP",
+    "lot_number": "2503",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0ehJr6rb3x51xJ",
+    "lot_number": "761",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0imzWxozrgGm1M",
+    "lot_number": "760",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ihF2JsRnF0IZH4",
+    "lot_number": "11050",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:21"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uDdnE9KFOtXgQ1",
+    "lot_number": "26040",
+    "sold_yen": "772000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZpCU0mQteE241u",
+    "lot_number": "10191",
+    "sold_yen": "476000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2vsa960nXqpCSm7",
+    "lot_number": "5087",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01rGZFf6lrGLpMp",
+    "lot_number": "28018",
+    "sold_yen": "369000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mOXSQ3rSQQuWJyY",
+    "lot_number": "60177",
+    "sold_yen": "564000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fxzEYCD2UtrxiH",
+    "lot_number": "40018",
+    "sold_yen": "722000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7j36MnwMeNZLMZ",
+    "lot_number": "514",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9erwX2uEBbaXBDL",
+    "lot_number": "25035",
+    "sold_yen": "213000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZAhz3USh3aUpL8",
+    "lot_number": "60024",
+    "sold_yen": "475000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJKlEsFSXRsxVJ9",
+    "lot_number": "69048",
+    "sold_yen": "104000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72nwdxb01IpIX8B",
+    "lot_number": "10330",
+    "sold_yen": "537000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2flUPt7z4wpzT7S",
+    "lot_number": "4081",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uSCA1vHIqOJGPw",
+    "lot_number": "26075",
+    "sold_yen": "468000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7aqWO3g2xIiE0nr",
+    "lot_number": "10081",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wFxSou3UrUYBpM",
+    "lot_number": "20020",
+    "sold_yen": "189000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fBAbvEFLCotc1C",
+    "lot_number": "40006",
+    "sold_yen": "317000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mKefRvYUw8wpNPu",
+    "lot_number": "69099",
+    "sold_yen": "143000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0WXgzG8Q8wTWp",
+    "lot_number": "18",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:09"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gYdKERpEyYHige",
+    "lot_number": "29067",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UcZUf2J8edjd4k",
+    "lot_number": "19064",
+    "sold_yen": "139000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "4p9JCOWcjfzQ9w",
+    "lot_number": "290",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "tmV9aYavNkinIC",
+    "lot_number": "10016",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:15"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7npNRBEInRuBeb",
+    "lot_number": "79036",
+    "sold_yen": "444000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wJaD5dz3mlKsWu",
+    "lot_number": "20035",
+    "sold_yen": "515000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9f98NqRZB8Kx16B",
+    "lot_number": "25008",
+    "sold_yen": "49000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJt95LraRhUnzYg",
+    "lot_number": "69019",
+    "sold_yen": "296000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9v6jdmA2a8krdb1",
+    "lot_number": "26097",
+    "sold_yen": "390000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "711kwIqt1PgAadV",
+    "lot_number": "10224",
+    "sold_yen": "177000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2el8AeeG7mZqXsT",
+    "lot_number": "49064",
+    "sold_yen": "91000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mPece5fIqrrq8ra",
+    "lot_number": "60104",
+    "sold_yen": "163000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2Qn2roy26mvXZx0",
+    "lot_number": "7179",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "j9lGfNMZaWwlu",
+    "lot_number": "332",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:05"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJZiKZkoJZutRMj",
+    "lot_number": "69072",
+    "sold_yen": "194000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72tprnuRt5mJem1",
+    "lot_number": "10340",
+    "sold_yen": "341000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sxEaWyyNPuqWvd",
+    "lot_number": "10154",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:43"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72n58HsHKe7Stbg",
+    "lot_number": "10339",
+    "sold_yen": "392000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7m4wmskUUWX0pa",
+    "lot_number": "79033",
+    "sold_yen": "330000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "qbWHvtMLopr77VZ",
+    "lot_number": "70101",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:53"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "mOR6qwHhSSwKbqf",
+    "lot_number": "60165",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sVVqhv5awUJFFY",
+    "lot_number": "1056",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJCbXrLYb4ZjeN3",
+    "lot_number": "69033",
+    "sold_yen": "176000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgJHlR1c3B1Zvpr",
+    "lot_number": "59538",
+    "sold_yen": "90000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06o1BxMn8RaZRRn",
+    "lot_number": "29118",
+    "sold_yen": "142000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZdYFfxjsVab9An",
+    "lot_number": "30752",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:20"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "cFwgSjILWBNAr",
+    "lot_number": "21",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2zRd6CZJ49i7Ib",
+    "lot_number": "137",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qn6gUI9YFIKAyet",
+    "lot_number": "70004",
+    "sold_yen": "166000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qcnr4H5I4Fqt5Kg",
+    "lot_number": "70218",
+    "sold_yen": "256000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cE7yoCfwKWmTNp4",
+    "lot_number": "39009",
+    "sold_yen": "66000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6ogOH3JUWdIrRhk",
+    "lot_number": "17082",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:11"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0hhfHGXSP6KfzMs",
+    "lot_number": "29090",
+    "sold_yen": "67000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mKb6cFXPEHouqf8",
+    "lot_number": "69092",
+    "sold_yen": "68000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06qJay61IN15Lvp",
+    "lot_number": "29121",
+    "sold_yen": "133000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "719udJknNCJORa2",
+    "lot_number": "10239",
+    "sold_yen": "399000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h8JJaUEePmtr2l",
+    "lot_number": "29082",
+    "sold_yen": "250000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0wVRgqhSvEAqXFK",
+    "lot_number": "20057",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:19"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9AFLqmkRtY2Op",
+    "lot_number": "15",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0wwtZI0fAFQ3WB1",
+    "lot_number": "20013",
+    "sold_yen": "186000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xb1zXFLJZMgEKY",
+    "lot_number": "9033",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qn4UDcZESfQ47ps",
+    "lot_number": "70001",
+    "sold_yen": "331000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qbkDBpzP2LXq2bP",
+    "lot_number": "70138",
+    "sold_yen": "127000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "3S4RJuPNiUqzqG",
+    "lot_number": "242",
+    "sold_yen": "45000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "70SXKtv3zEf45nR",
+    "lot_number": "10024",
+    "sold_yen": "117000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmsiOYv0NGBN2jl",
+    "lot_number": "70039",
+    "sold_yen": "256000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9elbDlsuSkV7Qt2",
+    "lot_number": "25024",
+    "sold_yen": "43000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLcxAbYHDpwAol",
+    "lot_number": "50141",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:02"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3xj3ENsjAqzenCR",
+    "lot_number": "90488",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:42"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7MkYK2QlgA40YO",
+    "lot_number": "79079",
+    "sold_yen": "102000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "tyB8WnRQUPHdqk7",
+    "lot_number": "80192",
+    "sold_yen": "165000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7a77tFhNhP4B5FG",
+    "lot_number": "10047",
+    "sold_yen": "162000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01SSDIftiLVyoeJ",
+    "lot_number": "28063",
+    "sold_yen": "76000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0nf1ulQJPVMZDAQ",
+    "lot_number": "20277",
+    "sold_yen": "256000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sy9qLtXoFczLP8",
+    "lot_number": "10165",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:46"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJSXrjif20eD7Bz",
+    "lot_number": "69061",
+    "sold_yen": "182000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uA3IO8FOom2TfD",
+    "lot_number": "26043",
+    "sold_yen": "94000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6UfgnpBVrFJxCL2",
+    "lot_number": "19069",
+    "sold_yen": "127000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2zJfb4sEwjeQB6U",
+    "lot_number": "6117",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ejLiJ6miU5TvDS",
+    "lot_number": "49034",
+    "sold_yen": "73000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgDm3aY3jKL9KeH",
+    "lot_number": "59527",
+    "sold_yen": "120000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "3h0idGNlwU9bo05",
+    "lot_number": "8037",
+    "sold_yen": "102000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmdNOhz6i3SHzcv",
+    "lot_number": "70013",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgNk7wJIavrLmW0",
+    "lot_number": "59543",
+    "sold_yen": "93000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJFmChN43u8eCnp",
+    "lot_number": "69030",
+    "sold_yen": "86000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "32J2Tu6775cOmVQ",
+    "lot_number": "70037",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cTR4bbTeSfr7u9Y",
+    "lot_number": "30076",
+    "sold_yen": "388000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6ZqZbEwagHyyuPv",
+    "lot_number": "10194",
+    "sold_yen": "446000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aE6xe3MetR6if6",
+    "lot_number": "10004",
+    "sold_yen": "304000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2LEAYcU3hjUnAoU",
+    "lot_number": "60017",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": "10:21"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "d8C7AKZgfshwM",
+    "lot_number": "22",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qn1JYmYA1PI8IP6",
+    "lot_number": "70097",
+    "sold_yen": "465000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "bB2Sxq8MKTLFTdb",
+    "lot_number": "35010",
+    "sold_yen": "154000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZx7UcTNpC3Z3aK",
+    "lot_number": "60010",
+    "sold_yen": "174000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fBtHy2NMAaA0RV",
+    "lot_number": "40003",
+    "sold_yen": "125000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Zg7VDjBSYgeUfn",
+    "lot_number": "10176",
+    "sold_yen": "195000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "5pdCU2bDWKbZ2O",
+    "lot_number": "374",
+    "sold_yen": "129000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myOUYq7qn022Y1L",
+    "lot_number": "69168",
+    "sold_yen": "95000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06PcfAML6bpMQjH",
+    "lot_number": "29163",
+    "sold_yen": "88000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgEgdQoUQJmPI8n",
+    "lot_number": "59529",
+    "sold_yen": "153000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgMpURiPDwQ5p4t",
+    "lot_number": "59541",
+    "sold_yen": "288000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jrRmzpVwOvFmvwX",
+    "lot_number": "50139",
+    "sold_yen": "79000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jnxyXrjCDE267qM",
+    "lot_number": "59003",
+    "sold_yen": "90000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "26thBI2ZuMMljzE",
+    "lot_number": "4281",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "n166XLEMmgQtfK0",
+    "lot_number": "60077",
+    "sold_yen": "336000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uLGNp8nit8FpIf",
+    "lot_number": "50152",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "71jmtKwWcXL8q8V",
+    "lot_number": "10257",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:01"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Ul0BfVDU2GxTZq",
+    "lot_number": "19079",
+    "sold_yen": "196000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaC5fOZ59JEMdQk",
+    "lot_number": "55218",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h2opuSuvZ7CFQB",
+    "lot_number": "29071",
+    "sold_yen": "76000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jmH13GaBMWKT6hu",
+    "lot_number": "59014",
+    "sold_yen": "69000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJPMMtha0J7HJ2c",
+    "lot_number": "69057",
+    "sold_yen": "242000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "cE4nJMerTweYpOG",
+    "lot_number": "39002",
+    "sold_yen": "72000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gHUmD4A5Y3dUo3",
+    "lot_number": "29030",
+    "sold_yen": "88000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "JlELLmNu1WF8Ls",
+    "lot_number": "2093",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:25"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "oOGVQdEO6iOkxfR",
+    "lot_number": "74090",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "il4AIOfvbc3qjsl",
+    "lot_number": "55077",
+    "sold_yen": "132000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myk7zHmwhUlt92J",
+    "lot_number": "69115",
+    "sold_yen": "146000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "8Gu6ZtNoBiueI",
+    "lot_number": "13",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:07"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6sI7xcdlLZWTzAt",
+    "lot_number": "1812",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:03"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gHsgNl9OtJnqrH",
+    "lot_number": "29039",
+    "sold_yen": "85000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "29FiJegaJCbUwXT",
+    "lot_number": "4529",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:44"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7A7rdFYa5nc8zF",
+    "lot_number": "79058",
+    "sold_yen": "90000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06s6s4ekwfUCdkq",
+    "lot_number": "29124",
+    "sold_yen": "88000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mKeHXlHlMBPghLP",
+    "lot_number": "69090",
+    "sold_yen": "77000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7fIcGqbc5H7oeq",
+    "lot_number": "79022",
+    "sold_yen": "57000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0hjwaRy60xgtZu0",
+    "lot_number": "29002",
+    "sold_yen": "121000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "4PShQ7STP3ajDo",
+    "lot_number": "314",
+    "sold_yen": "126000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aycjnJ4M8U621G",
+    "lot_number": "10094",
+    "sold_yen": "208000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "24CDNFGJdSaQJX3",
+    "lot_number": "4118",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "14:30"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7pebctpMl5SwZx",
+    "lot_number": "79030",
+    "sold_yen": "141000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mK6bYPE8clru01I",
+    "lot_number": "69082",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9uF2KZ1vJLHlcBm",
+    "lot_number": "26051",
+    "sold_yen": "164000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "5BtIujzZssKatuH",
+    "lot_number": "14018",
+    "sold_yen": "96000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2fgtHsvhSN7Dd0R",
+    "lot_number": "4072",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Uokg6WILrOthzN",
+    "lot_number": "19083",
+    "sold_yen": "97000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "71dVlJVF277XCPR",
+    "lot_number": "10248",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:57"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "605tTxYwcD1xnW",
+    "lot_number": "4221",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "ZgzIwuCIz1kV0a",
+    "lot_number": "3070",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "sVtkrMCU3BTbJD",
+    "lot_number": "1055",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7gColR4J4iNm87",
+    "lot_number": "79024",
+    "sold_yen": "138000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jmIOq23mQTYh23Q",
+    "lot_number": "59018",
+    "sold_yen": "111000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "7aCJfITsr1WxQq5",
+    "lot_number": "10001",
+    "sold_yen": "72000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mz0LiN5EBCZYbil",
+    "lot_number": "69102",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "38xSzCXu5EHSPK1",
+    "lot_number": "8266",
+    "sold_yen": "51000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6ona1IM5F4YiCs5",
+    "lot_number": "17093",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "15:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2PQQLaENcEVRHJ7",
+    "lot_number": "7123",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gyoo81luHErLCV",
+    "lot_number": "29022",
+    "sold_yen": "85000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "iaEMOPhHJFtR8um",
+    "lot_number": "55221",
+    "sold_yen": "156000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3hMd2dJI7sxO9NO",
+    "lot_number": "80020",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "16:13"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "3hkCzxIlbfKbXQw",
+    "lot_number": "8056",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:58"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06Febf26eqJadCf",
+    "lot_number": "29147",
+    "sold_yen": "118000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "26AZcTdt26WJwzp",
+    "lot_number": "4295",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "q7hYFR1nwwdkNW8",
+    "lot_number": "79027",
+    "sold_yen": "84000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "27ry8EmtRNcVxIH",
+    "lot_number": "4354",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9OUsIWOhFvEXQL",
+    "lot_number": "710",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "26F54oFqpm6j8a5",
+    "lot_number": "4201",
+    "model": "FREED",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qmsKUOdB5aUDvfG",
+    "lot_number": "70030",
+    "sold_yen": "94000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "CIdkmxu18AOir7",
+    "lot_number": "2545",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2fii5Nn3VBYO2Aa",
+    "lot_number": "4076",
+    "model": "FREED",
+    "auction_date": "02.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mK32jZD3kVjyLql",
+    "lot_number": "69078",
+    "sold_yen": "101000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "01Mxk3djzVFHD4Z",
+    "lot_number": "28052",
+    "sold_yen": "109000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "72s40SlxFBsbMwZ",
+    "lot_number": "10347",
+    "sold_yen": "114000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Z5ktWGaYgmelMz",
+    "lot_number": "10156",
+    "sold_yen": "69000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "x7vPnHuDjCgVY8A",
+    "lot_number": "90090",
+    "model": "FREED",
+    "auction_date": "01.07.2026",
+    "auction_time": "13:23"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6TIbvwhP2ZxKn5i",
+    "lot_number": "19011",
+    "sold_yen": "91000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "3hjInShsE08EuMR",
+    "lot_number": "8054",
+    "sold_yen": "75000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "P1nBo0bjzVbiCx",
+    "lot_number": "3230",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "VyQ1C6ES1AutEm",
+    "lot_number": "3770",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0lSIZcwWoqvEG12",
+    "lot_number": "20163",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "VuLa7DHtBQS9bj",
+    "lot_number": "3771",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0m1qAnIpUJG3SZM",
+    "lot_number": "20177",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2eZIdAZ23YMd5ND",
+    "lot_number": "4044",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": "11:48"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2cgf2CUxyYinJCj",
+    "lot_number": "4817",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "QAfVyYaLgHFoLH",
+    "lot_number": "3375",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2VyW6lduV36VVYA",
+    "lot_number": "75054",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": "10:39"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YSXwWwiAJVaEot",
+    "lot_number": "30300",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:28"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7pPvi98MRva6hk",
+    "lot_number": "526",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "szIOpnw92ifNVp",
+    "lot_number": "1019",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": "12:06"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0lIKUQLgxFP34iz",
+    "lot_number": "20147",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "bm6OXXXgiZfbFX",
+    "lot_number": "9260",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:51"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "blmrezRn4q2WH7",
+    "lot_number": "9252",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": "10:49"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9LhI4di0L5T7k4",
+    "lot_number": "712",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gJIJXVl9VfBQ0o",
+    "lot_number": "29041",
+    "sold_yen": "134000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0h57Yvb97UVHzuD",
+    "lot_number": "29077",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "2uQ9vBKiRiYt6",
+    "lot_number": "33",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": "13:15"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6sNZL3x5elTTQOS",
+    "lot_number": "1813",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": "11:03"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "06RUOB6oG8eRJXJ",
+    "lot_number": "29169",
+    "sold_yen": "167000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "YPgsimRO9FO77D",
+    "lot_number": "30328",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": "12:38"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "6afXsEvFWv5gj9",
+    "lot_number": "4249",
+    "model": "N BOX",
+    "auction_date": "30.06.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "0lNJX2E7t4almEi",
+    "lot_number": "20155",
+    "model": "N BOX",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "js3ePr96ceXG786",
+    "lot_number": "50157",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "6U42PTg4gtwGAlS",
+    "lot_number": "19048",
+    "sold_yen": "80000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jrBXn4yzLTkA6xr",
+    "lot_number": "50111",
+    "sold_yen": "123000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "qbdQbTPe3roIM5K",
+    "lot_number": "70126",
+    "sold_yen": "40000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jrHQATSiefhAmLQ",
+    "lot_number": "50121",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9ekhrG2ClmjpSAl",
+    "lot_number": "25022",
+    "sold_yen": "59000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "jgSj9HCy6SN5GhS",
+    "lot_number": "59551",
+    "sold_yen": "96000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "0gH1aXCHxZqwWvm",
+    "lot_number": "29038",
+    "sold_yen": "77000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "myCel537VsvkrFh",
+    "lot_number": "69146",
+    "sold_yen": "101000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mJPkGDyITeNRf5R",
+    "lot_number": "69056",
+    "sold_yen": "53000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "9ei1Yvrq1UNbsSE",
+    "lot_number": "25010",
+    "sold_yen": "26000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "ibRylsygCjDwNKf",
+    "lot_number": "55310",
+    "sold_yen": "405000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "sold_price",
+    "lot_uid": "mZvKCHKtC09rAlJ",
+    "lot_number": "60017",
+    "sold_yen": "507000"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "9MDZymBXdZqy05",
+    "lot_number": "715",
+    "model": "FORESTER",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "new_lot",
+    "lot_uid": "7DqkjDjLwCyzvu",
+    "lot_number": "540",
+    "model": "FORESTER",
+    "auction_date": "01.07.2026",
+    "auction_time": null
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "PZHYIsPTXxyhCz",
+    "lot_number": "33133"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "ohZaKr7OY3wftw9",
+    "lot_number": "72037"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "99zVHV446wuS2",
+    "lot_number": "14"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2XSciCiNWUN7ht",
+    "lot_number": "178"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "5vPfYoV05elWO",
+    "lot_number": "9"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2fcoQX4ktfIADya",
+    "lot_number": "4066"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "FGbx2y2XWIFho2",
+    "lot_number": "2798"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "QPXrAJeNxeSthm",
+    "lot_number": "33017"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2VxxDQRdNcSTpQV",
+    "lot_number": "75023"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "IJARH0R9d7SXhV",
+    "lot_number": "2020"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "HtUZCdNaNyagr",
+    "lot_number": "74"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "cN31dE59y5qGx",
+    "lot_number": "222"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "8yMtdpzZQHO35Cu",
+    "lot_number": "2326"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "qmiMQsrVdrqe5IR",
+    "lot_number": "70021"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2WY1DbqgLbMsLR",
+    "lot_number": "176"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "3I6NnJ0VSn0XKl",
+    "lot_number": "226"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "mXIxMTLSceMwCA",
+    "lot_number": "1578"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "44odApPqz6BnR1",
+    "lot_number": "261"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2owReI14C6rLg8",
+    "lot_number": "118"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "8eogh3w5Xyxig",
+    "lot_number": "12"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "aR9W1yDZokoOY",
+    "lot_number": "10"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "Dp5uagoM4VONo",
+    "lot_number": "68"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "2lmcoGVccn179r",
+    "lot_number": "111"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "CWYErP9hL6kR4",
+    "lot_number": "67"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "mOZVWcI9kMDG6cd",
+    "lot_number": "6017"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "cU7UtnYDbxEoMLg",
+    "lot_number": "30002"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "mZMw7zgKtAYg09C",
+    "lot_number": "60045"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "YWY4tylkq4MR7T",
+    "lot_number": "30468"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "sFC3fHezIwA1Sb",
+    "lot_number": "1029"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "mZOktU9vxybE5TY",
+    "lot_number": "60049"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "lw9WV75V0tKRyv5",
+    "lot_number": "6511"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "cTnB4YiEAy97HLo",
+    "lot_number": "30026"
+  },
+  {
+    "ts": "2026-06-29T09:24:13.446639+00:00",
+    "type": "off_board",
+    "lot_uid": "cTt3bYTVMpMgv4s",
+    "lot_number": "30035"
   }
 ]
