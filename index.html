@@ -343,9 +343,12 @@ function buildMakerList(){
   if(!makers.length){box.innerHTML='<div class="msel-empty">no makers</div>';return;}
   box.innerHTML=makers.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.maker.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]}</span></label>`).join('');
 }
+// placeholder model values from whole-maker scrapes that aren't a real model
+const _BAD_MODELS=new Set(['Any','(maker)','']);
+function isRealModel(m){return m && !_BAD_MODELS.has(m);}
 function modelPool(){
   const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
-  return [...new Set(pool.map(l=>l.model_tracked).filter(Boolean))].sort();
+  return [...new Set(pool.map(l=>l.model_tracked).filter(isRealModel))].sort();
 }
 function refreshModels(){
   // drop any selected models no longer valid for the chosen makers
@@ -354,7 +357,7 @@ function refreshModels(){
   let models=modelPool();
   const counts={};
   const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
-  pool.forEach(l=>{if(l.model_tracked)counts[l.model_tracked]=(counts[l.model_tracked]||0)+1;});
+  pool.forEach(l=>{if(isRealModel(l.model_tracked))counts[l.model_tracked]=(counts[l.model_tracked]||0)+1;});
   const box=document.getElementById('ms-model-list');
   if(!models.length){box.innerHTML='<div class="msel-empty">select a maker first</div>';return;}
   box.innerHTML=models.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.model.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]||0}</span></label>`).join('');
@@ -435,7 +438,7 @@ function render(){
   body.innerHTML=lots.slice(0,500).map(l=>`<tr class="trow" onclick="window.open('${esc(l._link)}','_blank')">
     <td class="mono bold">${esc(l.lot_number)}</td>
     <td>${esc(l.maker)}</td>
-    <td>${esc(l.model_tracked)}<div class="sub">${esc(l.chassis)||''}${l.grade?' · '+esc(l.grade):''}</div></td>
+    <td>${isRealModel(l.model_tracked)?esc(l.model_tracked):'—'}<div class="sub">${esc(l.chassis)||''}${l.grade?' · '+esc(l.grade):''}</div></td>
     <td class="mono">${esc(l.year)}</td>
     <td class="mono">${km(l.mileage_km)}</td>
     <td><span class="cond">${esc(l.condition)||'—'}</span></td>
