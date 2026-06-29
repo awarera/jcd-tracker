@@ -85,6 +85,33 @@ Also (.github/workflows/scrape.yml):
 - timeout-minutes raised 30 -> 60 (MUST be pushed; the earlier cancel at
   exactly 30m means this file had not been committed).
 
+## v4.1 , login revert (fix LOGIN FAILED)
+Date: 2026-06-29
+
+The v4 login() rewrite (wait-for-field instead of fixed sleeps) caused
+LOGIN FAILED on every run — filling the form too eagerly before aj_login()
+finished setting it up. User confirmed they could log in fine in-browser, so
+credentials were healthy; the regression was mine.
+Fix: reverted login() to the EXACT working baseline (fixed 1200/600/3000ms
+waits). All other v4 speed-ups (single /aj_neo navigation, smart waits in the
+scrape loop) are kept — they're in scrape_model, not login, and don't affect
+login success. Lesson: don't "optimize" the one function that was already
+working without a live test.
+
 Tokens seen returning 0 lots in the v3 run (fix individually if wanted):
 ASX, MAZDA6, ATENZA — likely need the site's exact spelling. They don't break
 anything; only their own line returns empty.
+
+## v5 , European model names (fix "(maker)" + blank year)
+Date: 2026-06-29
+
+The whole-maker (FULL_MAKERS) boards group cars under a model header like
+<font style="font-size:13px">AUDI A1</font> rather than putting the model on
+each row — so European cars showed model "(maker)". (Year was actually fine;
+the blank-year European rows came from the earlier cancelled/partial runs.)
+Fix (scraper.py parse_board): walk the results container in document order,
+track the latest model header, and tag each row with it (model_row). The
+scrape loop already prefers model_row over the "(maker)" placeholder for
+whole-maker scrapes. Verified on a real Audi board capture: rows now resolve
+model "A1" with correct years (2021/2020/2018/2017) and prices. Per-model
+Japanese scrapes are unaffected (they have no headers and the model is known).
