@@ -276,25 +276,15 @@ def get_usd_per_yen(html):
 # ---------------------------------------------------------------------------
 def login(page):
     page.goto(BASE + "/", wait_until="domcontentloaded")
+    page.wait_for_timeout(1200)
     try: page.evaluate("aj_login()")
     except Exception: pass
-    # wait for the login form to actually appear before filling (robust +
-    # faster than a blind fixed sleep; also avoids transient field-missing)
-    try:
-        page.wait_for_selector("input[name=username]", timeout=15000)
-    except Exception:
-        page.wait_for_timeout(1500)
+    page.wait_for_timeout(600)
     page.fill("input[name=username]", USER)
     page.fill("input[name=password]", PW)
     try: page.evaluate("doLoad_login()")
     except Exception: pass
-    # wait for login to take effect (username appears in page) instead of fixed 3s
-    try:
-        page.wait_for_function(
-            "(u) => document.body && document.body.innerHTML.toLowerCase().includes(u)",
-            arg=USER.lower(), timeout=8000)
-    except Exception:
-        page.wait_for_timeout(2000)
+    page.wait_for_timeout(3000)
     return USER.lower() in page.content().lower()
 
 def resolve_maker_ids(page):
