@@ -54,39 +54,121 @@ PW   = os.environ.get("JCD_PASSWORD", "")
 # ----------------------------------------------------------------------------
 
 MODELS = [
-    # Toyota
+    # ---- TOYOTA (maker_id 1) ----
     {"maker_id": "1", "model": "AQUA"},
-    {"maker_id": "1", "model": "COROLLA FIELDER"},          # Corolla Fielder
+    {"maker_id": "1", "model": "COROLLA FIELDER"},
     {"maker_id": "1", "model": "VITZ"},
     {"maker_id": "1", "model": "HARRIER"},
     {"maker_id": "1", "model": "LAND CRUISER PRADO"},
-    # Nissan
+    {"maker_id": "1", "model": "LAND CRUISER"},
+    {"maker_id": "1", "model": "PROBOX"},
+    {"maker_id": "1", "model": "SUCCEED"},
+    {"maker_id": "1", "model": "PASSO"},
+    {"maker_id": "1", "model": "PREMIO"},
+    {"maker_id": "1", "model": "ALLION"},
+    {"maker_id": "1", "model": "WISH"},
+    {"maker_id": "1", "model": "VOXY"},
+    {"maker_id": "1", "model": "NOAH"},
+    {"maker_id": "1", "model": "SIENTA"},
+    {"maker_id": "1", "model": "HIACE"},
+    {"maker_id": "1", "model": "RAV4"},
+    {"maker_id": "1", "model": "C-HR"},
+    {"maker_id": "1", "model": "HILUX"},
+    {"maker_id": "1", "model": "CROWN"},
+    {"maker_id": "1", "model": "ALPHARD"},
+    {"maker_id": "1", "model": "VANGUARD"},
+    {"maker_id": "1", "model": "RACTIS"},
+    {"maker_id": "1", "model": "BELTA"},
+    # ---- NISSAN (maker_id 2) ----
     {"maker_id": "2", "model": "NOTE"},
     {"maker_id": "2", "model": "X-TRAIL"},
     {"maker_id": "2", "model": "SERENA"},
     {"maker_id": "2", "model": "DAYZ"},
-    # Mazda
-    {"maker_id": "3", "model": "MAZDA2"},            # current shape
-    {"maker_id": "3", "model": "DEMIO"},             # older shape (separate entry)
+    {"maker_id": "2", "model": "MARCH"},
+    {"maker_id": "2", "model": "TIIDA"},
+    {"maker_id": "2", "model": "WINGROAD"},
+    {"maker_id": "2", "model": "AD"},
+    {"maker_id": "2", "model": "JUKE"},
+    {"maker_id": "2", "model": "DUALIS"},
+    {"maker_id": "2", "model": "SYLPHY"},
+    {"maker_id": "2", "model": "TEANA"},
+    {"maker_id": "2", "model": "MURANO"},
+    {"maker_id": "2", "model": "ELGRAND"},
+    {"maker_id": "2", "model": "CARAVAN"},
+    {"maker_id": "2", "model": "KICKS"},
+    # ---- MAZDA (maker_id 3) ----
+    {"maker_id": "3", "model": "MAZDA2"},
+    {"maker_id": "3", "model": "DEMIO"},
     {"maker_id": "3", "model": "CX-5"},
-    # Honda
+    {"maker_id": "3", "model": "CX-3"},
+    {"maker_id": "3", "model": "CX-8"},
+    {"maker_id": "3", "model": "CX-30"},
+    {"maker_id": "3", "model": "AXELA"},
+    {"maker_id": "3", "model": "ATENZA"},
+    {"maker_id": "3", "model": "PREMACY"},
+    {"maker_id": "3", "model": "MAZDA3"},
+    {"maker_id": "3", "model": "MAZDA6"},
+    {"maker_id": "3", "model": "BONGO"},
+    # ---- MITSUBISHI (maker_id 4) ----
+    {"maker_id": "4", "model": "OUTLANDER"},
+    {"maker_id": "4", "model": "RVR"},
+    {"maker_id": "4", "model": "DELICA"},
+    {"maker_id": "4", "model": "PAJERO"},
+    {"maker_id": "4", "model": "ASX"},
+    {"maker_id": "4", "model": "ECLIPSE CROSS"},
+    {"maker_id": "4", "model": "MIRAGE"},
+    {"maker_id": "4", "model": "LANCER"},
+    # ---- HONDA (maker_id 5) ----
     {"maker_id": "5", "model": "FIT"},
     {"maker_id": "5", "model": "VEZEL"},
     {"maker_id": "5", "model": "FREED"},
     {"maker_id": "5", "model": "N BOX"},
-    # Subaru
+    {"maker_id": "5", "model": "FIT SHUTTLE"},
+    {"maker_id": "5", "model": "SHUTTLE"},
+    {"maker_id": "5", "model": "GRACE"},
+    {"maker_id": "5", "model": "INSIGHT"},
+    {"maker_id": "5", "model": "CR-V"},
+    {"maker_id": "5", "model": "STEPWGN"},
+    {"maker_id": "5", "model": "ODYSSEY"},
+    {"maker_id": "5", "model": "CIVIC"},
+    {"maker_id": "5", "model": "ACCORD"},
+    {"maker_id": "5", "model": "STREAM"},
+    {"maker_id": "5", "model": "AIRWAVE"},
+    {"maker_id": "5", "model": "VAMOS"},
+    # ---- SUZUKI (maker_id 6) ----
+    {"maker_id": "6", "model": "SWIFT"},
+    {"maker_id": "6", "model": "SOLIO"},
+    {"maker_id": "6", "model": "WAGON R"},
+    {"maker_id": "6", "model": "HUSTLER"},
+    {"maker_id": "6", "model": "SPACIA"},
+    {"maker_id": "6", "model": "JIMNY"},
+    {"maker_id": "6", "model": "ESCUDO"},
+    {"maker_id": "6", "model": "BALENO"},
+    {"maker_id": "6", "model": "SX4"},
+    # ---- SUBARU (maker_id 7) ----
     {"maker_id": "7", "model": "FORESTER"},
     {"maker_id": "7", "model": "IMPREZA"},
+    {"maker_id": "7", "model": "XV"},
+    {"maker_id": "7", "model": "LEGACY"},
+    {"maker_id": "7", "model": "OUTBACK"},
+    {"maker_id": "7", "model": "LEVORG"},
+    {"maker_id": "7", "model": "EXIGA"},
 ]
 
 # ----------------------------------------------------------------------------
-#  EXPAND TO FULL SITE
-#  Set SCRAPE_ALL = True to scrape EVERY model on the site instead of the list
-#  above. This is heavy (tens of thousands of cars, ~50 makers), much slower,
-#  and more likely to hit rate-limits. Use only when you deliberately want the
-#  whole catalogue. When False (default), the MODELS list above is used.
+#  FULL MAKERS , scraped whole (every model), by maker NAME.
+#  Used for lower-volume makers where we want the entire catalogue. The maker's
+#  numeric id is resolved at runtime from the board page (we don't hardcode ids
+#  we don't know). Names must match the site's maker labels (uppercase).
+# ----------------------------------------------------------------------------
+FULL_MAKERS = ["AUDI", "BMW", "MERCEDES BENZ", "VOLKSWAGEN", "VOLVO"]
+
+# ----------------------------------------------------------------------------
+#  EXPAND TO FULL SITE  (set True to scrape EVERY model of EVERY maker)
+#  Heavy and rate-limit-prone. Leave False for the curated list above.
 # ----------------------------------------------------------------------------
 SCRAPE_ALL = False
+
 
 
 def now_iso():
@@ -205,6 +287,43 @@ def login(page):
     page.wait_for_timeout(3000)
     return USER.lower() in page.content().lower()
 
+def resolve_maker_ids(page):
+    """Map maker NAME -> site maker id by reading the maker links on the board.
+
+    The board page lists makers as links whose handlers carry the maker id
+    (e.g. model_submit('12','',1) or a maker_id in the onclick/href). We read
+    the visible label and the id together. Returns {NAME_UPPER: id}.
+
+    NOTE: selector confirmed on first live run. If a FULL_MAKERS entry doesn't
+    resolve, its name likely differs from the site label (e.g. 'MERCEDES BENZ'
+    vs 'MERCEDES-BENZ') — adjust the FULL_MAKERS spelling to match the site.
+    """
+    try:
+        page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
+        page.wait_for_timeout(1500)
+        pairs = page.evaluate(
+            r"""() => {
+                const out = {};
+                // maker links typically call a submit with the maker id as first arg
+                const els = Array.from(document.querySelectorAll("a[onclick], a[href]"));
+                for (const el of els) {
+                    const label = (el.textContent || "").trim().toUpperCase();
+                    if (!label) continue;
+                    const oc = el.getAttribute("onclick") || el.getAttribute("href") || "";
+                    // look for a numeric id argument
+                    const m = oc.match(/(?:maker[_a-z]*|submit)\s*\(?\s*['"]?(\d+)['"]?/i)
+                            || oc.match(/['"](\d+)['"]\s*,\s*['"]/);
+                    if (m) out[label] = m[1];
+                }
+                return out;
+            }"""
+        )
+        return pairs or {}
+    except Exception as e:
+        print(f"  ! resolve_maker_ids failed: {e}", file=sys.stderr)
+        return {}
+
+
 def discover_all_models(page):
     """For SCRAPE_ALL: enumerate every (maker_id, model) board on the site.
 
@@ -309,20 +428,34 @@ def run():
             work = discover_all_models(page)
             print(f"  discovered {len(work)} model boards across all makers")
         else:
-            work = MODELS
+            work = list(MODELS)
+            # Resolve FULL_MAKERS (European brands) to their site maker ids and
+            # add a whole-maker entry (model="" => no model filter, all models).
+            if FULL_MAKERS:
+                name_to_id = resolve_maker_ids(page)
+                for mk in FULL_MAKERS:
+                    mid = name_to_id.get(mk.upper())
+                    if mid:
+                        work.append({"maker_id": mid, "model": "", "maker_name": mk.upper()})
+                        MAKER_NAME[mid] = mk.upper()
+                    else:
+                        print(f"  ! could not resolve maker id for '{mk}' — skipping", file=sys.stderr)
 
         for m in work:
-            print(f"Scraping {m['model']} (maker {m['maker_id']})...")
+            label = m["model"] or f"(all {m.get('maker_name', m['maker_id'])})"
+            print(f"Scraping {label} (maker {m['maker_id']})...")
             try:
                 lots = scrape_model(page, m["maker_id"], m["model"])
             except Exception as e:
-                print(f"  ! error on {m['model']}: {e}", file=sys.stderr)
+                print(f"  ! error on {label}: {e}", file=sys.stderr)
                 lots = []
             print(f"  {len(lots)} lots")
             if usd_per_yen is None:
                 usd_per_yen = get_usd_per_yen(page.content())
             for lot in lots:
-                lot["model_tracked"] = m["model"]
+                # for whole-maker scrapes, model isn't pre-known; keep the model
+                # parsed from the row if present, else mark by maker
+                lot["model_tracked"] = m["model"] or lot.get("model_tracked") or lot.get("model_row") or "(maker)"
                 lot["maker"] = MAKER_NAME.get(m["maker_id"], m["maker_id"])
                 lot["last_seen"] = ts
                 snapshot.append(lot)
