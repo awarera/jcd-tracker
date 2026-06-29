@@ -113,14 +113,14 @@ tr.trow:hover td{background:var(--p10)}
         <button data-v="sold">Sold</button>
       </div>
       <h4>Auction date</h4>
-      <div class="datepresets" id="f-datepreset">
-        <button class="dp on" data-v="all">All dates</button>
-        <button class="dp" data-v="today">Today</button>
-        <button class="dp" data-v="3d">Next 3 days</button>
-        <button class="dp" data-v="week">This week</button>
-        <button class="dp" data-v="past">Already auctioned<small>where sold prices appear</small></button>
-        <button class="dp" data-v="customtoggle" id="dp-custom">Custom range…</button>
-      </div>
+      <select class="sel" id="f-datesel">
+        <option value="all">All dates</option>
+        <option value="today">Today</option>
+        <option value="3d">Next 3 days</option>
+        <option value="week">This week</option>
+        <option value="past">Already auctioned</option>
+        <option value="custom">Custom range…</option>
+      </select>
       <div class="range" id="custom-range" style="margin-top:6px;display:none"><input class="inp" id="f-date-from" type="date" title="from"><span>–</span><input class="inp" id="f-date-to" type="date" title="to"></div>
       <h4>Maker</h4>
       <select class="sel" id="f-maker"><option value="">All makers</option></select>
@@ -232,14 +232,11 @@ function initFilters(){
 
   document.getElementById('f-status').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
     document.querySelectorAll('#f-status button').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.status=b.dataset.v;render();});
-  document.getElementById('f-datepreset').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
-    if(b.dataset.v==='customtoggle'){
-      document.querySelectorAll('#f-datepreset .dp').forEach(x=>x.classList.remove('on'));b.classList.add('on');
-      document.getElementById('custom-range').style.display='flex';F.date='custom';render();return;
-    }
-    document.querySelectorAll('#f-datepreset .dp').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.date=b.dataset.v;
-    document.getElementById('custom-range').style.display='none';
-    F.dfrom='';F.dto='';document.getElementById('f-date-from').value='';document.getElementById('f-date-to').value='';render();});
+  document.getElementById('f-datesel').addEventListener('change',e=>{
+    const v=e.target.value;F.date=v;
+    document.getElementById('custom-range').style.display=(v==='custom')?'flex':'none';
+    if(v!=='custom'){F.dfrom='';F.dto='';document.getElementById('f-date-from').value='';document.getElementById('f-date-to').value='';}
+    render();});
   ['f-date-from','f-date-to'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
     F.dfrom=document.getElementById('f-date-from').value;F.dto=document.getElementById('f-date-to').value;F.date='custom';render();}));
   document.getElementById('f-maker').addEventListener('change',e=>{F.maker=e.target.value;refreshModels();F.model='';document.getElementById('f-model').value='';render();});
@@ -260,9 +257,9 @@ function initFilters(){
     document.querySelectorAll('.rail select,.rail input').forEach(el=>el.value='');
     document.getElementById('search').value='';
     document.getElementById('custom-range').style.display='none';
+    document.getElementById('f-datesel').value='all';
     document.querySelectorAll('#f-cond .chip').forEach(c=>c.classList.remove('on'));
     document.querySelectorAll('#f-status button').forEach((x,i)=>x.classList.toggle('on',i===0));
-    document.querySelectorAll('#f-datepreset .dp').forEach((x,i)=>x.classList.toggle('on',i===0));
     refreshModels();render();});
 }
 
@@ -318,7 +315,7 @@ function sortLots(lots){
 
 function statusCell(l){
   if(l._status==='sold')return '<span class="badge b-sold">SOLD</span>';
-  if(l._status==='ended_no_price')return '<span class="badge b-noprice">ENDED · no price</span>';
+  if(l._status==='ended_no_price')return '<span class="badge b-noprice" title="Auction passed, no sold price recorded — may be unsold, withdrawn, or removed. Click to check the lot page.">no sale</span>';
   return '<span class="badge b-live">LIVE</span>';
 }
 
