@@ -115,3 +115,21 @@ scrape loop already prefers model_row over the "(maker)" placeholder for
 whole-maker scrapes. Verified on a real Audi board capture: rows now resolve
 model "A1" with correct years (2021/2020/2018/2017) and prices. Per-model
 Japanese scrapes are unaffected (they have no headers and the model is known).
+
+## v5.1 , CORRECTED European model fix (v5 was wrong)
+Date: 2026-06-29
+
+v5 was tested against the WRONG board capture (a single-model A1 view), not
+the real whole-maker view. On the real whole-maker board the group header is
+literally "Any" (meaning all models) — so v5 produced model "Any" and blank
+year for every German car. Both faults trace to ONE difference in the spec
+cell (c3):
+  per-model board   c3 = 'YEAR CHASSIS GRADE'            e.g. '2017 8XCHZ 1.0TFSI'
+  whole-maker board c3 = 'MAKER MODEL YEAR CHASSIS GRADE' e.g. 'AUDI A1 2017 8XCHZ 1.0TFSI'
+Real fix: _parse_spec_cell() detects a leading maker word, strips MAKER+MODEL
+to get the model, and parses year/chassis/grade from the remainder. Year was
+blank on Germans precisely because c3 started with "AUDI" not a digit.
+Verified on the REAL whole-maker Audi board: model='A1', years 2017/2021/2012/
+2020, chassis + prices all correct. Japanese boards (c3 starts with a digit)
+parse exactly as before — confirmed unchanged on board_dump.html.
+Lesson (again): verify against the actual layout, not a lookalike capture.
