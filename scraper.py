@@ -184,27 +184,40 @@ def save_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # ---------------------------------------------------------------------------
+# Maker words that can prefix the spec cell on whole-maker boards, longest
+# first so "MERCEDES BENZ" matches before "MERCEDES". Used to split
+# "AUDI A1 2017 8XCHZ 1.0TFSI" into model + year/chassis/grade.
+_MAKER_WORDS = ["MERCEDES BENZ", "VOLKSWAGEN", "MITSUBISHI", "DAIHATSU",
+                "TOYOTA", "NISSAN", "SUBARU", "SUZUKI", "HONDA", "MAZDA",
+                "LEXUS", "ISUZU", "AUDI", "BMW", "VOLVO"]
+
+def _parse_spec_cell(c3):
+    """Parse the spec cell, which has two layouts:
+       per-model board:   'YEAR CHASSIS GRADE'          e.g. '2017 8XCHZ 1.0TFSI'
+       whole-maker board: 'MAKER MODEL YEAR CHASSIS GRADE' e.g. 'AUDI A1 2017 8XCHZ 1.0TFSI'
+    Returns (model_row, year, chassis, grade). model_row is None on per-model
+    boards (the model is already known from config there).
+    """
+    s = c3 or ""
+    up = s.upper()
+    for mk in _MAKER_WORDS:
+        if up.startswith(mk + " "):
+            rest = s[len(mk):].strip()
+            mm = re.match(r"(.*?)\s+(\d{4})\s+(\S+)\s*(.*)", rest)
+            if mm:
+                return (mm.group(1).strip() or None, mm.group(2),
+                        mm.group(3), (mm.group(4).strip() or None))
+            break
+    m = re.match(r"(\d{4})\s+(\S+)\s*(.*)", s)
+    if m:
+        return None, m.group(1), m.group(2), (m.group(3).strip() or None)
+    return None, None, None, None
+
 def parse_board(html):
     soup = BeautifulSoup(html, "lxml")
     out = soup.find(id="aj_out_poisk")
     if not out:
         return []
-    # Whole-maker boards group cars under a model header like
-    # <font style="font-size:13px">AUDI A1</font>. Walk in document order so we
-    # can tag each row with the model header that precedes it. (Per-model boards
-    # simply won't have these headers, which is fine — model is known anyway.)
-    row_model = {}
-    current_model = None
-    for el in out.descendants:
-        nm = getattr(el, "name", None)
-        if nm == "font" and "font-size:13px" in (el.get("style") or ""):
-            txt = el.get_text(strip=True)
-            if txt:
-                current_model = txt
-        elif nm == "tr" and (el.get("id") or "").startswith("aj_view"):
-            lk = el.find("a", href=re.compile(r"aj-"))
-            if lk:
-                row_model[id(el)] = current_model
     rows = out.find_all("tr", id=re.compile(r"^aj_view\d+"))
     lots = []
     for r in rows:
@@ -228,7 +241,8 @@ def parse_board(html):
         lotnum = link.get_text(strip=True)
         auction = re.sub(r"^" + re.escape(lotnum) + r"\s*", "", auction).strip()
         c3 = ct(3)
-        m_year = re.match(r"(\d{4})\s+(\S+)\s*(.*)", c3)
+        # spec cell: handles both per-model and whole-maker layouts
+        model_row, year, chassis, grade = _parse_spec_cell(c3)
         c4 = ct(4)
         m_cc = re.search(r"(\d+)\s*cc", c4)
         c5 = ct(5)
@@ -239,13 +253,6 @@ def parse_board(html):
         start_yen = sold_yen = avg_yen = None
         if m_avg:
             start_yen, sold_yen, avg_yen = m_avg.group(1), m_avg.group(2), m_avg.group(3)
-        # model header for this row (whole-maker boards). Strip leading maker
-        # word so "AUDI A1" -> "A1" (the maker is stored separately).
-        hdr = row_model.get(id(r))
-        model_row = None
-        if hdr:
-            parts = hdr.split(None, 1)
-            model_row = parts[1] if len(parts) == 2 else hdr
         lots.append({
             "lot_uid": lot_uid,
             "lot_url": BASE + "/" + href,
@@ -253,9 +260,9 @@ def parse_board(html):
             "auction": auction,
             "auction_date": m_date.group(1) if m_date else None,
             "auction_time": m_time.group(1) if m_time else None,
-            "year": m_year.group(1) if m_year else None,
-            "chassis": m_year.group(2) if m_year else None,
-            "grade": (m_year.group(3).strip() or None) if m_year else None,
+            "year": year,
+            "chassis": chassis,
+            "grade": grade,
             "engine_cc": m_cc.group(1) if m_cc else None,
             "spec_raw": c4,
             "mileage_km": m_km.group(1) if m_km else None,
