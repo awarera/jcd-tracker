@@ -169,3 +169,13 @@ RISK NOTE: the price pass is the one thing that raises request volume. It is
 gentle by design (cap + delays + newest-first), but the first runs work the
 backlog — watch those logs for any throttling and lower JCD_PRICE_BATCH if so.
 Revert point saved at jcd-baselines/v6-PRE-PRICEFETCH-EXPORT-20260630.
+
+## v6.1 , price batch raised after a clean first run
+Date: 2026-06-30
+First prices run (batch 180) was clean: 165 captured, 15 gone, ~11 min, no
+throttling. Daily auction volume is large, so raised default JCD_PRICE_BATCH
+180 -> 600 and tightened the gap 0.9s -> 0.6s. Est ~32 min/run, safely under
+the 60-min timeout; added a 45-min wall-clock guard that stops gracefully and
+commits what it has rather than being killed mid-run. ~3,300 backlog now clears
+in ~2 days at 3 passes/day, then keeps pace with daily volume. Still tunable
+per-run via the JCD_PRICE_BATCH env var if you ever want to dial it back.
