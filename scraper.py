@@ -41,9 +41,9 @@ PW   = os.environ.get("JCD_PASSWORD", "")
 MODE = os.environ.get("JCD_MODE", "board").strip().lower()
 
 # Price pass tuning (gentle by design — drains the backlog over several runs):
-PRICE_BATCH = int(os.environ.get("JCD_PRICE_BATCH", "180"))  # max lot pages per run
+PRICE_BATCH = int(os.environ.get("JCD_PRICE_BATCH", "600"))  # max lot pages per run
 PRICE_MIN_AGE_H = 3      # don't chase cars that ended <3h ago (price not settled)
-PRICE_GAP_MS = 900       # polite delay between lot-page fetches
+PRICE_GAP_MS = 600       # polite delay between lot-page fetches
 
 # Models to track: (maker_id, model_name_token). maker_id 3 = MAZDA.
 # model_submit(maker_id, model_name, 1) drives the board.
@@ -565,6 +565,8 @@ def run_price_pass():
     print(f"Price pass: {len(cands)} price-less ended cars; fetching {len(batch)} this run.")
 
     captured = gone = 0
+    start_t = time.time()
+    MAX_RUN_S = 45 * 60   # stop gracefully well before the 60-min job timeout
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         page = browser.new_page()
@@ -573,6 +575,9 @@ def run_price_pass():
             print("LOGIN FAILED", file=sys.stderr); browser.close(); sys.exit(1)
         print("Login OK.")
         for i, (em, uid, rec) in enumerate(batch, 1):
+            if time.time() - start_t > MAX_RUN_S:
+                print(f"  time guard: stopping at {i-1}/{len(batch)} to commit safely before timeout")
+                break
             url = rec.get("lot_url")
             if not url:
                 continue
@@ -588,7 +593,7 @@ def run_price_pass():
                 rec["price_gone"] = True
                 rec["price_gone_at"] = ts
                 gone += 1
-            if i % 25 == 0:
+            if i % 50 == 0:
                 print(f"  ...{i}/{len(batch)} (captured {captured}, gone {gone})")
             page.wait_for_timeout(PRICE_GAP_MS)
         browser.close()
