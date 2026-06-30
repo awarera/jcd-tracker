@@ -2,12 +2,24 @@ name: JCD Auction Scraper
 
 on:
   schedule:
-    # Twice daily. Auctions run through the JST afternoon; these times
-    # (UTC) put one run in the Nairobi morning and one in the evening so
-    # we catch sold prices soon after auctions close.
-    - cron: '0 5 * * *'    # 05:00 UTC = 08:00 Nairobi
-    - cron: '0 14 * * *'   # 14:00 UTC = 17:00 Nairobi
+    # ---- BOARD scrape (live auction board) : twice daily ----
+    - cron: '0 5 * * *'    # 05:00 UTC = 08:00 Nairobi  (board)
+    - cron: '0 14 * * *'   # 14:00 UTC = 17:00 Nairobi  (board)
+    # ---- PRICE pass (lot-page price completion) : offset, in the gaps ----
+    # Runs after each board scrape has had time to mark new ended cars, and
+    # spaced out so we're never hitting the site with both at once. Smaller,
+    # gentle batches drain the price backlog over several runs.
+    - cron: '0 9 * * *'    # 09:00 UTC = 12:00 Nairobi  (prices)
+    - cron: '0 18 * * *'   # 18:00 UTC = 21:00 Nairobi  (prices)
+    - cron: '0 23 * * *'   # 23:00 UTC = 02:00 Nairobi  (prices)
   workflow_dispatch:        # manual "Run workflow" button
+    inputs:
+      mode:
+        description: 'Which pass to run manually'
+        required: false
+        default: 'board'
+        type: choice
+        options: [board, prices]
 
 permissions:
   contents: write
@@ -15,7 +27,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 70
 
     steps:
       - name: Checkout repo
@@ -31,10 +43,26 @@ jobs:
           pip install playwright beautifulsoup4 lxml
           python -m playwright install --with-deps chromium
 
+      - name: Decide mode (board vs prices)
+        id: mode
+        run: |
+          # Price-pass crons -> prices; board crons & manual default -> board.
+          SCHED="${{ github.event.schedule }}"
+          if [ "$SCHED" = "0 9 * * *" ] || [ "$SCHED" = "0 18 * * *" ] || [ "$SCHED" = "0 23 * * *" ]; then
+            MODE=prices
+          elif [ -n "${{ github.event.inputs.mode }}" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          else
+            MODE=board
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Selected mode: $MODE"
+
       - name: Run scraper
         env:
           JCD_USERNAME: ${{ secrets.JCD_USERNAME }}
           JCD_PASSWORD: ${{ secrets.JCD_PASSWORD }}
+          JCD_MODE: ${{ steps.mode.outputs.mode }}
           PYTHONUNBUFFERED: "1"
         run: python -u scraper.py
         continue-on-error: true
@@ -45,6 +73,6 @@ jobs:
           git config user.email "bot@jcd-tracker.noreply"
           git add data/
           git diff --staged --quiet && echo "No changes to commit" || \
-            git commit -m "scrape: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "${{ steps.mode.outputs.mode }}: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git pull --rebase --autostash
           git push
