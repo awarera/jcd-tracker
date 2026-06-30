@@ -133,3 +133,39 @@ Verified on the REAL whole-maker Audi board: model='A1', years 2017/2021/2012/
 2020, chassis + prices all correct. Japanese boards (c3 starts with a digit)
 parse exactly as before — confirmed unchanged on board_dump.html.
 Lesson (again): verify against the actual layout, not a lookalike capture.
+
+## v6 , price completion pass + CSV export
+Date: 2026-06-30
+
+Problem: sold prices live on each car's individual lot page, but the board
+scrape only reads the board. Cars that drop off the board before their price
+posts kept "ended, no price" forever — making CSV exports incomplete.
+
+Scraper (scraper.py): added a second MODE.
+- JCD_MODE=board (default) = the original live-board scrape, unchanged.
+- JCD_MODE=prices = visits ended, price-less lot pages and captures the sold
+  price (parse_lot_price), newest-ended first, skipping cars that ended <3h ago
+  (price not settled). Capped at JCD_PRICE_BATCH (~180) per run with a polite
+  ~0.9s gap, so the backlog (~6k at launch) drains over several runs, then
+  just maintains. No age cutoff assumed — we have only 2 days of data and have
+  NOT observed pages being removed. Instead, if a lot page genuinely returns
+  "nothing found", it's marked price_gone so we don't refetch it — which lets
+  the data tell us empirically if/when pages ever expire.
+- Both modes share login + parsing. They run as SEPARATE scheduled jobs so the
+  slower price pass can never blow the board scrape's timeout or risk live data.
+
+Workflow (scrape.yml): board crons at 05:00 & 14:00 UTC; price crons at 09:00,
+18:00, 23:00 UTC (offset, in the gaps, never concurrent with board). Manual
+runs default to board; a dropdown lets you pick prices manually.
+
+Dashboard (index.html): Export CSV button (top-right above the table). Exports
+the currently filtered + sorted rows (all of them, not the 500 display cap),
+with sold price in ¥ and $, chassis, grade, condition, auction, status, and
+the lot URL. UTF-8 BOM so Japanese grades open correctly in Excel. CSV chosen
+over xlsx as the workhorse for a large, growing dataset; filter first, export
+the slice.
+
+RISK NOTE: the price pass is the one thing that raises request volume. It is
+gentle by design (cap + delays + newest-first), but the first runs work the
+backlog — watch those logs for any throttling and lower JCD_PRICE_BATCH if so.
+Revert point saved at jcd-baselines/v6-PRE-PRICEFETCH-EXPORT-20260630.
