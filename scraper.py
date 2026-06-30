@@ -31,6 +31,20 @@ EVENTS_FILE = DATA_DIR / "events.json"
 USER = os.environ.get("JCD_USERNAME", "")
 PW   = os.environ.get("JCD_PASSWORD", "")
 
+# ----------------------------------------------------------------------------
+#  MODE: "board" (default) = scrape the live auction board (the original job).
+#        "prices" = visit individual lot pages of ended cars that have no sold
+#                   price yet, and capture the price. Runs on its own schedule.
+#  Set via env JCD_MODE. Both modes share login + parsing; they're isolated as
+#  separate scheduled runs so the slower price pass can't affect the board run.
+# ----------------------------------------------------------------------------
+MODE = os.environ.get("JCD_MODE", "board").strip().lower()
+
+# Price pass tuning (gentle by design — drains the backlog over several runs):
+PRICE_BATCH = int(os.environ.get("JCD_PRICE_BATCH", "180"))  # max lot pages per run
+PRICE_MIN_AGE_H = 3      # don't chase cars that ended <3h ago (price not settled)
+PRICE_GAP_MS = 900       # polite delay between lot-page fetches
+
 # Models to track: (maker_id, model_name_token). maker_id 3 = MAZDA.
 # model_submit(maker_id, model_name, 1) drives the board.
 # ============================================================================
@@ -457,6 +471,176 @@ def scrape_model(page, maker_id, model, fresh_nav=True):
     return uniq
 
 # ---------------------------------------------------------------------------
+def parse_lot_price(html):
+    """From an individual lot page (aj-XXXX.htm), extract the sold price in yen.
+    Returns (sold_yen:str|None, page_gone:bool).
+
+    We don't have a confirmed selector yet, so we parse defensively from the
+    visible text: the lot page shows 'Sold for' with a yen figure, and an ended
+    page shows 'nothing found' / 'This auction has ended'. Both are handled.
+    If the layout differs from what we expect, we return (None, False) so the
+    car is simply retried next run rather than wrongly marked gone.
+    """
+    low = html.lower()
+    if "nothing found" in low or "auction has ended" in low and "sold" not in low:
+        # page exists but lists nothing and no sold figure — treat as gone only
+        # if there is genuinely no price anywhere on the page
+        pass
+    # Look for the board-style packed value first if present
+    m = re.search(r"yen\|(\d+)\|(\d+)\|(\d+)", html)
+    if m and m.group(2) != "0":
+        return m.group(2), False
+    # Look for a 'sold' figure: patterns like '1 590 000 ¥ sold' or 'Sold for ... ¥'
+    # Normalise spaces in numbers (the site writes '1 590 000')
+    text = re.sub(r"<[^>]+>", " ", html)
+    text = re.sub(r"&nbsp;", " ", text)
+    # find a yen amount immediately followed by 'sold'
+    m2 = re.search(r"([\d][\d \u00a0,]{2,})\s*¥\s*sold", text, re.I)
+    if m2:
+        digits = re.sub(r"[^\d]", "", m2.group(1))
+        if digits and int(digits) > 0:
+            return digits, False
+    # explicit 'nothing found' with no price → page is gone/empty
+    if "nothing found" in low:
+        return None, True
+    return None, False
+
+
+def fetch_lot_price(page, lot_url):
+    """Navigate to a lot page and return (sold_yen, page_gone)."""
+    try:
+        page.goto(lot_url, wait_until="domcontentloaded")
+        try:
+            page.wait_for_load_state("networkidle", timeout=4000)
+        except Exception:
+            page.wait_for_timeout(800)
+        return parse_lot_price(page.content())
+    except Exception as e:
+        print(f"   ! fetch failed {lot_url}: {str(e)[:80]}", file=sys.stderr)
+        return None, False
+
+
+def run_price_pass():
+    """Visit ended, price-less lot pages and capture sold prices.
+    Newest-ended first, skipping cars that ended too recently (price not
+    settled). Capped per run. Learns empirically: if a page truly returns
+    'nothing found', mark it so we don't refetch it."""
+    if not USER or not PW:
+        print("ERROR: set JCD_USERNAME and JCD_PASSWORD", file=sys.stderr); sys.exit(1)
+    state = load_json(STATE_FILE, {})
+    events = load_json(EVENTS_FILE, [])
+    ts = now_iso()
+    now_ms = datetime.now(timezone.utc).timestamp()
+
+    def ended_moment(rec):
+        d = rec.get("auction_date"); t = rec.get("auction_time") or "23:59"
+        if not d: return None
+        try:
+            dd, mm, yy = d.split("."); hh, mi = t.split(":")
+            # JST = UTC+9
+            return datetime(int(yy), int(mm), int(dd), int(hh), int(mi),
+                            tzinfo=timezone.utc).timestamp() - 9*3600
+        except Exception:
+            return None
+
+    # candidates: have a lot_url, no sold price, auction moment has passed by
+    # at least PRICE_MIN_AGE_H, and not already marked page_gone
+    cands = []
+    for uid, rec in state.items():
+        if rec.get("price_gone"):
+            continue
+        if parse_int_safe(rec.get("sold_yen")):
+            continue
+        em = ended_moment(rec)
+        if em is None:
+            continue
+        age_h = (now_ms - em) / 3600.0
+        if age_h < PRICE_MIN_AGE_H:
+            continue  # ended too recently; price may not be posted
+        cands.append((em, uid, rec))
+
+    # newest-ended first
+    cands.sort(key=lambda x: x[0], reverse=True)
+    batch = cands[:PRICE_BATCH]
+    print(f"Price pass: {len(cands)} price-less ended cars; fetching {len(batch)} this run.")
+
+    captured = gone = 0
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        page = browser.new_page()
+        print("Logging in...")
+        if not login(page):
+            print("LOGIN FAILED", file=sys.stderr); browser.close(); sys.exit(1)
+        print("Login OK.")
+        for i, (em, uid, rec) in enumerate(batch, 1):
+            url = rec.get("lot_url")
+            if not url:
+                continue
+            sold, page_gone = fetch_lot_price(page, url)
+            if sold and parse_int_safe(sold):
+                rec["sold_yen"] = sold
+                rec["status"] = "sold"
+                rec["price_captured_at"] = ts
+                events.append({"ts": ts, "type": "sold_price", "lot_uid": uid,
+                               "lot_number": rec.get("lot_number"), "sold_yen": sold})
+                captured += 1
+            elif page_gone:
+                rec["price_gone"] = True
+                rec["price_gone_at"] = ts
+                gone += 1
+            if i % 25 == 0:
+                print(f"  ...{i}/{len(batch)} (captured {captured}, gone {gone})")
+            page.wait_for_timeout(PRICE_GAP_MS)
+        browser.close()
+
+    save_json(STATE_FILE, state)
+    save_json(EVENTS_FILE, events)
+    # refresh dashboard.json so the site reflects the new prices
+    rebuild_dashboard(state, events)
+    save_json(DATA_DIR / "last_run_status.json", {
+        "ts": ts, "ok": True, "mode": "prices",
+        "fetched": len(batch), "captured": captured, "page_gone": gone,
+        "remaining_priceless": len(cands) - captured - gone})
+    print(f"\nPrice pass done. Captured {captured} prices, {gone} pages gone, "
+          f"~{len(cands)-captured-gone} price-less ended cars remain.")
+
+
+def parse_int_safe(v):
+    try:
+        return int(v) if v not in (None, "", "0") else 0
+    except (TypeError, ValueError):
+        return 0
+
+
+def rebuild_dashboard(state, events):
+    """Recompute dashboard.json from current state (shared by both modes)."""
+    lots_list = list(state.values())
+    sold_lots = [l for l in lots_list if parse_int_safe(l.get("sold_yen"))]
+    by_model, by_maker = {}, {}
+    for l in lots_list:
+        by_model[l.get("model_tracked", "?")] = by_model.get(l.get("model_tracked", "?"), 0) + 1
+        by_maker[l.get("maker", "?")] = by_maker.get(l.get("maker", "?"), 0) + 1
+    usd = None
+    # reuse last known rate stored on any lot/run if present
+    for l in lots_list:
+        if l.get("usd_per_yen"):
+            usd = l["usd_per_yen"]; break
+    dashboard = {
+        "generated": now_iso(),
+        "usd_per_yen": usd,
+        "totals": {
+            "tracked": len(lots_list),
+            "live": sum(1 for l in lots_list if l.get("status") == "live"),
+            "sold_captured": len(sold_lots),
+            "off_board": sum(1 for l in lots_list if l.get("status") == "off_board"),
+            "by_model": by_model, "by_maker": by_maker,
+        },
+        "lots": lots_list,
+        "recent_events": events[-200:],
+    }
+    save_json(DATA_DIR / "dashboard.json", dashboard)
+
+
 def run():
     if not USER or not PW:
         print("ERROR: set JCD_USERNAME and JCD_PASSWORD", file=sys.stderr); sys.exit(1)
@@ -515,6 +699,8 @@ def run():
                 lot["model_tracked"] = m["model"] or lot.get("model_tracked") or lot.get("model_row") or "(maker)"
                 lot["maker"] = MAKER_NAME.get(m["maker_id"], m["maker_id"])
                 lot["last_seen"] = ts
+                if usd_per_yen:
+                    lot["usd_per_yen"] = usd_per_yen
                 snapshot.append(lot)
         browser.close()
 
@@ -619,4 +805,9 @@ def run():
     print(f"Saved: {STATE_FILE.name}, {EVENTS_FILE.name}, dashboard.json, snapshots/{today}.json")
 
 if __name__ == "__main__":
-    run()
+    if MODE == "prices":
+        print("=== MODE: prices (lot-page price completion) ===")
+        run_price_pass()
+    else:
+        print("=== MODE: board (live auction board scrape) ===")
+        run()
