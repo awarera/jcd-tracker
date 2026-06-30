@@ -199,7 +199,7 @@ tr.trow:hover td{background:var(--p10)}
 <div class="foot" id="foot"></div>
 
 <script>
-let DATA=null, SORT={key:'auction_date',dir:1}, COND_ORDER=['3','3.5','4','4.5','5','R'];
+let DATA=null, SORT={key:'auction_date',dir:-1}, COND_ORDER=['3','3.5','4','4.5','5','R'];
 let USD_RATE=0.0062; // yen->usd; overridden by data.usd_per_yen when present
 const F={status:'',date:'all',dfrom:'',dto:'',maker:new Set(),model:new Set(),ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
 let DD_OPEN=null;
@@ -399,7 +399,11 @@ function sortLots(lots){
   const k=SORT.key,d=SORT.dir,numeric=['lot_number','year','mileage_km','start_yen','sold_yen'];
   return [...lots].sort((a,b)=>{
     if(k==='condition')return(condRank(a.condition)-condRank(b.condition))*d;
-    if(k==='auction_date')return dnum(a.auction_date).localeCompare(dnum(b.auction_date))*d;
+    if(k==='auction_date'){
+      const ma=auctionMoment(a),mb=auctionMoment(b);
+      const ta=ma?ma.getTime():-Infinity, tb=mb?mb.getTime():-Infinity;
+      return (ta-tb)*d;
+    }
     if(k==='status')return (a._status||'').localeCompare(b._status||'')*d;
     let x=a[k],y=b[k];
     if(numeric.includes(k)){x=parseFloat(x)||0;y=parseFloat(y)||0;return(x-y)*d;}
@@ -446,7 +450,7 @@ function render(){
     <td class="${parseInt(l.sold_yen)?'bold':''}" style="${parseInt(l.sold_yen)?'color:var(--g)':''}">${parseInt(l.sold_yen)?priceCell(l.sold_yen):'<span class="mono">—</span>'}</td>
     <td>${esc(l.auction_date)||'—'} <span class="sub mono">${esc(l.auction_time)||''}</span><div class="sub">${esc(l.auction)}</div></td>
     <td>${statusCell(l)}</td>
-    <td><span class="openx">open ↗</span></td>
+    <td><span class="openx"${l._status==='ended'&&!parseInt(l.sold_yen)?' title="Auction ended — the lot page may have been removed by the site (some show \'nothing found\')"':''}>open ↗</span></td>
   </tr>`).join('');
   document.getElementById('result-hint').textContent=lots.length>500?'showing first 500 — narrow filters to see more':'';
 }
