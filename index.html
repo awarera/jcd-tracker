@@ -76,6 +76,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .fsrch input{background:none;border:none;outline:none;font-family:inherit;font-size:13px;color:var(--ink);width:100%}
 .fsrch input::placeholder{color:var(--ink4)}
 .result-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:12px;color:var(--ink3);flex-wrap:wrap;gap:6px}
+.rm-left{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.export-btn{flex-shrink:0;font-family:inherit;font-size:12px;font-weight:600;color:var(--peach);background:var(--wh);border:1px solid var(--p20);border-radius:8px;padding:6px 12px;cursor:pointer;white-space:nowrap;transition:all .12s}
+.export-btn:hover{background:var(--peach);color:#fff;border-color:var(--peach)}
+.export-btn:active{transform:translateY(1px)}
 .result-meta b{color:var(--ink);font-family:'DM Mono',monospace}
 .activef{display:flex;gap:5px;flex-wrap:wrap}
 .aftag{font-size:10.5px;font-family:'DM Mono',monospace;background:var(--p10);color:var(--peach);border:1px solid var(--p20);border-radius:20px;padding:2px 8px}
@@ -173,9 +177,12 @@ tr.trow:hover td{background:var(--p10)}
         <input id="search" placeholder="Search lot, chassis, grade, auction, colour…">
       </div>
       <div class="result-meta">
-        <span><b id="result-count">0</b> cars match</span>
-        <span class="activef" id="active-filters"></span>
-        <span id="result-hint"></span>
+        <div class="rm-left">
+          <span><b id="result-count">0</b> cars match</span>
+          <span class="activef" id="active-filters"></span>
+          <span id="result-hint"></span>
+        </div>
+        <button id="export-btn" class="export-btn" title="Export the currently filtered rows to CSV">↓ Export CSV</button>
       </div>
       <div class="tbl-wrap"><table id="t">
         <thead><tr>
@@ -199,7 +206,7 @@ tr.trow:hover td{background:var(--p10)}
 <div class="foot" id="foot"></div>
 
 <script>
-let DATA=null, SORT={key:'auction_date',dir:-1}, COND_ORDER=['3','3.5','4','4.5','5','R'];
+let DATA=null, SORT={key:'auction_date',dir:-1}, COND_ORDER=['3','3.5','4','4.5','5','R'], CURRENT_VIEW=[];
 let USD_RATE=0.0062; // yen->usd; overridden by data.usd_per_yen when present
 const F={status:'',date:'all',dfrom:'',dto:'',maker:new Set(),model:new Set(),ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
 let DD_OPEN=null;
@@ -308,6 +315,7 @@ function initFilters(){
     F.kmin=document.getElementById('f-km-min').value;F.kmax=document.getElementById('f-km-max').value;
     F.pmin=document.getElementById('f-price-min').value;F.pmax=document.getElementById('f-price-max').value;render();}));
   document.getElementById('search').addEventListener('input',e=>{F.q=e.target.value.toLowerCase();render();});
+  document.getElementById('export-btn').addEventListener('click',exportCSV);
   document.getElementById('f-cond').addEventListener('click',e=>{const chip=e.target.closest('.chip');if(!chip)return;
     const c=chip.dataset.c;
     if(F.cond.has(c)){F.cond.delete(c);chip.classList.remove('on');}
@@ -433,8 +441,49 @@ function activeFilterTags(){
   return tags.map(t=>`<span class="aftag">${esc(t)}</span>`).join('');
 }
 
+function exportCSV(){
+  const rows=CURRENT_VIEW;
+  if(!rows.length){alert('No rows to export — adjust the filters.');return;}
+  const usd=v=>{const n=parseInt(v);return n?Math.round(n*USD_RATE):'';};
+  const cols=[
+    ['Lot',l=>l.lot_number],
+    ['Make',l=>l.maker],
+    ['Model',l=>isRealModel(l.model_tracked)?l.model_tracked:''],
+    ['Chassis',l=>l.chassis||''],
+    ['Grade',l=>l.grade||''],
+    ['Year',l=>l.year||''],
+    ['Mileage_km',l=>l.mileage_km||''],
+    ['Condition',l=>l.condition||''],
+    ['Start_yen',l=>parseInt(l.start_yen)||''],
+    ['Start_usd',l=>usd(l.start_yen)],
+    ['Sold_yen',l=>parseInt(l.sold_yen)||''],
+    ['Sold_usd',l=>usd(l.sold_yen)],
+    ['Auction_date',l=>l.auction_date||''],
+    ['Auction_time',l=>l.auction_time||''],
+    ['Auction_house',l=>l.auction||''],
+    ['Status',l=>l._status||''],
+    ['Lot_url',l=>l._link||''],
+  ];
+  const esc=v=>{v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+  const lines=[cols.map(c=>c[0]).join(',')];
+  for(const l of rows) lines.push(cols.map(c=>esc(c[1](l))).join(','));
+  // BOM so Excel reads UTF-8 (Japanese grades) correctly
+  const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'});
+  const parts=['jcd'];
+  if(F.maker.size&&F.maker.size<=3)parts.push([...F.maker].join('-').replace(/\s+/g,''));
+  if(F.model.size&&F.model.size<=3)parts.push([...F.model].join('-').replace(/\s+/g,''));
+  if(F.status)parts.push(F.status);
+  const today=new Date().toISOString().slice(0,10);
+  const fname=parts.join('_')+'_'+today+'.csv';
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download=fname;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},100);
+}
+
 function render(){
   const lots=sortLots(applyFilters());
+  CURRENT_VIEW=lots;  // for CSV export (full filtered set, not the 500 display cap)
   document.getElementById('result-count').textContent=lots.length;
   document.getElementById('active-filters').innerHTML=activeFilterTags();
   const body=document.getElementById('tbody');
