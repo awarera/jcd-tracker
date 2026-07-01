@@ -107,6 +107,7 @@ tr.trow:hover td{background:var(--p10)}
 </style>
 </head>
 <body>
+<div id="app">
 <div class="hdr">
   <div class="logo">
     <div class="lmark">JCD</div><div class="lbrand">Auction Tracker</div>
@@ -135,10 +136,13 @@ tr.trow:hover td{background:var(--p10)}
       <h4>Auction date</h4>
       <select class="sel" id="f-datesel">
         <option value="all">All dates</option>
-        <option value="today">Today</option>
-        <option value="3d">Next 3 days</option>
-        <option value="week">This week</option>
-        <option value="past">Already auctioned</option>
+        <option value="today" data-grp="both">Today</option>
+        <option value="last3" data-grp="past">Last 3 days</option>
+        <option value="last7" data-grp="past">Last 7 days</option>
+        <option value="last30" data-grp="past">Last 30 days</option>
+        <option value="3d" data-grp="future">Next 3 days</option>
+        <option value="week" data-grp="future">Next 7 days</option>
+        <option value="past" data-grp="future">Already auctioned</option>
         <option value="custom">Custom range…</option>
       </select>
       <div class="range" id="custom-range" style="margin-top:6px;display:none"><input class="inp" id="f-date-from" type="date" title="from"><span>–</span><input class="inp" id="f-date-to" type="date" title="to"></div>
@@ -249,9 +253,21 @@ async function load(){
   DATA.lots.forEach(l=>{
     if(!l.maker)l.maker='—';
     l._status=derivedStatus(l);
-    // Prefer a confirmed-working URL (st- for cars whose aj- page has expired),
-    // else the aj- lot page. This keeps links live even for unsold ended cars.
-    l._link=l.working_url||l.lot_url;
+    // Link priority: (1) a scraper-confirmed working page, (2) for cars whose
+    // auction ended more than ~1 day ago the aj- page has expired so use st-,
+    // (3) otherwise the live aj- page. This keeps links live for old cars with
+    // zero extra scraping — and defers to confirmed evidence when we have it.
+    (function(){
+      if(l.working_url){l._link=l.working_url;return;}
+      const base=l.lot_url||'';
+      const m=auctionMoment(l);
+      const dayMs=24*60*60*1000;
+      if(m && (Date.now()-m.getTime())>dayMs && base.indexOf('/aj-')>-1){
+        l._link=base.replace('/aj-','/st-');
+      } else {
+        l._link=base;
+      }
+    })();
   });
   if(DATA.usd_per_yen){USD_RATE=DATA.usd_per_yen;}
   const rateEl=document.getElementById('k-rate');
@@ -263,7 +279,7 @@ async function load(){
   const gen=DATA.generated?new Date(DATA.generated):null;
   document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
   document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
-  initFilters(); updateDDLabels(); render();
+  initFilters(); updateDDLabels(); adaptDatePresets(); render();
 }
 
 function initFilters(){
@@ -274,7 +290,8 @@ function initFilters(){
   refreshModels();
 
   document.getElementById('f-status').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
-    document.querySelectorAll('#f-status button').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.status=b.dataset.v;render();});
+    document.querySelectorAll('#f-status button').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.status=b.dataset.v;
+    adaptDatePresets();render();});
   document.getElementById('f-datesel').addEventListener('change',e=>{
     const v=e.target.value;F.date=v;
     document.getElementById('custom-range').style.display=(v==='custom')?'flex':'none';
@@ -371,11 +388,36 @@ function refreshModels(){
   box.innerHTML=models.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.model.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]||0}</span></label>`).join('');
 }
 
+function adaptDatePresets(){
+  // Rebuild the option list to match the view (hiding <option>s is unreliable
+  // across browsers, so we reconstruct instead). Ended -> past presets;
+  // Live -> future; All -> both.
+  const st=F.status; // '', 'live', 'ended'
+  const showPast=(st==='ended'||st==='');
+  const showFuture=(st==='live'||st==='');
+  const opts=[['all','All dates']];
+  opts.push(['today','Today']);
+  if(showPast){opts.push(['last3','Last 3 days'],['last7','Last 7 days'],['last30','Last 30 days']);}
+  if(showFuture){opts.push(['3d','Next 3 days'],['week','Next 7 days'],['past','Already auctioned']);}
+  opts.push(['custom','Custom range…']);
+  const sel=document.getElementById('f-datesel');
+  const valid=new Set(opts.map(o=>o[0]));
+  sel.innerHTML=opts.map(([v,t])=>`<option value="${v}">${t}</option>`).join('');
+  // keep current selection if still valid, else revert to All
+  if(valid.has(F.date)){sel.value=F.date;}
+  else{F.date='all';sel.value='all';document.getElementById('custom-range').style.display='none';}
+}
+
 function dateMatch(l){
   if(F.date==='all')return true;
   const ad=toDate(l.auction_date);if(!ad)return false;
   const today=new Date(new Date().toDateString());
   if(F.date==='today')return ad.getTime()===today.getTime();
+  // past presets (for Ended view)
+  if(F.date==='last3'){const s=new Date(today);s.setDate(s.getDate()-3);return ad>=s&&ad<=today;}
+  if(F.date==='last7'){const s=new Date(today);s.setDate(s.getDate()-7);return ad>=s&&ad<=today;}
+  if(F.date==='last30'){const s=new Date(today);s.setDate(s.getDate()-30);return ad>=s&&ad<=today;}
+  // future presets (for Live view)
   if(F.date==='3d'){const e=new Date(today);e.setDate(e.getDate()+3);return ad>=today&&ad<=e;}
   if(F.date==='week'){const e=new Date(today);e.setDate(e.getDate()+7);return ad>=today&&ad<=e;}
   if(F.date==='past')return ad<today;
@@ -435,7 +477,7 @@ function statusCell(l){
 function activeFilterTags(){
   const tags=[];
   if(F.status)tags.push(F.status);
-  if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today','3d':'next 3 days',week:'this week',past:'past'}[F.date]||F.date));
+  if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today',last3:'last 3 days',last7:'last 7 days',last30:'last 30 days','3d':'next 3 days',week:'next 7 days',past:'past'}[F.date]||F.date));
   if(F.maker.size)tags.push(F.maker.size<=2?[...F.maker].join(', '):F.maker.size+' makers');
   if(F.model.size)tags.push(F.model.size<=2?[...F.model].join(', '):F.model.size+' models');
   if(F.ymin||F.ymax)tags.push('yr '+(F.ymin||'')+'-'+(F.ymax||''));
@@ -516,7 +558,11 @@ document.querySelectorAll('#t th[data-s]').forEach(th=>th.addEventListener('clic
   th.insertAdjacentHTML('beforeend',` <span class="arr">${SORT.dir>0?'▲':'▼'}</span>`);
   render();
 }));
+
+// Dashboard loads directly (access-code gate removed).
 load();
+
 </script>
+</div><!-- /#app -->
 </body>
 </html>
