@@ -1,870 +1,522 @@
-#!/usr/bin/env python3
-"""
-Japan Car Direct - Auction Spec & Price Tracker
-================================================
-Builds a private dataset of every car (for chosen models) that appears on the
-live auction board, with full specs + the direct lot link. Runs daily and
-accumulates. After a lot's auction time passes, re-checks it to try to capture
-the final sold (hammer) price - if the lot page is still alive.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Auction Tracker — Peach Cars Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --peach:#F33A6A;--pd:#D42255;--p10:rgba(243,58,106,.08);--p20:rgba(243,58,106,.18);
+  --bg:#FAFAF8;--wh:#FFF;--s2:#F6F4F1;--s3:#EEECEA;
+  --bd:#E4E0DB;--bd2:#D0CBC4;
+  --ink:#0D120A;--ink2:#2D3748;--ink3:#5A6478;--ink4:#A0AABA;
+  --g:#15803D;--gbg:#F0FDF4;--gbd:#BBF7D0;
+  --am:#B45309;--abg:#FFFBEB;--abd:#FDE68A;
+  --rd:#DC2626;--rbg:#FEF2F2;--rbd:#FECACA;
+  --bl:#2563EB;--bbg:#EFF6FF;--bbd:#BFDBFE;
+  --r:10px;--rs:7px;
+  --sh:0 1px 3px rgba(0,0,0,.05),0 4px 12px rgba(0,0,0,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased}
+.hdr{background:var(--wh);border-bottom:1px solid var(--bd);padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300;box-shadow:var(--sh)}
+.logo{display:flex;align-items:center;gap:8px}
+.lmark{width:30px;height:30px;background:var(--peach);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff}
+.lbrand{font-size:14px;font-weight:700}.lsep{width:3px;height:3px;border-radius:50%;background:var(--bd2)}.lsub{font-size:11px;color:var(--ink3)}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.rate-pill{background:var(--s2);border:1px solid var(--bd);border-radius:20px;padding:3px 10px;font-size:11px;font-family:'DM Mono',monospace;color:var(--ink2)}
+.kpis{display:flex;gap:14px}
+.kpi{font-family:'DM Mono',monospace;font-size:12px;color:var(--ink3)}
+.kpi b{color:var(--ink);font-size:13px}
+.pg{max-width:1380px;margin:0 auto;padding:16px 20px 40px}
+.browse{display:grid;grid-template-columns:228px 1fr;gap:16px;align-items:start}
+.rail{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:14px;box-shadow:var(--sh);position:sticky;top:70px;max-height:calc(100vh - 86px);overflow-y:auto}
+.rail h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--ink3);margin:11px 0 5px}
+.rail h4:first-child{margin-top:0}
+.sel,.inp{background:var(--wh);border:1px solid var(--bd);border-radius:var(--rs);padding:7px 9px;font-family:inherit;font-size:12.5px;color:var(--ink);outline:none;width:100%}
+.sel{appearance:none;cursor:pointer;padding-right:24px;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235A6478' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.sel:focus,.inp:focus{border-color:var(--peach)}
+.range{display:flex;gap:6px;align-items:center}.range .inp{padding:6px 8px}
+.range span{font-size:11px;color:var(--ink4)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.msel{border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);overflow:hidden}
+.dd{position:relative}
+.dd-btn{width:100%;text-align:left;background:var(--wh);border:1px solid var(--bd);border-radius:var(--rs);padding:7px 9px;font-family:inherit;font-size:12.5px;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.dd-btn:hover{border-color:var(--bd2)}
+.dd-btn.active{border-color:var(--peach)}
+.dd-arrow{color:var(--ink3);font-size:10px}
+.dd-panel{margin-top:5px;border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);overflow:hidden;box-shadow:var(--sh)}
+.msel-bar{display:flex;gap:4px;padding:5px 6px;border-bottom:1px solid var(--bd);background:var(--s2)}
+.msel-act{flex:1;font-family:inherit;font-size:10.5px;font-weight:600;padding:3px;border:1px solid var(--bd);border-radius:5px;background:var(--wh);color:var(--ink3);cursor:pointer}
+.msel-act:hover{color:var(--peach);border-color:var(--p20)}
+.msel-list{max-height:160px;overflow-y:auto;padding:4px}
+.msel-opt{display:flex;align-items:center;gap:7px;padding:4px 6px;border-radius:5px;cursor:pointer;font-size:12.5px;color:var(--ink2)}
+.msel-opt:hover{background:var(--p10)}
+.msel-opt input{accent-color:var(--peach);cursor:pointer;margin:0}
+.msel-opt .cnt{margin-left:auto;font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4)}
+.msel-empty{padding:8px;font-size:11px;color:var(--ink4);text-align:center}
+.chip{font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;border:1px solid var(--bd);background:var(--wh);color:var(--ink3);cursor:pointer;font-family:'DM Mono',monospace}
+.chip.on{background:var(--p10);border-color:var(--p20);color:var(--peach)}
+.seg{display:flex;border:1px solid var(--bd);border-radius:var(--rs);overflow:hidden}
+.seg button{flex:1;padding:6px 3px;font-family:inherit;font-size:11px;font-weight:600;background:var(--wh);color:var(--ink3);border:none;cursor:pointer;border-right:1px solid var(--bd);white-space:nowrap}
+.seg button:last-child{border-right:none}
+.seg button.on{background:var(--peach);color:#fff}
+.datepresets{display:flex;flex-direction:column;gap:3px}
+.dp{text-align:left;padding:5px 9px;border:1px solid var(--bd);border-radius:var(--rs);background:var(--wh);font-family:inherit;font-size:11.5px;font-weight:600;color:var(--ink2);cursor:pointer}
+.dp.on{background:var(--p10);border-color:var(--p20);color:var(--peach)}
+.dp small{display:block;font-weight:400;color:var(--ink4);font-size:9.5px;margin-top:1px}
+.rail-foot{margin-top:14px}
+.btn{padding:8px 12px;border-radius:var(--rs);font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border:none;width:100%;text-align:center}
+.bg{background:var(--s2);color:var(--ink2);border:1px solid var(--bd)}.bg:hover{background:var(--s3)}
+.fsrch{display:flex;align-items:center;gap:7px;background:var(--wh);border:1.5px solid var(--bd);border-radius:var(--rs);padding:9px 12px;margin-bottom:12px}
+.fsrch:focus-within{border-color:var(--peach)}
+.fsrch input{background:none;border:none;outline:none;font-family:inherit;font-size:13px;color:var(--ink);width:100%}
+.fsrch input::placeholder{color:var(--ink4)}
+.result-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:12px;color:var(--ink3);flex-wrap:wrap;gap:6px}
+.rm-left{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.export-btn{flex-shrink:0;font-family:inherit;font-size:12px;font-weight:600;color:var(--peach);background:var(--wh);border:1px solid var(--p20);border-radius:8px;padding:6px 12px;cursor:pointer;white-space:nowrap;transition:all .12s}
+.export-btn:hover{background:var(--peach);color:#fff;border-color:var(--peach)}
+.export-btn:active{transform:translateY(1px)}
+.result-meta b{color:var(--ink);font-family:'DM Mono',monospace}
+.activef{display:flex;gap:5px;flex-wrap:wrap}
+.aftag{font-size:10.5px;font-family:'DM Mono',monospace;background:var(--p10);color:var(--peach);border:1px solid var(--p20);border-radius:20px;padding:2px 8px}
+.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bd);background:var(--wh);box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{padding:10px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink3);border-bottom:1px solid var(--bd);background:var(--s2);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--ink)}
+th .arr{color:var(--peach);font-size:9px}
+td{padding:10px;border-bottom:1px solid var(--bd);vertical-align:middle;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr.trow{cursor:pointer}
+tr.trow:hover td{background:var(--p10)}
+.mono{font-family:'DM Mono',monospace}.bold{font-weight:600}
+.sub{font-size:10px;color:var(--ink3)}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+.b-live{background:var(--p10);color:var(--peach);border:1px solid var(--p20)}
+.b-sold{background:var(--gbg);color:var(--g);border:1px solid var(--gbd)}
+.b-noprice{background:var(--abg);color:var(--am);border:1px solid var(--abd)}
+.cond{display:inline-block;min-width:26px;text-align:center;font-family:'DM Mono',monospace;font-weight:600;padding:1px 5px;border-radius:5px;background:var(--s2);color:var(--ink2)}
+.openx{color:var(--peach);font-weight:600;font-size:11px}
+.empty{padding:50px 20px;text-align:center;color:var(--ink3)}
+.empty b{display:block;font-size:15px;color:var(--ink2);margin-bottom:6px}
+.foot{max-width:1380px;margin:0 auto;padding:8px 20px 30px;font-size:11px;color:var(--ink4);font-family:'DM Mono',monospace}
+@media(max-width:900px){.browse{grid-template-columns:1fr}.rail{position:static}.kpis{display:none}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="logo">
+    <div class="lmark">JCD</div><div class="lbrand">Auction Tracker</div>
+    <div class="lsep"></div><div class="lsub">Peach Cars Intelligence</div>
+  </div>
+  <div class="hdr-right">
+    <div class="kpis">
+      <span class="kpi"><b id="k-tracked">—</b> tracked</span>
+      <span class="kpi"><b id="k-live">—</b> live</span>
+      <span class="kpi"><b id="k-sold">—</b> sold</span>
+      <span class="kpi" id="k-rate"></span>
+    </div>
+    <span class="rate-pill" id="updated">loading…</span>
+  </div>
+</div>
 
-Outputs (in ./data):
-  lots_state.json  - every lot ever seen, with latest known values + status
-  events.json      - append-only log of changes (new lot, sold price captured, gone)
-  snapshots/DATE.json - daily snapshot of the live board
+<div class="pg">
+  <div class="browse">
+    <aside class="rail">
+      <h4>Status</h4>
+      <div class="seg" id="f-status">
+        <button data-v="" class="on">All</button>
+        <button data-v="live">Live</button>
+        <button data-v="ended">Ended</button>
+      </div>
+      <h4>Auction date</h4>
+      <select class="sel" id="f-datesel">
+        <option value="all">All dates</option>
+        <option value="today">Today</option>
+        <option value="3d">Next 3 days</option>
+        <option value="week">This week</option>
+        <option value="past">Already auctioned</option>
+        <option value="custom">Custom range…</option>
+      </select>
+      <div class="range" id="custom-range" style="margin-top:6px;display:none"><input class="inp" id="f-date-from" type="date" title="from"><span>–</span><input class="inp" id="f-date-to" type="date" title="to"></div>
+      <h4>Maker</h4>
+      <div class="dd" id="dd-maker">
+        <button type="button" class="dd-btn" id="dd-maker-btn">All makers <span class="dd-arrow">▾</span></button>
+        <div class="dd-panel" id="dd-maker-panel" style="display:none">
+          <div class="msel-bar"><button type="button" class="msel-act" data-act="all">Select all</button><button type="button" class="msel-act" data-act="none">Clear</button></div>
+          <div class="msel-list" id="ms-maker-list"></div>
+        </div>
+      </div>
+      <h4>Model</h4>
+      <div class="dd" id="dd-model">
+        <button type="button" class="dd-btn" id="dd-model-btn">All models <span class="dd-arrow">▾</span></button>
+        <div class="dd-panel" id="dd-model-panel" style="display:none">
+          <div class="msel-bar"><button type="button" class="msel-act" data-act="all">Select all</button><button type="button" class="msel-act" data-act="none">Clear</button></div>
+          <div class="msel-list" id="ms-model-list"></div>
+        </div>
+      </div>
+      <h4>Year</h4>
+      <div class="range"><input class="inp" id="f-year-min" type="number" placeholder="from"><span>–</span><input class="inp" id="f-year-max" type="number" placeholder="to"></div>
+      <h4>Mileage (km)</h4>
+      <div class="range"><input class="inp" id="f-km-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-km-max" type="number" placeholder="max"></div>
+      <h4>Sold price $ (USD)</h4>
+      <div class="range"><input class="inp" id="f-price-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-price-max" type="number" placeholder="max"></div>
+      <h4>Condition</h4>
+      <div class="chips" id="f-cond"></div>
+      <h4>Auction house</h4>
+      <select class="sel" id="f-auction"><option value="">All auctions</option></select>
+      <div class="rail-foot"><button class="btn bg" id="reset">Reset filters</button></div>
+    </aside>
 
-Run:
-  export JCD_USERNAME="..."   export JCD_PASSWORD="..."
-  python3 tracker.py
-"""
-import json, os, re, sys, time
-from datetime import datetime, timezone
-from pathlib import Path
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
+    <div>
+      <div class="fsrch">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AABA" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search" placeholder="Search lot, chassis, grade, auction, colour…">
+      </div>
+      <div class="result-meta">
+        <div class="rm-left">
+          <span><b id="result-count">0</b> cars match</span>
+          <span class="activef" id="active-filters"></span>
+          <span id="result-hint"></span>
+        </div>
+        <button id="export-btn" class="export-btn" title="Export the currently filtered rows to CSV">↓ Export CSV</button>
+      </div>
+      <div class="tbl-wrap"><table id="t">
+        <thead><tr>
+          <th data-s="lot_number">Lot</th>
+          <th data-s="maker">Make</th>
+          <th data-s="model_tracked">Model</th>
+          <th data-s="year">Year</th>
+          <th data-s="mileage_km">Mileage (km)</th>
+          <th data-s="condition">Cond</th>
+          <th data-s="start_yen">Start ¥</th>
+          <th data-s="sold_yen">Sold ¥</th>
+          <th data-s="auction_date">Auction</th>
+          <th data-s="status">Status</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+<div class="foot" id="foot"></div>
 
-BASE = "https://auc.japancardirect.com"
-DATA_DIR = Path(__file__).parent / "data"
-SNAP_DIR = DATA_DIR / "snapshots"
-STATE_FILE = DATA_DIR / "lots_state.json"
-EVENTS_FILE = DATA_DIR / "events.json"
+<script>
+let DATA=null, SORT={key:'auction_date',dir:-1}, COND_ORDER=['3','3.5','4','4.5','5','R'], CURRENT_VIEW=[];
+let USD_RATE=0.0062; // yen->usd; overridden by data.usd_per_yen when present
+const F={status:'',date:'all',dfrom:'',dto:'',maker:new Set(),model:new Set(),ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',cond:new Set(),auction:'',q:''};
+let DD_OPEN=null;
+const yen=v=>{const n=parseInt(v);return(!n||isNaN(n))?'—':n.toLocaleString('en-US');};
+const usd=v=>{const n=parseInt(v);if(!n||isNaN(n))return '';const d=Math.round(n*USD_RATE);return '$'+d.toLocaleString('en-US');};
+const priceCell=v=>{const n=parseInt(v);if(!n||isNaN(n))return '<span class="mono">—</span>';return `<span class="mono">${yen(v)}</span><div class="sub mono">${usd(v)}</div>`;};
+const km=v=>v?Number(v).toLocaleString():'—';
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dnum=d=>d?d.split('.').reverse().join(''):'';
+const condRank=c=>{const i=COND_ORDER.indexOf(c);return i<0?-1:i;};
+const toDate=d=>{if(!d)return null;const[dd,mm,yy]=d.split('.');return new Date(`${yy}-${mm}-${dd}`);};
 
-USER = os.environ.get("JCD_USERNAME", "")
-PW   = os.environ.get("JCD_PASSWORD", "")
+// Build the auction's moment in real time. Board date is DD.MM.YYYY and time is
+// HH:MM in JST (Japan, UTC+9). We construct that instant and compare to now, so
+// an auction earlier *today* correctly counts as already passed.
+const auctionMoment=l=>{
+  if(!l.auction_date)return null;
+  const [dd,mm,yy]=l.auction_date.split('.');
+  const t=l.auction_time && /^\d{2}:\d{2}$/.test(l.auction_time)?l.auction_time:'23:59';
+  const [hh,mi]=t.split(':');
+  // JST = UTC+9, so the UTC instant is the wall-clock minus 9h
+  return new Date(Date.UTC(+yy,+mm-1,+dd,+hh-9,+mi));
+};
 
-# ----------------------------------------------------------------------------
-#  MODE: "board" (default) = scrape the live auction board (the original job).
-#        "prices" = visit individual lot pages of ended cars that have no sold
-#                   price yet, and capture the price. Runs on its own schedule.
-#  Set via env JCD_MODE. Both modes share login + parsing; they're isolated as
-#  separate scheduled runs so the slower price pass can't affect the board run.
-# ----------------------------------------------------------------------------
-MODE = os.environ.get("JCD_MODE", "board").strip().lower()
+// Honest two-state model. The board reliably tells us only whether an auction
+// is upcoming (live) or has happened (ended). Whether an ended car sold, didn't
+// sell, was cancelled, or simply hasn't had its price scraped yet is NOT
+// reliably knowable in real time — so we don't claim it. We show the sold price
+// when we have one; otherwise it's blank. We never label absence as "no sale".
+function derivedStatus(l){
+  const m=auctionMoment(l);
+  const passed = m ? m.getTime() < Date.now() : false;
+  return passed ? 'ended' : 'live';
+}
+const hasSoldPrice=l=>parseInt(l.sold_yen)>0;
 
-# Price pass tuning (gentle by design — drains the backlog over several runs):
-PRICE_BATCH = int(os.environ.get("JCD_PRICE_BATCH", "600"))  # max lot pages per run
-PRICE_MIN_AGE_H = 3      # don't chase cars that ended <3h ago (price not settled)
-PRICE_GAP_MS = 600       # polite delay between lot-page fetches
+async function load(){
+  try{const r=await fetch('data/dashboard.json?_='+Date.now());DATA=await r.json();}
+  catch(e){document.getElementById('foot').textContent='No data yet — run the scraper.';return;}
+  DATA.lots.forEach(l=>{
+    if(!l.maker)l.maker='—';
+    l._status=derivedStatus(l);
+    // Prefer a confirmed-working URL (st- for cars whose aj- page has expired),
+    // else the aj- lot page. This keeps links live even for unsold ended cars.
+    l._link=l.working_url||l.lot_url;
+  });
+  if(DATA.usd_per_yen){USD_RATE=DATA.usd_per_yen;}
+  const rateEl=document.getElementById('k-rate');
+  if(rateEl)rateEl.innerHTML='¥1 ≈ <b>$'+USD_RATE.toFixed(4)+'</b>';
+  const t=DATA.totals||{};
+  document.getElementById('k-tracked').textContent=DATA.lots.length;
+  document.getElementById('k-live').textContent=DATA.lots.filter(l=>l._status==='live').length;
+  document.getElementById('k-sold').textContent=DATA.lots.filter(l=>hasSoldPrice(l)).length;
+  const gen=DATA.generated?new Date(DATA.generated):null;
+  document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
+  document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
+  initFilters(); updateDDLabels(); render();
+}
 
-# Models to track: (maker_id, model_name_token). maker_id 3 = MAZDA.
-# model_submit(maker_id, model_name, 1) drives the board.
-# ============================================================================
-#  WHAT TO TRACK  —  edit this section anytime, nothing else needs to change
-# ============================================================================
-#
-#  maker_id reference:
-#    1=TOYOTA  2=NISSAN  3=MAZDA  4=MITSUBISHI  5=HONDA
-#    6=SUZUKI  7=SUBARU  8=ISUZU  9=DAIHATSU   23=LEXUS
-#
-#  Each line = one model board to scrape. To add a model, copy a line and
-#  change the maker_id + model token. To remove one, delete its line.
-#
-#  NOTE on tokens: the site uses its own spelling. If a line returns 0 cars
-#  on a run, the token is slightly off (e.g. "MAZDA2" vs older "DEMIO", or
-#  "PRADO" vs "LAND CRUISER PRADO"). Just fix that one line. A wrong token
-#  only affects its own line; everything else still scrapes fine.
-#
-#  Current shape and older shape can be SEPARATE entries on the site
-#  (e.g. MAZDA2 is the current car, DEMIO is the older body — both kept here).
-# ----------------------------------------------------------------------------
+function initFilters(){
+  buildMakerList();
+  const auctions=[...new Set(DATA.lots.map(l=>l.auction).filter(Boolean))].sort();
+  document.getElementById('f-auction').insertAdjacentHTML('beforeend',auctions.map(a=>`<option>${esc(a)}</option>`).join(''));
+  document.getElementById('f-cond').innerHTML=COND_ORDER.map(c=>`<span class="chip" data-c="${c}">${c}</span>`).join('');
+  refreshModels();
 
-MODELS = [
-    # ---- TOYOTA (maker_id 1) ----
-    {"maker_id": "1", "model": "AQUA"},
-    {"maker_id": "1", "model": "COROLLA FIELDER"},
-    {"maker_id": "1", "model": "VITZ"},
-    {"maker_id": "1", "model": "HARRIER"},
-    {"maker_id": "1", "model": "LAND CRUISER PRADO"},
-    {"maker_id": "1", "model": "LAND CRUISER"},
-    {"maker_id": "1", "model": "PROBOX"},
-    {"maker_id": "1", "model": "SUCCEED"},
-    {"maker_id": "1", "model": "PASSO"},
-    {"maker_id": "1", "model": "PREMIO"},
-    {"maker_id": "1", "model": "ALLION"},
-    {"maker_id": "1", "model": "WISH"},
-    {"maker_id": "1", "model": "VOXY"},
-    {"maker_id": "1", "model": "NOAH"},
-    {"maker_id": "1", "model": "SIENTA"},
-    {"maker_id": "1", "model": "HIACE"},
-    {"maker_id": "1", "model": "RAV4"},
-    {"maker_id": "1", "model": "C-HR"},
-    {"maker_id": "1", "model": "HILUX"},
-    {"maker_id": "1", "model": "CROWN"},
-    {"maker_id": "1", "model": "ALPHARD"},
-    {"maker_id": "1", "model": "VANGUARD"},
-    {"maker_id": "1", "model": "RACTIS"},
-    {"maker_id": "1", "model": "BELTA"},
-    # ---- NISSAN (maker_id 2) ----
-    {"maker_id": "2", "model": "NOTE"},
-    {"maker_id": "2", "model": "X-TRAIL"},
-    {"maker_id": "2", "model": "SERENA"},
-    {"maker_id": "2", "model": "DAYZ"},
-    {"maker_id": "2", "model": "MARCH"},
-    {"maker_id": "2", "model": "TIIDA"},
-    {"maker_id": "2", "model": "WINGROAD"},
-    {"maker_id": "2", "model": "AD"},
-    {"maker_id": "2", "model": "JUKE"},
-    {"maker_id": "2", "model": "DUALIS"},
-    {"maker_id": "2", "model": "SYLPHY"},
-    {"maker_id": "2", "model": "TEANA"},
-    {"maker_id": "2", "model": "MURANO"},
-    {"maker_id": "2", "model": "ELGRAND"},
-    {"maker_id": "2", "model": "CARAVAN"},
-    {"maker_id": "2", "model": "KICKS"},
-    # ---- MAZDA (maker_id 3) ----
-    {"maker_id": "3", "model": "MAZDA2"},
-    {"maker_id": "3", "model": "DEMIO"},
-    {"maker_id": "3", "model": "CX-5"},
-    {"maker_id": "3", "model": "CX-3"},
-    {"maker_id": "3", "model": "CX-8"},
-    {"maker_id": "3", "model": "CX-30"},
-    {"maker_id": "3", "model": "AXELA"},
-    {"maker_id": "3", "model": "ATENZA"},
-    {"maker_id": "3", "model": "PREMACY"},
-    {"maker_id": "3", "model": "MAZDA3"},
-    {"maker_id": "3", "model": "MAZDA6"},
-    {"maker_id": "3", "model": "BONGO"},
-    # ---- MITSUBISHI (maker_id 4) ----
-    {"maker_id": "4", "model": "OUTLANDER"},
-    {"maker_id": "4", "model": "RVR"},
-    {"maker_id": "4", "model": "DELICA"},
-    {"maker_id": "4", "model": "PAJERO"},
-    {"maker_id": "4", "model": "ASX"},
-    {"maker_id": "4", "model": "ECLIPSE CROSS"},
-    {"maker_id": "4", "model": "MIRAGE"},
-    {"maker_id": "4", "model": "LANCER"},
-    # ---- HONDA (maker_id 5) ----
-    {"maker_id": "5", "model": "FIT"},
-    {"maker_id": "5", "model": "VEZEL"},
-    {"maker_id": "5", "model": "FREED"},
-    {"maker_id": "5", "model": "N BOX"},
-    {"maker_id": "5", "model": "FIT SHUTTLE"},
-    {"maker_id": "5", "model": "SHUTTLE"},
-    {"maker_id": "5", "model": "GRACE"},
-    {"maker_id": "5", "model": "INSIGHT"},
-    {"maker_id": "5", "model": "CR-V"},
-    {"maker_id": "5", "model": "STEPWGN"},
-    {"maker_id": "5", "model": "ODYSSEY"},
-    {"maker_id": "5", "model": "CIVIC"},
-    {"maker_id": "5", "model": "ACCORD"},
-    {"maker_id": "5", "model": "STREAM"},
-    {"maker_id": "5", "model": "AIRWAVE"},
-    {"maker_id": "5", "model": "VAMOS"},
-    # ---- SUZUKI (maker_id 6) ----
-    {"maker_id": "6", "model": "SWIFT"},
-    {"maker_id": "6", "model": "SOLIO"},
-    {"maker_id": "6", "model": "WAGON R"},
-    {"maker_id": "6", "model": "HUSTLER"},
-    {"maker_id": "6", "model": "SPACIA"},
-    {"maker_id": "6", "model": "JIMNY"},
-    {"maker_id": "6", "model": "ESCUDO"},
-    {"maker_id": "6", "model": "BALENO"},
-    {"maker_id": "6", "model": "SX4"},
-    # ---- SUBARU (maker_id 7) ----
-    {"maker_id": "7", "model": "FORESTER"},
-    {"maker_id": "7", "model": "IMPREZA"},
-    {"maker_id": "7", "model": "XV"},
-    {"maker_id": "7", "model": "LEGACY"},
-    {"maker_id": "7", "model": "OUTBACK"},
-    {"maker_id": "7", "model": "LEVORG"},
-    {"maker_id": "7", "model": "EXIGA"},
-]
+  document.getElementById('f-status').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+    document.querySelectorAll('#f-status button').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.status=b.dataset.v;render();});
+  document.getElementById('f-datesel').addEventListener('change',e=>{
+    const v=e.target.value;F.date=v;
+    document.getElementById('custom-range').style.display=(v==='custom')?'flex':'none';
+    if(v!=='custom'){F.dfrom='';F.dto='';document.getElementById('f-date-from').value='';document.getElementById('f-date-to').value='';}
+    render();});
+  ['f-date-from','f-date-to'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+    F.dfrom=document.getElementById('f-date-from').value;F.dto=document.getElementById('f-date-to').value;F.date='custom';render();}));
+  // Maker dropdown toggle
+  document.getElementById('dd-maker-btn').addEventListener('click',()=>{
+    const p=document.getElementById('dd-maker-panel');const open=p.style.display==='none';
+    p.style.display=open?'block':'none';document.getElementById('dd-maker-btn').classList.toggle('active',open);});
+  document.getElementById('dd-maker-panel').addEventListener('click',e=>{
+    const act=e.target.closest('.msel-act');
+    if(act){const all=[...new Set(DATA.lots.map(l=>l.maker).filter(x=>x&&x!=='—'))];
+      if(act.dataset.act==='all'){all.forEach(m=>F.maker.add(m));}else{F.maker.clear();}
+      F.model.clear();buildMakerList();refreshModels();updateDDLabels();render();return;}
+  });
+  document.getElementById('ms-maker-list').addEventListener('change',e=>{
+    const cb=e.target.closest('input[type=checkbox]');if(!cb)return;
+    if(cb.checked)F.maker.add(cb.value);else F.maker.delete(cb.value);
+    F.model.clear();refreshModels();updateDDLabels();render();});
+  // Model dropdown toggle
+  document.getElementById('dd-model-btn').addEventListener('click',()=>{
+    const p=document.getElementById('dd-model-panel');const open=p.style.display==='none';
+    p.style.display=open?'block':'none';document.getElementById('dd-model-btn').classList.toggle('active',open);});
+  document.getElementById('dd-model-panel').addEventListener('click',e=>{
+    const act=e.target.closest('.msel-act');
+    if(act){const avail=modelPool();
+      if(act.dataset.act==='all'){avail.forEach(m=>F.model.add(m));}else{F.model.clear();}
+      refreshModels();updateDDLabels();render();return;}
+  });
+  document.getElementById('ms-model-list').addEventListener('change',e=>{
+    const cb=e.target.closest('input[type=checkbox]');if(!cb)return;
+    if(cb.checked)F.model.add(cb.value);else F.model.delete(cb.value);updateDDLabels();render();});
+  document.getElementById('f-auction').addEventListener('change',e=>{F.auction=e.target.value;render();});
+  ['f-year-min','f-year-max','f-km-min','f-km-max','f-price-min','f-price-max'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+    F.ymin=document.getElementById('f-year-min').value;F.ymax=document.getElementById('f-year-max').value;
+    F.kmin=document.getElementById('f-km-min').value;F.kmax=document.getElementById('f-km-max').value;
+    F.pmin=document.getElementById('f-price-min').value;F.pmax=document.getElementById('f-price-max').value;render();}));
+  document.getElementById('search').addEventListener('input',e=>{F.q=e.target.value.toLowerCase();render();});
+  document.getElementById('export-btn').addEventListener('click',exportCSV);
+  document.getElementById('f-cond').addEventListener('click',e=>{const chip=e.target.closest('.chip');if(!chip)return;
+    const c=chip.dataset.c;
+    if(F.cond.has(c)){F.cond.delete(c);chip.classList.remove('on');}
+    else{F.cond.add(c);chip.classList.add('on');}render();});
+  document.getElementById('reset').addEventListener('click',()=>{
+    Object.assign(F,{status:'',date:'all',dfrom:'',dto:'',ymin:'',ymax:'',kmin:'',kmax:'',pmin:'',pmax:'',auction:'',q:''});
+    F.cond=new Set();F.maker=new Set();F.model=new Set();
+    document.querySelectorAll('.rail select,.rail input').forEach(el=>el.value='');
+    document.getElementById('search').value='';
+    document.getElementById('custom-range').style.display='none';
+    document.getElementById('f-datesel').value='all';
+    document.getElementById('dd-maker-panel').style.display='none';
+    document.getElementById('dd-model-panel').style.display='none';
+    document.querySelectorAll('#f-cond .chip').forEach(c=>c.classList.remove('on'));
+    document.querySelectorAll('#f-status button').forEach((x,i)=>x.classList.toggle('on',i===0));
+    buildMakerList();refreshModels();updateDDLabels();render();});
+}
 
-# ----------------------------------------------------------------------------
-#  FULL MAKERS , scraped whole (every model), by maker NAME.
-#  Used for lower-volume makers where we want the entire catalogue. The maker's
-#  numeric id is resolved at runtime from the board page (we don't hardcode ids
-#  we don't know). Names must match the site's maker labels (uppercase).
-# ----------------------------------------------------------------------------
-FULL_MAKERS = ["AUDI", "BMW", "MERCEDES BENZ", "VOLKSWAGEN", "VOLVO"]
+// reflect selection counts on the dropdown buttons
+function updateDDLabels(){
+  const mk=document.getElementById('dd-maker-btn');
+  mk.firstChild.textContent=F.maker.size?(F.maker.size+' maker'+(F.maker.size>1?'s':'')+' '):'All makers ';
+  const md=document.getElementById('dd-model-btn');
+  md.firstChild.textContent=F.model.size?(F.model.size+' model'+(F.model.size>1?'s':'')+' '):'All models ';
+}
 
-# ----------------------------------------------------------------------------
-#  EXPAND TO FULL SITE  (set True to scrape EVERY model of EVERY maker)
-#  Heavy and rate-limit-prone. Leave False for the curated list above.
-# ----------------------------------------------------------------------------
-SCRAPE_ALL = False
+// ---- multi-select maker/model panels ----
+function buildMakerList(){
+  const counts={};
+  DATA.lots.forEach(l=>{if(l.maker&&l.maker!=='—')counts[l.maker]=(counts[l.maker]||0)+1;});
+  let makers=Object.keys(counts).sort();
+  const box=document.getElementById('ms-maker-list');
+  if(!makers.length){box.innerHTML='<div class="msel-empty">no makers</div>';return;}
+  box.innerHTML=makers.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.maker.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]}</span></label>`).join('');
+}
+// placeholder model values from whole-maker scrapes that aren't a real model
+const _BAD_MODELS=new Set(['Any','(maker)','']);
+function isRealModel(m){return m && !_BAD_MODELS.has(m);}
+function modelPool(){
+  const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
+  return [...new Set(pool.map(l=>l.model_tracked).filter(isRealModel))].sort();
+}
+function refreshModels(){
+  // drop any selected models no longer valid for the chosen makers
+  const valid=new Set(modelPool());
+  [...F.model].forEach(m=>{if(!valid.has(m))F.model.delete(m);});
+  let models=modelPool();
+  const counts={};
+  const pool=F.maker.size?DATA.lots.filter(l=>F.maker.has(l.maker)):DATA.lots;
+  pool.forEach(l=>{if(isRealModel(l.model_tracked))counts[l.model_tracked]=(counts[l.model_tracked]||0)+1;});
+  const box=document.getElementById('ms-model-list');
+  if(!models.length){box.innerHTML='<div class="msel-empty">select a maker first</div>';return;}
+  box.innerHTML=models.map(m=>`<label class="msel-opt"><input type="checkbox" value="${esc(m)}" ${F.model.has(m)?'checked':''}><span>${esc(m)}</span><span class="cnt">${counts[m]||0}</span></label>`).join('');
+}
 
+function dateMatch(l){
+  if(F.date==='all')return true;
+  const ad=toDate(l.auction_date);if(!ad)return false;
+  const today=new Date(new Date().toDateString());
+  if(F.date==='today')return ad.getTime()===today.getTime();
+  if(F.date==='3d'){const e=new Date(today);e.setDate(e.getDate()+3);return ad>=today&&ad<=e;}
+  if(F.date==='week'){const e=new Date(today);e.setDate(e.getDate()+7);return ad>=today&&ad<=e;}
+  if(F.date==='past')return ad<today;
+  if(F.date==='custom'){
+    if(F.dfrom&&ad<new Date(F.dfrom))return false;
+    if(F.dto&&ad>new Date(F.dto))return false;
+    return true;
+  }
+  return true;
+}
 
-
-def now_iso():
-    return datetime.now(timezone.utc).isoformat()
-
-def load_json(path, default):
-    if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
-    return default
-
-def save_json(path, obj):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-
-# ---------------------------------------------------------------------------
-# Maker words that can prefix the spec cell on whole-maker boards, longest
-# first so "MERCEDES BENZ" matches before "MERCEDES". Used to split
-# "AUDI A1 2017 8XCHZ 1.0TFSI" into model + year/chassis/grade.
-_MAKER_WORDS = ["MERCEDES BENZ", "VOLKSWAGEN", "MITSUBISHI", "DAIHATSU",
-                "TOYOTA", "NISSAN", "SUBARU", "SUZUKI", "HONDA", "MAZDA",
-                "LEXUS", "ISUZU", "AUDI", "BMW", "VOLVO"]
-
-def _parse_spec_cell(c3):
-    """Parse the spec cell, which has two layouts:
-       per-model board:   'YEAR CHASSIS GRADE'          e.g. '2017 8XCHZ 1.0TFSI'
-       whole-maker board: 'MAKER MODEL YEAR CHASSIS GRADE' e.g. 'AUDI A1 2017 8XCHZ 1.0TFSI'
-    Returns (model_row, year, chassis, grade). model_row is None on per-model
-    boards (the model is already known from config there).
-    """
-    s = c3 or ""
-    up = s.upper()
-    for mk in _MAKER_WORDS:
-        if up.startswith(mk + " "):
-            rest = s[len(mk):].strip()
-            mm = re.match(r"(.*?)\s+(\d{4})\s+(\S+)\s*(.*)", rest)
-            if mm:
-                return (mm.group(1).strip() or None, mm.group(2),
-                        mm.group(3), (mm.group(4).strip() or None))
-            break
-    m = re.match(r"(\d{4})\s+(\S+)\s*(.*)", s)
-    if m:
-        return None, m.group(1), m.group(2), (m.group(3).strip() or None)
-    return None, None, None, None
-
-def parse_board(html):
-    soup = BeautifulSoup(html, "lxml")
-    out = soup.find(id="aj_out_poisk")
-    if not out:
-        return []
-    rows = out.find_all("tr", id=re.compile(r"^aj_view\d+"))
-    lots = []
-    for r in rows:
-        link = r.find("a", href=re.compile(r"aj-"))
-        if not link:
-            continue
-        href = link.get("href")
-        lot_uid = re.sub(r"^aj-|\.htm$", "", href)
-        cells = r.find_all("td", recursive=False)
-        def ct(i):
-            return " ".join(cells[i].get_text(" ", strip=True).split()) if i < len(cells) else ""
-        c2 = ct(2)
-        m_date = re.search(r"(\d{2}\.\d{2}\.\d{4})", c2)
-        m_time = re.search(r"\[(\d{2}:\d{2})\]", c2)
-        auction = c2
-        if m_date:
-            auction = c2.split(m_date.group(1))[-1]
-        auction = re.sub(r"^\s*\[\d{2}:\d{2}\]\s*", "", auction).strip()
-        auction = re.sub(r"\s+", " ", auction)
-        # the lot number sometimes leads the cell; strip it if duplicated
-        lotnum = link.get_text(strip=True)
-        auction = re.sub(r"^" + re.escape(lotnum) + r"\s*", "", auction).strip()
-        c3 = ct(3)
-        # spec cell: handles both per-model and whole-maker layouts
-        model_row, year, chassis, grade = _parse_spec_cell(c3)
-        c4 = ct(4)
-        m_cc = re.search(r"(\d+)\s*cc", c4)
-        c5 = ct(5)
-        m_km = re.search(r"(\d+)\s*km", c5)
-        m_cond = re.search(r"km\s+(\S+)\s+(\S+)\s*$", c5)
-        c7 = ct(7)
-        m_avg = re.search(r"yen\|(\d+)\|(\d+)\|(\d+)", c7)
-        start_yen = sold_yen = avg_yen = None
-        if m_avg:
-            start_yen, sold_yen, avg_yen = m_avg.group(1), m_avg.group(2), m_avg.group(3)
-        lots.append({
-            "lot_uid": lot_uid,
-            "lot_url": BASE + "/" + href,
-            "lot_number": link.get_text(strip=True),
-            "auction": auction,
-            "auction_date": m_date.group(1) if m_date else None,
-            "auction_time": m_time.group(1) if m_time else None,
-            "year": year,
-            "chassis": chassis,
-            "grade": grade,
-            "engine_cc": m_cc.group(1) if m_cc else None,
-            "spec_raw": c4,
-            "mileage_km": m_km.group(1) if m_km else None,
-            "condition": m_cond.group(2) if m_cond else None,
-            "start_yen": start_yen,
-            "sold_yen": sold_yen,
-            "avg_yen": avg_yen,
-            "model_row": model_row,
-        })
-    return lots
-
-def get_page_count(html):
-    """How many result pages exist. Read the pagination control specifically:
-    it uses navi(this,N) onclick calls. Fall back to total-count / 20."""
-    soup = BeautifulSoup(html, "lxml")
-    out = soup.find(id="aj_out_poisk")
-    if not out:
-        return 1
-    navi_nums = [int(n) for n in re.findall(r"navi\(this,(\d+)\)", str(out))]
-    if navi_nums:
-        return max(navi_nums)
-    span = out.find("span")
-    if span and span.get_text(strip=True).isdigit():
-        total = int(span.get_text(strip=True))
-        return max(1, -(-total // 20))  # ceil division
-    return 1
-
-
-def get_usd_per_yen(html):
-    """The site publishes its own rate table: tpl_curr={"yen":[{"usd":"160.9",...}]}
-    That number is yen-per-usd. Return usd-per-yen (1/that). Fallback None."""
-    m = re.search(r'"yen"\s*:\s*\[\s*\{[^}]*"usd"\s*:\s*"([\d.]+)"', html)
-    if m:
-        try:
-            yen_per_usd = float(m.group(1))
-            if yen_per_usd > 0:
-                return round(1.0 / yen_per_usd, 6)
-        except ValueError:
-            pass
-    return None
-
-# ---------------------------------------------------------------------------
-def login(page):
-    page.goto(BASE + "/", wait_until="domcontentloaded")
-    page.wait_for_timeout(1200)
-    try: page.evaluate("aj_login()")
-    except Exception: pass
-    page.wait_for_timeout(600)
-    page.fill("input[name=username]", USER)
-    page.fill("input[name=password]", PW)
-    try: page.evaluate("doLoad_login()")
-    except Exception: pass
-    page.wait_for_timeout(3000)
-    return USER.lower() in page.content().lower()
-
-def resolve_maker_ids(page):
-    """Map maker NAME -> site maker id by reading the maker links on the board.
-
-    The board page lists makers as links whose handlers carry the maker id
-    (e.g. model_submit('12','',1) or a maker_id in the onclick/href). We read
-    the visible label and the id together. Returns {NAME_UPPER: id}.
-
-    NOTE: selector confirmed on first live run. If a FULL_MAKERS entry doesn't
-    resolve, its name likely differs from the site label (e.g. 'MERCEDES BENZ'
-    vs 'MERCEDES-BENZ') — adjust the FULL_MAKERS spelling to match the site.
-    """
-    try:
-        page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
-        page.wait_for_timeout(1500)
-        pairs = page.evaluate(
-            r"""() => {
-                const out = {};
-                // maker links typically call a submit with the maker id as first arg
-                const els = Array.from(document.querySelectorAll("a[onclick], a[href]"));
-                for (const el of els) {
-                    const label = (el.textContent || "").trim().toUpperCase();
-                    if (!label) continue;
-                    const oc = el.getAttribute("onclick") || el.getAttribute("href") || "";
-                    // look for a numeric id argument
-                    const m = oc.match(/(?:maker[_a-z]*|submit)\s*\(?\s*['"]?(\d+)['"]?/i)
-                            || oc.match(/['"](\d+)['"]\s*,\s*['"]/);
-                    if (m) out[label] = m[1];
-                }
-                return out;
-            }"""
-        )
-        return pairs or {}
-    except Exception as e:
-        print(f"  ! resolve_maker_ids failed: {e}", file=sys.stderr)
-        return {}
-
-
-def discover_all_models(page):
-    """For SCRAPE_ALL: enumerate every (maker_id, model) board on the site.
-
-    The board page exposes makers and, once a maker is chosen, that maker's
-    model list. We read those selectors to build the full work list.
-
-    NOTE: this path drives the site's own maker/model controls. The exact
-    selector names should be confirmed on the first live full run — if it
-    returns an empty or tiny list, the selector below needs adjusting to match
-    the live DOM. The curated MODELS list does not depend on this function.
-    """
-    work = []
-    for maker_id, maker_name in MAKER_NAME.items():
-        try:
-            # ask the site for this maker's model list via its own JS
-            models = page.evaluate(
-                """(mk) => {
-                    // the board exposes a model dropdown per maker; collect its options
-                    const sel = document.querySelector('select[name="model"], #model, #aj_model');
-                    if(!sel) return [];
-                    return Array.from(sel.options)
-                        .map(o => o.value || o.textContent.trim())
-                        .filter(v => v && v.toLowerCase() !== 'all');
-                }""", maker_id)
-            for mdl in (models or []):
-                work.append({"maker_id": maker_id, "model": mdl})
-        except Exception as e:
-            print(f"  ! could not list models for {maker_name}: {e}", file=sys.stderr)
-    return work
-
-
-def scrape_model(page, maker_id, model, fresh_nav=True):
-    """Load a model board, walk all result pages, return all lots.
-
-    Speed notes (same request volume, just less idle waiting):
-    - We only navigate to /aj_neo once per maker-session; subsequent models
-      reuse the loaded page and just call model_submit again (fresh_nav=False).
-    - We wait for the results container to be present rather than sleeping a
-      fixed time, then a short polite gap.
-    """
-    if fresh_nav:
-        page.goto(BASE + "/aj_neo", wait_until="domcontentloaded")
-        try:
-            page.wait_for_selector("#aj_out_poisk", timeout=8000)
-        except Exception:
-            page.wait_for_timeout(1200)
-    page.evaluate(f"model_submit('{maker_id}','{model}',1)")
-    # wait for the board to render results (or settle) instead of fixed 3s
-    try:
-        page.wait_for_function(
-            "() => { const o=document.getElementById('aj_out_poisk');"
-            "return o && o.innerHTML && o.innerHTML.length > 50; }",
-            timeout=8000)
-    except Exception:
-        page.wait_for_timeout(1500)
-    page.wait_for_timeout(400)  # small polite settle
-    html = page.content()
-    all_lots = parse_board(html)
-    total_pages = get_page_count(html)
-
-    current = 1
-    guard = 0
-    while current < total_pages and guard < 100:
-        guard += 1
-        target = current + 1
-        try:
-            link = page.locator(
-                f"#aj_out_poisk a[onclick*='navi(this,{target})']"
-            ).first
-            if link.count() == 0:
-                print(f"   page {target}: link not present, stopping", file=sys.stderr)
-                break
-            link.click(timeout=5000)
-            # wait for the page-number link we clicked to no longer be the
-            # 'next' target (i.e. content advanced), then a short settle
-            try:
-                page.wait_for_function(
-                    "(t) => { const o=document.getElementById('aj_out_poisk');"
-                    "return o && o.innerHTML && o.innerHTML.length > 50; }",
-                    arg=str(target), timeout=6000)
-            except Exception:
-                page.wait_for_timeout(1200)
-            page.wait_for_timeout(300)  # small polite gap between page turns
-            page_lots = parse_board(page.content())
-            if page_lots:
-                all_lots += page_lots
-                current = target
-            else:
-                print(f"   page {target}: no rows parsed, stopping", file=sys.stderr)
-                break
-        except Exception as e:
-            print(f"   page {target} failed: {str(e)[:120]}", file=sys.stderr)
-            break
-
-    # de-dupe by lot_uid
-    seen, uniq = set(), []
-    for lot in all_lots:
-        if lot["lot_uid"] not in seen:
-            seen.add(lot["lot_uid"]); uniq.append(lot)
-    return uniq
-
-# ---------------------------------------------------------------------------
-def parse_lot_price(html):
-    """From an individual lot page (aj-XXXX.htm), extract the sold price in yen.
-    Returns (sold_yen:str|None, page_gone:bool).
-
-    We don't have a confirmed selector yet, so we parse defensively from the
-    visible text: the lot page shows 'Sold for' with a yen figure, and an ended
-    page shows 'nothing found' / 'This auction has ended'. Both are handled.
-    If the layout differs from what we expect, we return (None, False) so the
-    car is simply retried next run rather than wrongly marked gone.
-    """
-    low = html.lower()
-    # Look for the board-style packed value first if present
-    m = re.search(r"yen\|(\d+)\|(\d+)\|(\d+)", html)
-    if m and m.group(2) != "0":
-        return m.group(2), False
-    # Look for a 'sold' figure: patterns like '1 590 000 ¥ sold' or 'Sold for ... ¥'
-    # Normalise spaces in numbers (the site writes '1 590 000')
-    text = re.sub(r"<[^>]+>", " ", html)
-    text = re.sub(r"&nbsp;", " ", text)
-    # find a yen amount immediately followed by 'sold'
-    m2 = re.search(r"([\d][\d \u00a0,]{2,})\s*¥\s*sold", text, re.I)
-    if m2:
-        digits = re.sub(r"[^\d]", "", m2.group(1))
-        if digits and int(digits) > 0:
-            return digits, False
-    # No sold price found. If the page says 'nothing found', it's an expired/
-    # empty page (caller will try the st- fallback for aj- URLs).
-    if "nothing found" in low:
-        return None, True
-    return None, False
-
-
-def fetch_lot_price(page, lot_url):
-    """Return (sold_yen, page_gone, working_url).
-
-    The live lot page is aj-XXXX.htm. About a day after the auction the aj- page
-    expires ('nothing found / auction has ended') and the permanent record —
-    full spec, photo, auction sheet, and the sold price — moves to st-XXXX.htm.
-    So: try aj- first; if it's dead, retry the st- page. working_url is whichever
-    page actually rendered content (so the dashboard can link to a live page even
-    for cars that didn't sell). Only report page_gone if BOTH are unusable.
-    """
-    def _get(url):
-        try:
-            page.goto(url, wait_until="domcontentloaded")
-            try:
-                page.wait_for_load_state("networkidle", timeout=4000)
-            except Exception:
-                page.wait_for_timeout(700)
-            return page.content()
-        except Exception as e:
-            print(f"   ! fetch failed {url}: {str(e)[:70]}", file=sys.stderr)
-            return None
-
-    html = _get(lot_url)
-    if html:
-        low = html.lower()
-        aj_alive = "nothing found" not in low
-        sold, gone = parse_lot_price(html)
-        if sold:
-            return sold, False, (lot_url if aj_alive else lot_url)
-        # aj- page dead/empty -> try the permanent st- result page
-        if gone and "/aj-" in lot_url:
-            st_url = lot_url.replace("/aj-", "/st-")
-            st_html = _get(st_url)
-            if st_html:
-                st_alive = "nothing found" not in st_html.lower()
-                s2, g2 = parse_lot_price(st_html)
-                if s2:
-                    return s2, False, st_url
-                # st- rendered content but no sold price (car didn't sell) —
-                # still a WORKING link with full spec; keep it, not 'gone'
-                if st_alive:
-                    return None, False, st_url
-                return None, g2, None
-        return sold, gone, (lot_url if aj_alive else None)
-    return None, False, None
-
-
-def run_price_pass():
-    """Visit ended, price-less lot pages and capture sold prices.
-    Newest-ended first, skipping cars that ended too recently (price not
-    settled). Capped per run. Learns empirically: if a page truly returns
-    'nothing found', mark it so we don't refetch it."""
-    if not USER or not PW:
-        print("ERROR: set JCD_USERNAME and JCD_PASSWORD", file=sys.stderr); sys.exit(1)
-    state = load_json(STATE_FILE, {})
-    events = load_json(EVENTS_FILE, [])
-    ts = now_iso()
-    now_ms = datetime.now(timezone.utc).timestamp()
-
-    def ended_moment(rec):
-        d = rec.get("auction_date"); t = rec.get("auction_time") or "23:59"
-        if not d: return None
-        try:
-            dd, mm, yy = d.split("."); hh, mi = t.split(":")
-            # JST = UTC+9
-            return datetime(int(yy), int(mm), int(dd), int(hh), int(mi),
-                            tzinfo=timezone.utc).timestamp() - 9*3600
-        except Exception:
-            return None
-
-    # One-time correction: earlier runs marked some cars price_gone when their
-    # aj- page had expired — but the price is on the st- page. Clear those flags
-    # so the new st- fallback can recover them. (Harmless once cleared.)
-    recovered = 0
-    for rec in state.values():
-        if rec.get("price_gone"):
-            rec.pop("price_gone", None)
-            rec.pop("price_gone_at", None)
-            recovered += 1
-    if recovered:
-        print(f"Reset {recovered} stale price_gone flags (st- fallback will retry them).")
-
-    # candidates: have a lot_url, no sold price, not already checked/gone, and
-    # ended long enough ago that the price would have posted.
-    cands = []
-    for uid, rec in state.items():
-        if rec.get("price_gone"):
-            continue
-        if rec.get("price_checked_at"):
-            continue  # already visited a working page; confirmed no sale
-        if parse_int_safe(rec.get("sold_yen")):
-            continue
-        em = ended_moment(rec)
-        if em is None:
-            continue
-        age_h = (now_ms - em) / 3600.0
-        if age_h < PRICE_MIN_AGE_H:
-            continue  # ended too recently; price may not be posted
-        cands.append((em, uid, rec))
-
-    # newest-ended first
-    cands.sort(key=lambda x: x[0], reverse=True)
-    batch = cands[:PRICE_BATCH]
-    print(f"Price pass: {len(cands)} price-less ended cars; fetching {len(batch)} this run.")
-
-    captured = gone = 0
-    start_t = time.time()
-    MAX_RUN_S = 45 * 60   # stop gracefully well before the 60-min job timeout
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        page = browser.new_page()
-        print("Logging in...")
-        if not login(page):
-            print("LOGIN FAILED", file=sys.stderr); browser.close(); sys.exit(1)
-        print("Login OK.")
-        for i, (em, uid, rec) in enumerate(batch, 1):
-            if time.time() - start_t > MAX_RUN_S:
-                print(f"  time guard: stopping at {i-1}/{len(batch)} to commit safely before timeout")
-                break
-            url = rec.get("lot_url")
-            if not url:
-                continue
-            sold, page_gone, working_url = fetch_lot_price(page, url)
-            if working_url:
-                rec["working_url"] = working_url   # a page that actually renders
-            if sold and parse_int_safe(sold):
-                rec["sold_yen"] = sold
-                rec["status"] = "sold"
-                rec["price_captured_at"] = ts
-                events.append({"ts": ts, "type": "sold_price", "lot_uid": uid,
-                               "lot_number": rec.get("lot_number"), "sold_yen": sold})
-                captured += 1
-            elif page_gone:
-                # BOTH aj- and st- unusable — genuinely gone. Still not refetched.
-                rec["price_gone"] = True
-                rec["price_gone_at"] = ts
-                gone += 1
-            # else: page works but car didn't sell (no price) — we've stored the
-            # working_url so the link stays live; mark it checked so we don't
-            # re-fetch it every run, but it's NOT 'gone' (link is alive).
-            elif working_url:
-                rec["price_checked_at"] = ts
-            if i % 50 == 0:
-                print(f"  ...{i}/{len(batch)} (captured {captured}, gone {gone})")
-            page.wait_for_timeout(PRICE_GAP_MS)
-        browser.close()
-
-    save_json(STATE_FILE, state)
-    save_json(EVENTS_FILE, events)
-    # refresh dashboard.json so the site reflects the new prices
-    rebuild_dashboard(state, events)
-    save_json(DATA_DIR / "last_run_status.json", {
-        "ts": ts, "ok": True, "mode": "prices",
-        "fetched": len(batch), "captured": captured, "page_gone": gone,
-        "remaining_priceless": len(cands) - captured - gone})
-    print(f"\nPrice pass done. Captured {captured} prices, {gone} pages gone, "
-          f"~{len(cands)-captured-gone} price-less ended cars remain.")
-
-
-def parse_int_safe(v):
-    try:
-        return int(v) if v not in (None, "", "0") else 0
-    except (TypeError, ValueError):
-        return 0
-
-
-def rebuild_dashboard(state, events):
-    """Recompute dashboard.json from current state (shared by both modes)."""
-    lots_list = list(state.values())
-    sold_lots = [l for l in lots_list if parse_int_safe(l.get("sold_yen"))]
-    by_model, by_maker = {}, {}
-    for l in lots_list:
-        by_model[l.get("model_tracked", "?")] = by_model.get(l.get("model_tracked", "?"), 0) + 1
-        by_maker[l.get("maker", "?")] = by_maker.get(l.get("maker", "?"), 0) + 1
-    usd = None
-    # reuse last known rate stored on any lot/run if present
-    for l in lots_list:
-        if l.get("usd_per_yen"):
-            usd = l["usd_per_yen"]; break
-    dashboard = {
-        "generated": now_iso(),
-        "usd_per_yen": usd,
-        "totals": {
-            "tracked": len(lots_list),
-            "live": sum(1 for l in lots_list if l.get("status") == "live"),
-            "sold_captured": len(sold_lots),
-            "off_board": sum(1 for l in lots_list if l.get("status") == "off_board"),
-            "by_model": by_model, "by_maker": by_maker,
-        },
-        "lots": lots_list,
-        "recent_events": events[-200:],
+function applyFilters(){
+  return DATA.lots.filter(l=>{
+    if(F.status&&l._status!==F.status)return false;
+    if(!dateMatch(l))return false;
+    if(F.maker.size&&!F.maker.has(l.maker))return false;
+    if(F.model.size&&!F.model.has(l.model_tracked))return false;
+    if(F.auction&&l.auction!==F.auction)return false;
+    const y=parseInt(l.year)||0;if(F.ymin&&y<+F.ymin)return false;if(F.ymax&&y>+F.ymax)return false;
+    const k=parseInt(l.mileage_km)||0;if(F.kmin&&k<+F.kmin)return false;if(F.kmax&&k>+F.kmax)return false;
+    if(F.pmin||F.pmax){
+      const sy=parseInt(l.sold_yen)||0;
+      if(!sy)return false;                 // no sold price → can't match a sold-price filter
+      const usd=sy*USD_RATE;
+      if(F.pmin&&usd<+F.pmin)return false;
+      if(F.pmax&&usd>+F.pmax)return false;
     }
-    save_json(DATA_DIR / "dashboard.json", dashboard)
+    if(F.cond.size && !F.cond.has(l.condition))return false;
+    if(F.q){const hay=[l.lot_number,l.chassis,l.grade,l.auction,l.maker,l.model_tracked,l.colour,l.spec_raw].join(' ').toLowerCase();if(!hay.includes(F.q))return false;}
+    return true;
+  });
+}
 
-
-def run():
-    if not USER or not PW:
-        print("ERROR: set JCD_USERNAME and JCD_PASSWORD", file=sys.stderr); sys.exit(1)
-    state = load_json(STATE_FILE, {})       # lot_uid -> record
-    events = load_json(EVENTS_FILE, [])
-    today = datetime.now().strftime("%Y-%m-%d")
-    ts = now_iso()
-    snapshot = []
-    usd_per_yen = None
-    # maker name lookup from MODELS config
-    MAKER_NAME = {"1":"TOYOTA","2":"NISSAN","3":"MAZDA","4":"MITSUBISHI","5":"HONDA",
-                  "6":"SUZUKI","7":"SUBARU","8":"ISUZU","9":"DAIHATSU","23":"LEXUS"}
-
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        page = browser.new_page()
-        print("Logging in...")
-        if not login(page):
-            print("LOGIN FAILED", file=sys.stderr); browser.close(); sys.exit(1)
-        print("Login OK.")
-
-        # Build the work list: either the curated MODELS, or every model on the
-        # site (discovered per maker) when SCRAPE_ALL is on.
-        if SCRAPE_ALL:
-            print("SCRAPE_ALL on — discovering all models per maker...")
-            work = discover_all_models(page)
-            print(f"  discovered {len(work)} model boards across all makers")
-        else:
-            work = list(MODELS)
-            # Resolve FULL_MAKERS (European brands) to their site maker ids and
-            # add a whole-maker entry (model="" => no model filter, all models).
-            if FULL_MAKERS:
-                name_to_id = resolve_maker_ids(page)
-                for mk in FULL_MAKERS:
-                    mid = name_to_id.get(mk.upper())
-                    if mid:
-                        work.append({"maker_id": mid, "model": "", "maker_name": mk.upper()})
-                        MAKER_NAME[mid] = mk.upper()
-                    else:
-                        print(f"  ! could not resolve maker id for '{mk}' — skipping", file=sys.stderr)
-
-        for idx, m in enumerate(work):
-            label = m["model"] or f"(all {m.get('maker_name', m['maker_id'])})"
-            print(f"Scraping {label} (maker {m['maker_id']})...")
-            try:
-                lots = scrape_model(page, m["maker_id"], m["model"], fresh_nav=(idx == 0))
-            except Exception as e:
-                print(f"  ! error on {label}: {e}", file=sys.stderr)
-                lots = []
-            print(f"  {len(lots)} lots")
-            if usd_per_yen is None:
-                usd_per_yen = get_usd_per_yen(page.content())
-            for lot in lots:
-                # for whole-maker scrapes, model isn't pre-known; keep the model
-                # parsed from the row if present, else mark by maker
-                lot["model_tracked"] = m["model"] or lot.get("model_tracked") or lot.get("model_row") or "(maker)"
-                lot["maker"] = MAKER_NAME.get(m["maker_id"], m["maker_id"])
-                lot["last_seen"] = ts
-                if usd_per_yen:
-                    lot["usd_per_yen"] = usd_per_yen
-                snapshot.append(lot)
-        browser.close()
-
-    # ---- SANITY GUARD ----
-    # Protect the dataset: if this run came back with far fewer cars than the
-    # previous live count, something went wrong (HTML change, rate-limit,
-    # partial/blocked scrape). Do NOT overwrite good data with junk.
-    prev_live = sum(1 for r in state.values() if r.get("status") == "live")
-    this_count = len(snapshot)
-    MIN_OK = 50            # absolute floor: a real run of these models returns hundreds
-    DROP_RATIO = 0.5       # flag if we got under half of last run's live count
-    if state and prev_live > 0:
-        if this_count < MIN_OK or this_count < prev_live * DROP_RATIO:
-            print(f"SANITY GUARD TRIPPED: scraped {this_count} lots vs {prev_live} "
-                  f"previously live. Refusing to overwrite data. "
-                  f"Likely a site change, rate-limit, or partial scrape.",
-                  file=sys.stderr)
-            # write a marker so the run is visibly flagged, but leave data intact
-            save_json(DATA_DIR / "last_run_status.json", {
-                "ts": ts, "ok": False, "scraped": this_count,
-                "prev_live": prev_live, "reason": "low_count_guard"})
-            sys.exit(2)
-    else:
-        # first ever run: just require a non-trivial count
-        if this_count < MIN_OK:
-            print(f"SANITY GUARD: first run returned only {this_count} lots "
-                  f"(expected hundreds). Not saving. Check login/scrape.",
-                  file=sys.stderr)
-            save_json(DATA_DIR / "last_run_status.json", {
-                "ts": ts, "ok": False, "scraped": this_count,
-                "reason": "first_run_too_small"})
-            sys.exit(2)
-    print(f"Sanity OK: {this_count} lots scraped (prev live {prev_live}).")
-
-    # Merge into state + log events
-    seen_today = set()
-    for lot in snapshot:
-        uid = lot["lot_uid"]; seen_today.add(uid)
-        if uid not in state:
-            lot["first_seen"] = ts; lot["status"] = "live"
-            state[uid] = lot
-            events.append({"ts": ts, "type": "new_lot", "lot_uid": uid,
-                           "lot_number": lot["lot_number"], "model": lot["model_tracked"],
-                           "auction_date": lot["auction_date"], "auction_time": lot["auction_time"]})
-        else:
-            prev = state[uid]
-            # capture a newly appearing sold price
-            if (prev.get("sold_yen") in (None, "0")) and lot.get("sold_yen") not in (None, "0"):
-                events.append({"ts": ts, "type": "sold_price", "lot_uid": uid,
-                               "lot_number": lot["lot_number"], "sold_yen": lot["sold_yen"]})
-                prev["status"] = "sold"
-            prev.update({k: lot[k] for k in lot if k != "first_seen"})
-            prev["last_seen"] = ts
-
-    # mark lots no longer on the board
-    for uid, rec in state.items():
-        if uid not in seen_today and rec.get("status") == "live":
-            rec["status"] = "off_board"
-            rec["off_board_since"] = ts
-            events.append({"ts": ts, "type": "off_board", "lot_uid": uid,
-                           "lot_number": rec.get("lot_number")})
-
-    save_json(STATE_FILE, state)
-    save_json(EVENTS_FILE, events)
-    save_json(SNAP_DIR / f"{today}.json", snapshot)
-
-    # ---- dashboard.json: pre-computed view the static page reads ----
-    lots_list = list(state.values())
-    def to_int(v):
-        try: return int(v)
-        except (TypeError, ValueError): return None
-    sold_lots = [l for l in lots_list if to_int(l.get("sold_yen"))]
-    by_model = {}
-    for l in lots_list:
-        by_model.setdefault(l.get("model_tracked", "?"), 0)
-        by_model[l.get("model_tracked", "?")] += 1
-    by_maker = {}
-    for l in lots_list:
-        by_maker.setdefault(l.get("maker", "?"), 0)
-        by_maker[l.get("maker", "?")] += 1
-    dashboard = {
-        "generated": ts,
-        "usd_per_yen": usd_per_yen,
-        "totals": {
-            "tracked": len(lots_list),
-            "live": sum(1 for l in lots_list if l.get("status") == "live"),
-            "sold_captured": len(sold_lots),
-            "off_board": sum(1 for l in lots_list if l.get("status") == "off_board"),
-            "by_model": by_model,
-            "by_maker": by_maker,
-        },
-        "lots": lots_list,
-        "recent_events": events[-200:],
+function sortLots(lots){
+  const k=SORT.key,d=SORT.dir,numeric=['lot_number','year','mileage_km','start_yen','sold_yen'];
+  return [...lots].sort((a,b)=>{
+    if(k==='condition')return(condRank(a.condition)-condRank(b.condition))*d;
+    if(k==='auction_date'){
+      const ma=auctionMoment(a),mb=auctionMoment(b);
+      const ta=ma?ma.getTime():-Infinity, tb=mb?mb.getTime():-Infinity;
+      return (ta-tb)*d;
     }
-    save_json(DATA_DIR / "dashboard.json", dashboard)
-    save_json(DATA_DIR / "last_run_status.json", {
-        "ts": ts, "ok": True, "scraped": len(snapshot),
-        "total_tracked": len(state)})
+    if(k==='status')return (a._status||'').localeCompare(b._status||'')*d;
+    let x=a[k],y=b[k];
+    if(numeric.includes(k)){x=parseFloat(x)||0;y=parseFloat(y)||0;return(x-y)*d;}
+    return(x||'').toString().localeCompare((y||'').toString())*d;
+  });
+}
 
-    live = sum(1 for r in state.values() if r.get("status") == "live")
-    print(f"\nDone. {len(snapshot)} lots on board today | {len(state)} total tracked | {live} live")
-    print(f"Saved: {STATE_FILE.name}, {EVENTS_FILE.name}, dashboard.json, snapshots/{today}.json")
+function statusCell(l){
+  if(l._status==='live')return '<span class="badge b-live">LIVE</span>';
+  // ended: if we captured a price, it sold; otherwise just "ended" (don't claim no-sale)
+  if(hasSoldPrice(l))return '<span class="badge b-sold">SOLD</span>';
+  return '<span class="badge b-noprice" title="Auction has happened. No sold price captured yet — it may have sold (price not yet scraped), or not sold / been cancelled. Click to check the lot page.">ended</span>';
+}
 
-if __name__ == "__main__":
-    if MODE == "prices":
-        print("=== MODE: prices (lot-page price completion) ===")
-        run_price_pass()
-    else:
-        print("=== MODE: board (live auction board scrape) ===")
-        run()
+function activeFilterTags(){
+  const tags=[];
+  if(F.status)tags.push(F.status);
+  if(F.date&&F.date!=='all')tags.push(F.date==='custom'?'date range':({today:'today','3d':'next 3 days',week:'this week',past:'past'}[F.date]||F.date));
+  if(F.maker.size)tags.push(F.maker.size<=2?[...F.maker].join(', '):F.maker.size+' makers');
+  if(F.model.size)tags.push(F.model.size<=2?[...F.model].join(', '):F.model.size+' models');
+  if(F.ymin||F.ymax)tags.push('yr '+(F.ymin||'')+'-'+(F.ymax||''));
+  if(F.kmin||F.kmax)tags.push('km '+(F.kmin||'')+'-'+(F.kmax||''));
+  if(F.pmin||F.pmax)tags.push('sold $'+(F.pmin||'')+'-'+(F.pmax||''));
+  if(F.cond.size)tags.push('cond '+[...F.cond].join(', '));
+  if(F.auction)tags.push(F.auction);
+  if(F.q)tags.push('“'+F.q+'”');
+  return tags.map(t=>`<span class="aftag">${esc(t)}</span>`).join('');
+}
+
+function exportCSV(){
+  const rows=CURRENT_VIEW;
+  if(!rows.length){alert('No rows to export — adjust the filters.');return;}
+  const usd=v=>{const n=parseInt(v);return n?Math.round(n*USD_RATE):'';};
+  const cols=[
+    ['Lot',l=>l.lot_number],
+    ['Make',l=>l.maker],
+    ['Model',l=>isRealModel(l.model_tracked)?l.model_tracked:''],
+    ['Chassis',l=>l.chassis||''],
+    ['Grade',l=>l.grade||''],
+    ['Year',l=>l.year||''],
+    ['Mileage_km',l=>l.mileage_km||''],
+    ['Condition',l=>l.condition||''],
+    ['Start_yen',l=>parseInt(l.start_yen)||''],
+    ['Start_usd',l=>usd(l.start_yen)],
+    ['Sold_yen',l=>parseInt(l.sold_yen)||''],
+    ['Sold_usd',l=>usd(l.sold_yen)],
+    ['Auction_date',l=>l.auction_date||''],
+    ['Auction_time',l=>l.auction_time||''],
+    ['Auction_house',l=>l.auction||''],
+    ['Status',l=>l._status||''],
+    ['Lot_url',l=>l._link||''],
+  ];
+  const esc=v=>{v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+  const lines=[cols.map(c=>c[0]).join(',')];
+  for(const l of rows) lines.push(cols.map(c=>esc(c[1](l))).join(','));
+  // BOM so Excel reads UTF-8 (Japanese grades) correctly
+  const blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'});
+  const parts=['jcd'];
+  if(F.maker.size&&F.maker.size<=3)parts.push([...F.maker].join('-').replace(/\s+/g,''));
+  if(F.model.size&&F.model.size<=3)parts.push([...F.model].join('-').replace(/\s+/g,''));
+  if(F.status)parts.push(F.status);
+  const today=new Date().toISOString().slice(0,10);
+  const fname=parts.join('_')+'_'+today+'.csv';
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download=fname;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},100);
+}
+
+function render(){
+  const lots=sortLots(applyFilters());
+  CURRENT_VIEW=lots;  // for CSV export (full filtered set, not the 500 display cap)
+  document.getElementById('result-count').textContent=lots.length;
+  document.getElementById('active-filters').innerHTML=activeFilterTags();
+  const body=document.getElementById('tbody');
+  if(!lots.length){body.innerHTML='<tr><td colspan="11" class="empty"><b>No matches</b>Adjust or reset the filters.</td></tr>';return;}
+  body.innerHTML=lots.slice(0,500).map(l=>`<tr class="trow" onclick="window.open('${esc(l._link)}','_blank')">
+    <td class="mono bold">${esc(l.lot_number)}</td>
+    <td>${esc(l.maker)}</td>
+    <td>${isRealModel(l.model_tracked)?esc(l.model_tracked):'—'}<div class="sub">${esc(l.chassis)||''}${l.grade?' · '+esc(l.grade):''}</div></td>
+    <td class="mono">${esc(l.year)}</td>
+    <td class="mono">${km(l.mileage_km)}</td>
+    <td><span class="cond">${esc(l.condition)||'—'}</span></td>
+    <td>${priceCell(l.start_yen)}</td>
+    <td class="${parseInt(l.sold_yen)?'bold':''}" style="${parseInt(l.sold_yen)?'color:var(--g)':''}">${parseInt(l.sold_yen)?priceCell(l.sold_yen):'<span class="mono">—</span>'}</td>
+    <td>${esc(l.auction_date)||'—'} <span class="sub mono">${esc(l.auction_time)||''}</span><div class="sub">${esc(l.auction)}</div></td>
+    <td>${statusCell(l)}</td>
+    <td><span class="openx"${l._status==='ended'&&!parseInt(l.sold_yen)?' title="Auction ended — the lot page may have been removed by the site (some show \'nothing found\')"':''}>open ↗</span></td>
+  </tr>`).join('');
+  document.getElementById('result-hint').textContent=lots.length>500?'showing first 500 — narrow filters to see more':'';
+}
+
+document.querySelectorAll('#t th[data-s]').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.s;SORT.dir=(SORT.key===k)?-SORT.dir:1;SORT.key=k;
+  document.querySelectorAll('#t th .arr').forEach(a=>a.remove());
+  th.insertAdjacentHTML('beforeend',` <span class="arr">${SORT.dir>0?'▲':'▼'}</span>`);
+  render();
+}));
+load();
+</script>
+</body>
+</html>
