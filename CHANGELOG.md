@@ -170,6 +170,48 @@ gentle by design (cap + delays + newest-first), but the first runs work the
 backlog — watch those logs for any throttling and lower JCD_PRICE_BATCH if so.
 Revert point saved at jcd-baselines/v6-PRE-PRICEFETCH-EXPORT-20260630.
 
+## v6.2 , st- page fallback (aj- pages expire after ~a day)
+Date: 2026-07-01
+
+DISCOVERY (from real observation): the live lot page aj-XXXX.htm expires about
+a day after the auction ('nothing found / auction has ended'), and the final
+result — including the sold price — moves permanently to st-XXXX.htm. This
+overturns the earlier assumption that aj- pages survive. It's why the price
+pass was marking older cars 'gone' (15/run): the price was on the st- page all
+along. Confirmed with a real Audi A3 (aj- dead, st- shows sold 160,000 yen).
+
+Fix (scraper.py):
+- fetch_lot_price now tries aj- first; if it's dead, automatically retries the
+  st- version (same code, aj- -> st-) and parses the price there. Only reports
+  page_gone if BOTH are unusable.
+- parse_lot_price cleaned up (correct gone-detection; still targets the 'sold'
+  figure, not the average-price column).
+- One-time reset of stale price_gone flags so cars wrongly marked gone in
+  earlier runs get retried via the st- fallback and recover their prices.
+Net effect: the ~15/run 'gone' cars should now convert to captured prices, and
+all older ended cars become price-recoverable from their st- pages.
+
+## v6.3 , keep links live for ALL ended cars (sold or not)
+Date: 2026-07-01
+
+Chosen logic: purely evidence-based, no date cutoffs. For each price-less ended
+car the pass tries the aj- page; if it renders 'nothing found' it tries the st-
+page. Whichever page actually renders is stored as working_url on the record.
+This handles the variable aj->st flip timing automatically (borderline cars
+just work either way) and needs no assumption about when a page expires.
+
+Also fixes the dead-link problem for UNSOLD cars: previously every row linked
+to aj-, which is dead for older cars — so even cars you wanted to view for their
+spec (that simply didn't sell) opened a 'nothing found' page. Now:
+- The pass stores working_url (st- when aj- has expired) even when there's no
+  sold price, and marks the car price_checked so it isn't re-fetched forever.
+- Dashboard + CSV link to working_url when present, else the aj- URL. So every
+  ended car — sold or not — opens a live page with the full spec/photo/sheet.
+- A car is only marked page_gone if BOTH aj- and st- are genuinely unusable.
+Backlog: handled automatically inside normal price runs (no separate scrape);
+the one-time price_gone reset + st- fallback recover the existing dead-link
+cars over the next few runs.
+
 ## v6.1 , price batch raised after a clean first run
 Date: 2026-06-30
 First prices run (batch 180) was clean: 165 captured, 15 gone, ~11 min, no
