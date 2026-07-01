@@ -162,7 +162,7 @@ tr.trow:hover td{background:var(--p10)}
       <div class="range"><input class="inp" id="f-year-min" type="number" placeholder="from"><span>–</span><input class="inp" id="f-year-max" type="number" placeholder="to"></div>
       <h4>Mileage (km)</h4>
       <div class="range"><input class="inp" id="f-km-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-km-max" type="number" placeholder="max"></div>
-      <h4>Price ¥ (start)</h4>
+      <h4>Sold price $ (USD)</h4>
       <div class="range"><input class="inp" id="f-price-min" type="number" placeholder="min"><span>–</span><input class="inp" id="f-price-max" type="number" placeholder="max"></div>
       <h4>Condition</h4>
       <div class="chips" id="f-cond"></div>
@@ -396,7 +396,13 @@ function applyFilters(){
     if(F.auction&&l.auction!==F.auction)return false;
     const y=parseInt(l.year)||0;if(F.ymin&&y<+F.ymin)return false;if(F.ymax&&y>+F.ymax)return false;
     const k=parseInt(l.mileage_km)||0;if(F.kmin&&k<+F.kmin)return false;if(F.kmax&&k>+F.kmax)return false;
-    const p=parseInt(l.start_yen)||0;if(F.pmin&&p<+F.pmin)return false;if(F.pmax&&p>+F.pmax)return false;
+    if(F.pmin||F.pmax){
+      const sy=parseInt(l.sold_yen)||0;
+      if(!sy)return false;                 // no sold price → can't match a sold-price filter
+      const usd=sy*USD_RATE;
+      if(F.pmin&&usd<+F.pmin)return false;
+      if(F.pmax&&usd>+F.pmax)return false;
+    }
     if(F.cond.size && !F.cond.has(l.condition))return false;
     if(F.q){const hay=[l.lot_number,l.chassis,l.grade,l.auction,l.maker,l.model_tracked,l.colour,l.spec_raw].join(' ').toLowerCase();if(!hay.includes(F.q))return false;}
     return true;
@@ -434,7 +440,7 @@ function activeFilterTags(){
   if(F.model.size)tags.push(F.model.size<=2?[...F.model].join(', '):F.model.size+' models');
   if(F.ymin||F.ymax)tags.push('yr '+(F.ymin||'')+'-'+(F.ymax||''));
   if(F.kmin||F.kmax)tags.push('km '+(F.kmin||'')+'-'+(F.kmax||''));
-  if(F.pmin||F.pmax)tags.push('¥'+(F.pmin||'')+'-'+(F.pmax||''));
+  if(F.pmin||F.pmax)tags.push('sold $'+(F.pmin||'')+'-'+(F.pmax||''));
   if(F.cond.size)tags.push('cond '+[...F.cond].join(', '));
   if(F.auction)tags.push(F.auction);
   if(F.q)tags.push('“'+F.q+'”');
