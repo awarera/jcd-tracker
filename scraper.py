@@ -482,10 +482,6 @@ def parse_lot_price(html):
     car is simply retried next run rather than wrongly marked gone.
     """
     low = html.lower()
-    if "nothing found" in low or "auction has ended" in low and "sold" not in low:
-        # page exists but lists nothing and no sold figure — treat as gone only
-        # if there is genuinely no price anywhere on the page
-        pass
     # Look for the board-style packed value first if present
     m = re.search(r"yen\|(\d+)\|(\d+)\|(\d+)", html)
     if m and m.group(2) != "0":
@@ -500,24 +496,58 @@ def parse_lot_price(html):
         digits = re.sub(r"[^\d]", "", m2.group(1))
         if digits and int(digits) > 0:
             return digits, False
-    # explicit 'nothing found' with no price → page is gone/empty
+    # No sold price found. If the page says 'nothing found', it's an expired/
+    # empty page (caller will try the st- fallback for aj- URLs).
     if "nothing found" in low:
         return None, True
     return None, False
 
 
 def fetch_lot_price(page, lot_url):
-    """Navigate to a lot page and return (sold_yen, page_gone)."""
-    try:
-        page.goto(lot_url, wait_until="domcontentloaded")
+    """Return (sold_yen, page_gone, working_url).
+
+    The live lot page is aj-XXXX.htm. About a day after the auction the aj- page
+    expires ('nothing found / auction has ended') and the permanent record —
+    full spec, photo, auction sheet, and the sold price — moves to st-XXXX.htm.
+    So: try aj- first; if it's dead, retry the st- page. working_url is whichever
+    page actually rendered content (so the dashboard can link to a live page even
+    for cars that didn't sell). Only report page_gone if BOTH are unusable.
+    """
+    def _get(url):
         try:
-            page.wait_for_load_state("networkidle", timeout=4000)
-        except Exception:
-            page.wait_for_timeout(800)
-        return parse_lot_price(page.content())
-    except Exception as e:
-        print(f"   ! fetch failed {lot_url}: {str(e)[:80]}", file=sys.stderr)
-        return None, False
+            page.goto(url, wait_until="domcontentloaded")
+            try:
+                page.wait_for_load_state("networkidle", timeout=4000)
+            except Exception:
+                page.wait_for_timeout(700)
+            return page.content()
+        except Exception as e:
+            print(f"   ! fetch failed {url}: {str(e)[:70]}", file=sys.stderr)
+            return None
+
+    html = _get(lot_url)
+    if html:
+        low = html.lower()
+        aj_alive = "nothing found" not in low
+        sold, gone = parse_lot_price(html)
+        if sold:
+            return sold, False, (lot_url if aj_alive else lot_url)
+        # aj- page dead/empty -> try the permanent st- result page
+        if gone and "/aj-" in lot_url:
+            st_url = lot_url.replace("/aj-", "/st-")
+            st_html = _get(st_url)
+            if st_html:
+                st_alive = "nothing found" not in st_html.lower()
+                s2, g2 = parse_lot_price(st_html)
+                if s2:
+                    return s2, False, st_url
+                # st- rendered content but no sold price (car didn't sell) —
+                # still a WORKING link with full spec; keep it, not 'gone'
+                if st_alive:
+                    return None, False, st_url
+                return None, g2, None
+        return sold, gone, (lot_url if aj_alive else None)
+    return None, False, None
 
 
 def run_price_pass():
@@ -543,12 +573,26 @@ def run_price_pass():
         except Exception:
             return None
 
-    # candidates: have a lot_url, no sold price, auction moment has passed by
-    # at least PRICE_MIN_AGE_H, and not already marked page_gone
+    # One-time correction: earlier runs marked some cars price_gone when their
+    # aj- page had expired — but the price is on the st- page. Clear those flags
+    # so the new st- fallback can recover them. (Harmless once cleared.)
+    recovered = 0
+    for rec in state.values():
+        if rec.get("price_gone"):
+            rec.pop("price_gone", None)
+            rec.pop("price_gone_at", None)
+            recovered += 1
+    if recovered:
+        print(f"Reset {recovered} stale price_gone flags (st- fallback will retry them).")
+
+    # candidates: have a lot_url, no sold price, not already checked/gone, and
+    # ended long enough ago that the price would have posted.
     cands = []
     for uid, rec in state.items():
         if rec.get("price_gone"):
             continue
+        if rec.get("price_checked_at"):
+            continue  # already visited a working page; confirmed no sale
         if parse_int_safe(rec.get("sold_yen")):
             continue
         em = ended_moment(rec)
@@ -581,7 +625,9 @@ def run_price_pass():
             url = rec.get("lot_url")
             if not url:
                 continue
-            sold, page_gone = fetch_lot_price(page, url)
+            sold, page_gone, working_url = fetch_lot_price(page, url)
+            if working_url:
+                rec["working_url"] = working_url   # a page that actually renders
             if sold and parse_int_safe(sold):
                 rec["sold_yen"] = sold
                 rec["status"] = "sold"
@@ -590,9 +636,15 @@ def run_price_pass():
                                "lot_number": rec.get("lot_number"), "sold_yen": sold})
                 captured += 1
             elif page_gone:
+                # BOTH aj- and st- unusable — genuinely gone. Still not refetched.
                 rec["price_gone"] = True
                 rec["price_gone_at"] = ts
                 gone += 1
+            # else: page works but car didn't sell (no price) — we've stored the
+            # working_url so the link stays live; mark it checked so we don't
+            # re-fetch it every run, but it's NOT 'gone' (link is alive).
+            elif working_url:
+                rec["price_checked_at"] = ts
             if i % 50 == 0:
                 print(f"  ...{i}/{len(batch)} (captured {captured}, gone {gone})")
             page.wait_for_timeout(PRICE_GAP_MS)
