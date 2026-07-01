@@ -260,9 +260,12 @@ async function load(){
     (function(){
       if(l.working_url){l._link=l.working_url;return;}
       const base=l.lot_url||'';
-      const m=auctionMoment(l);
-      const dayMs=24*60*60*1000;
-      if(m && (Date.now()-m.getTime())>dayMs && base.indexOf('/aj-')>-1){
+      // Use st- once the auction's calendar DATE is before today. This is
+      // date-based (not a 24h timestamp window), so cars with no auction_time
+      // flip to st- correctly instead of lingering on the dead aj- page.
+      const ad=toDate(l.auction_date);              // local midnight of auction day
+      const today=new Date(new Date().toDateString());
+      if(ad && ad.getTime()<today.getTime() && base.indexOf('/aj-')>-1){
         l._link=base.replace('/aj-','/st-');
       } else {
         l._link=base;
