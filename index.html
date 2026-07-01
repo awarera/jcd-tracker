@@ -221,7 +221,7 @@ const km=v=>v?Number(v).toLocaleString():'—';
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const dnum=d=>d?d.split('.').reverse().join(''):'';
 const condRank=c=>{const i=COND_ORDER.indexOf(c);return i<0?-1:i;};
-const toDate=d=>{if(!d)return null;const[dd,mm,yy]=d.split('.');return new Date(`${yy}-${mm}-${dd}`);};
+const toDate=d=>{if(!d)return null;const[dd,mm,yy]=d.split('.');return new Date(+yy,+mm-1,+dd);};
 
 // Build the auction's moment in real time. Board date is DD.MM.YYYY and time is
 // HH:MM in JST (Japan, UTC+9). We construct that instant and compare to now, so
