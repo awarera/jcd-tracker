@@ -585356,5 +585356,3225 @@
     "type": "off_board",
     "lot_uid": "svWhzjFITBJjO0",
     "lot_number": "10117"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "203RCBx3xY7KbAf",
+    "lot_number": "4569",
+    "sold_yen": "3355000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "29WYoLdk6C0JUlQ",
+    "lot_number": "4559",
+    "sold_yen": "3015000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tJbgcdKE1UkFmKx",
+    "lot_number": "80037",
+    "sold_yen": "100000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BKR16DSaotedQx",
+    "lot_number": "2474",
+    "sold_yen": "305000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tIXdhmx1LKUqoA3",
+    "lot_number": "80012",
+    "sold_yen": "140000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tJRoWNpxKmBohg3",
+    "lot_number": "80009",
+    "sold_yen": "285000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tJPAzsxMGpo1luG",
+    "lot_number": "80005",
+    "sold_yen": "650000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C5N9NbdRTQttfr",
+    "lot_number": "2409",
+    "sold_yen": "240000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "h8q9ThohTdyVZms",
+    "lot_number": "51146",
+    "sold_yen": "480000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Ba0nwAfCNQF7D7",
+    "lot_number": "2411",
+    "sold_yen": "210000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C6feCTF9o0jXbM",
+    "lot_number": "2400",
+    "sold_yen": "415000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BgWN3kQC9pmlKb",
+    "lot_number": "2423",
+    "sold_yen": "720000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "pdhwHFdMRSlNUc",
+    "lot_number": "1754",
+    "sold_yen": "475000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BAqPU0L40tL8cK",
+    "lot_number": "2457",
+    "sold_yen": "760000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "56x6bhzK1a5Yb6u",
+    "lot_number": "12035",
+    "sold_yen": "3005000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "rg9HLizN5M4gMB5",
+    "lot_number": "81340",
+    "sold_yen": "89000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "rg7TnXI31OPSQPI",
+    "lot_number": "81346",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BocinNSRXgU5NB",
+    "lot_number": "2436",
+    "sold_yen": "530000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BoEodwk9rzKyJW",
+    "lot_number": "2437",
+    "sold_yen": "370000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Adf06p64gkCkj5",
+    "lot_number": "2341",
+    "sold_yen": "735000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "rfhGKHIkXAuehvr",
+    "lot_number": "81280",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "reZ7Tvkj4y2wtVy",
+    "lot_number": "81258",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "3x8PV8EGTxj6JkG",
+    "lot_number": "9029",
+    "sold_yen": "225000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "3xebeNGQCnyWuvq",
+    "lot_number": "9030",
+    "sold_yen": "363000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "rf126aLbAwDdrOe",
+    "lot_number": "81250",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Awh78vydN7aBPi",
+    "lot_number": "2374",
+    "sold_yen": "615000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2L3eKtiYXp098TY",
+    "lot_number": "6037",
+    "sold_yen": "1010000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BVhah8ZhDsHkuk",
+    "lot_number": "2491",
+    "sold_yen": "590000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zouBF8PgwhOeV9",
+    "lot_number": "2286",
+    "sold_yen": "555000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BS7vr7UqdkLWTX",
+    "lot_number": "2487",
+    "sold_yen": "605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "3x7VJsdOmyHoLs1",
+    "lot_number": "9027",
+    "sold_yen": "878000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "rdXdCTgiyDaaofN",
+    "lot_number": "81170",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2KUx0i8vr6YJUUd",
+    "lot_number": "6023",
+    "sold_yen": "1355000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BE4AzThb4UwYJs",
+    "lot_number": "2462",
+    "sold_yen": "330000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ucdWBRKdgMNtXA",
+    "lot_number": "5984",
+    "sold_yen": "155000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BrP44xoZRHFWkj",
+    "lot_number": "2441",
+    "sold_yen": "585000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2u8H1gHlynKkEyc",
+    "lot_number": "5977",
+    "sold_yen": "350000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2u7kILy2KUPNcJb",
+    "lot_number": "5974",
+    "sold_yen": "450000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "3x9i1Xn9a2BWdh2",
+    "lot_number": "9020",
+    "sold_yen": "1573000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2u2NMqnD72NknjN",
+    "lot_number": "5967",
+    "sold_yen": "910000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tTbZzLh3K2fcrm",
+    "lot_number": "5951",
+    "sold_yen": "1505000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2LInv3XSGRpR3pt",
+    "lot_number": "6009",
+    "sold_yen": "1855000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BbvF2JzqgLcys8",
+    "lot_number": "2414",
+    "sold_yen": "710000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C5l3XsMBpxCZj7",
+    "lot_number": "2408",
+    "sold_yen": "985000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uknDCLF15g3aTG",
+    "lot_number": "5999",
+    "sold_yen": "910000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tWmEpMlUa0aA2J",
+    "lot_number": "5958",
+    "sold_yen": "410000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C4qRi2U5qVW2qq",
+    "lot_number": "2406",
+    "sold_yen": "550000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C2ao8rHJZpHBIJ",
+    "lot_number": "2401",
+    "sold_yen": "585000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2udAe8251JHkVMB",
+    "lot_number": "5987",
+    "sold_yen": "2280000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "xZuxvvocFVhwg7",
+    "lot_number": "2169",
+    "sold_yen": "385000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uaRF7IqpNSg39z",
+    "lot_number": "5981",
+    "sold_yen": "1750000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ueWvCanOcBSnBC",
+    "lot_number": "5980",
+    "sold_yen": "2180000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ADYHiH2K7gyOP4",
+    "lot_number": "2388",
+    "sold_yen": "855000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AD5vDg0d8ERQWn",
+    "lot_number": "2386",
+    "sold_yen": "475000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "xSH8ZKNdlmAh02",
+    "lot_number": "2157",
+    "sold_yen": "875000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z61yNiUPvdptsz",
+    "lot_number": "2252",
+    "sold_yen": "455000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tBYpSwyWat5QGu",
+    "lot_number": "5922",
+    "sold_yen": "410000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tylFcN3Og3iZ0M",
+    "lot_number": "5917",
+    "sold_yen": "185000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tHfDm1wxOF4tBCe",
+    "lot_number": "80893",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uoUzXW4EXiv1j5",
+    "lot_number": "5906",
+    "sold_yen": "695000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AkuEqS8j6ca4mu",
+    "lot_number": "2354",
+    "sold_yen": "345000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tGYRS01gYzO0JNH",
+    "lot_number": "80865",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tOF4eASnQYMn2Y",
+    "lot_number": "5944",
+    "sold_yen": "240000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AlQVW2r7y7Hvbv",
+    "lot_number": "2357",
+    "sold_yen": "665000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "jDBZSIuGsNPsrl2",
+    "lot_number": "50005",
+    "sold_yen": "275000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2t5rs0u2fZYr84q",
+    "lot_number": "5896",
+    "sold_yen": "420000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2u6SCVPAuqwWIMQ",
+    "lot_number": "5973",
+    "sold_yen": "360000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tH7ztkbKuSYxWNs",
+    "lot_number": "80879",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tK97TqtIXWjxCA",
+    "lot_number": "5937",
+    "sold_yen": "580000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2u04hLQFlQES7nd",
+    "lot_number": "5970",
+    "sold_yen": "195000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2upOLDmWbVUbYbK",
+    "lot_number": "5908",
+    "sold_yen": "1300000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2t7fPulMjXbP3OM",
+    "lot_number": "5890",
+    "sold_yen": "730000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sQoxigo1Qyc9SV",
+    "lot_number": "5871",
+    "sold_yen": "285000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tLuoozNwqQQZrB",
+    "lot_number": "5930",
+    "sold_yen": "340000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tHRDIQhowq68UT",
+    "lot_number": "5932",
+    "sold_yen": "2005000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tH1GftS33x2xFz4",
+    "lot_number": "80869",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Aa5ufo1bQcGWIH",
+    "lot_number": "2337",
+    "sold_yen": "545000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tCSBxXrt05LOza",
+    "lot_number": "5924",
+    "sold_yen": "1005000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tPzeU2KUPAtkUE",
+    "lot_number": "5946",
+    "sold_yen": "535000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "A0CopFyVlTQsMm",
+    "lot_number": "2336",
+    "sold_yen": "565000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tCqvIf1cELVkCP",
+    "lot_number": "5923",
+    "sold_yen": "2120000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tGNZC8NIAQvQ0dz",
+    "lot_number": "80847",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2txTzn5BxLJsvdr",
+    "lot_number": "5916",
+    "sold_yen": "2185000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sNFYhXKpUJ8feT",
+    "lot_number": "5868",
+    "sold_yen": "525000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tw6c3cQtOw5zs6",
+    "lot_number": "5912",
+    "sold_yen": "1210000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tGAoN7iwCborEZp",
+    "lot_number": "80823",
+    "sold_yen": "71000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sO958GbGp2XJbe",
+    "lot_number": "5869",
+    "sold_yen": "435000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zW2zoamWGMrYyc",
+    "lot_number": "2312",
+    "sold_yen": "395000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sNdSsfj0qqgLiy",
+    "lot_number": "5867",
+    "sold_yen": "1505000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zVztyrVGctBuBR",
+    "lot_number": "2311",
+    "sold_yen": "555000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AOoRub9Rlg2VsQ",
+    "lot_number": "2305",
+    "sold_yen": "575000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tFXqHmEHK0fE95h",
+    "lot_number": "80788",
+    "sold_yen": "71000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tFUI9mm50dqzeqf",
+    "lot_number": "80782",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AQFkELlbMMglax",
+    "lot_number": "2300",
+    "sold_yen": "665000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sZspYBbkCD8NHH",
+    "lot_number": "5888",
+    "sold_yen": "265000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2twZnHDJ1N8LxkL",
+    "lot_number": "5914",
+    "sold_yen": "565000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2spEZ5Yrk1CfEmW",
+    "lot_number": "5827",
+    "sold_yen": "255000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zi0hZ6FxG2XtKo",
+    "lot_number": "2275",
+    "sold_yen": "505000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zkpL0FRS8ybTs6",
+    "lot_number": "2270",
+    "sold_yen": "475000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sU2hXZU9KYY1pD",
+    "lot_number": "5879",
+    "sold_yen": "905000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ssPDUZwbqKb2Xj",
+    "lot_number": "5831",
+    "sold_yen": "1885000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sZUvOjCB7VYhE3",
+    "lot_number": "5889",
+    "sold_yen": "265000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sF5brlomCX35ms",
+    "lot_number": "5852",
+    "sold_yen": "805000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sFYn7MgTByJ3f9",
+    "lot_number": "5854",
+    "sold_yen": "1395000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tbGXuX4vOPYQ7Q",
+    "lot_number": "5809",
+    "sold_yen": "715000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BuxC4Q3zS2FAmi",
+    "lot_number": "2447",
+    "sold_yen": "1331000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2swUuqrtzPtNnqm",
+    "lot_number": "5830",
+    "sold_yen": "920000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sq85UGSAuV79jh",
+    "lot_number": "5828",
+    "sold_yen": "465000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Bu6we8BjnIP7pX",
+    "lot_number": "2446",
+    "sold_yen": "2053000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2soKNpxyN31yGug",
+    "lot_number": "5825",
+    "sold_yen": "690000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rCgJ0QvkJtZ1O2",
+    "lot_number": "5772",
+    "sold_yen": "2035000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BpyzSXcEuGmh1z",
+    "lot_number": "2439",
+    "sold_yen": "828000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tEapE13XAoMfOxi",
+    "lot_number": "80620",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "IFw2bHTKM324YX",
+    "lot_number": "2021",
+    "sold_yen": "855000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sh4cem6gIQatuv",
+    "lot_number": "5811",
+    "sold_yen": "1815000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2siptJvp5bKHVjw",
+    "lot_number": "5814",
+    "sold_yen": "1405000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2snQBK7Gg4oRIBA",
+    "lot_number": "5823",
+    "sold_yen": "700000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2smWq5FNJ5NaKIU",
+    "lot_number": "5821",
+    "sold_yen": "2180000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rQLJQMzQnd5sUR",
+    "lot_number": "5798",
+    "sold_yen": "1405000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rtEWje0hrHTPVA",
+    "lot_number": "5759",
+    "sold_yen": "465000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sjjFoWhBamoTcc",
+    "lot_number": "5816",
+    "sold_yen": "1850000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2KTCXCGCU8n3X2x",
+    "lot_number": "6021",
+    "sold_yen": "355000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rO4aQtWfrnZzgP",
+    "lot_number": "5792",
+    "sold_yen": "1005000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zzOXw3OUJSYjrB",
+    "lot_number": "2205",
+    "sold_yen": "660000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rLkBQbiEvyUFCN",
+    "lot_number": "5789",
+    "sold_yen": "725000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2reHPMzDvjFXTSp",
+    "lot_number": "5732",
+    "sold_yen": "435000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rlXl93FL9xvCVP",
+    "lot_number": "5745",
+    "sold_yen": "430000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yeTJRSlfig4WfC",
+    "lot_number": "2194",
+    "sold_yen": "695000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzUwKGxlYOf81Bi",
+    "lot_number": "65427",
+    "sold_yen": "1270000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rgYiX0PPLccjA7",
+    "lot_number": "5737",
+    "sold_yen": "435000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BhoSS4hRHd8A5t",
+    "lot_number": "2424",
+    "sold_yen": "517000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "c61qKCWTHKOw2g",
+    "lot_number": "901",
+    "sold_yen": "1390000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Bb4zc299QXgOTJ",
+    "lot_number": "2413",
+    "sold_yen": "2434000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzVqWlYevMQNYtY",
+    "lot_number": "65429",
+    "sold_yen": "420000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rUQAmexeLWGOnU",
+    "lot_number": "5704",
+    "sold_yen": "895000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "BaBtmiGSmEqkXo",
+    "lot_number": "2412",
+    "sold_yen": "1277000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8UINi5hj7ujfGc",
+    "lot_number": "653",
+    "sold_yen": "1820000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lyY5C65CFL2UIdB",
+    "lot_number": "65358",
+    "sold_yen": "430000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2r7y9LFIIwcJcWj",
+    "lot_number": "5710",
+    "sold_yen": "2055000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "xU4puU81Oh8IY3",
+    "lot_number": "2150",
+    "sold_yen": "630000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C3YLsjsN291hS3",
+    "lot_number": "2405",
+    "sold_yen": "2212000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rg58hIXiMAvlHq",
+    "lot_number": "5735",
+    "sold_yen": "275000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "xMlOjIDuv7JvYh",
+    "lot_number": "2146",
+    "sold_yen": "510000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "C35zMSAg3wjjZm",
+    "lot_number": "2403",
+    "sold_yen": "2451000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qz2b3Db3lI6tjf",
+    "lot_number": "5691",
+    "sold_yen": "170000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "xK6l09ra4Av7gA",
+    "lot_number": "2141",
+    "sold_yen": "580000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rmpqXL82CQm7Sa",
+    "lot_number": "5746",
+    "sold_yen": "580000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qwiC3kxrpT1zFd",
+    "lot_number": "5688",
+    "sold_yen": "665000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2r0INBGNzWkEAwG",
+    "lot_number": "5724",
+    "sold_yen": "2205000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lyGoWy8tiHaTSwo",
+    "lot_number": "65328",
+    "sold_yen": "600000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rsiEO5PtYNmo7z",
+    "lot_number": "5756",
+    "sold_yen": "1190000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2tUyh5UAQcVMEgn",
+    "lot_number": "5954",
+    "sold_yen": "2195000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2r773VXhs2TSIZY",
+    "lot_number": "5719",
+    "sold_yen": "605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AH0m9I7AAToWNn",
+    "lot_number": "2392",
+    "sold_yen": "2218000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8LcOM23IQ7x7V6",
+    "lot_number": "638",
+    "sold_yen": "1360000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qeCWvno5m2ZJY1",
+    "lot_number": "5658",
+    "sold_yen": "510000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzNhfl5jIZnzhxS",
+    "lot_number": "65414",
+    "sold_yen": "4140000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rXz0mxaPHLLI2W",
+    "lot_number": "5700",
+    "sold_yen": "755000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qBJK3VODhxamXh",
+    "lot_number": "5697",
+    "sold_yen": "590000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lAEKlLEd7FfsgzQ",
+    "lot_number": "65405",
+    "sold_yen": "435000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qhlvvG2FhR5DC3",
+    "lot_number": "5661",
+    "sold_yen": "1255000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8KiD7AabRuQ03p",
+    "lot_number": "636",
+    "sold_yen": "1465000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uqgRt6nsqd3s96",
+    "lot_number": "5909",
+    "sold_yen": "1265000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AAO3sFWRKDybCD",
+    "lot_number": "2381",
+    "sold_yen": "1824000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8IufLIp8Uhsdh4",
+    "lot_number": "632",
+    "sold_yen": "2360000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8I30VZXRpYBJkI",
+    "lot_number": "631",
+    "sold_yen": "770000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2uqIXiNOIUvSW5q",
+    "lot_number": "5900",
+    "sold_yen": "750000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AxbhMWqJQcMk6V",
+    "lot_number": "2376",
+    "sold_yen": "2541000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qk55vYFgdG0xg5",
+    "lot_number": "5667",
+    "sold_yen": "345000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lyLnYJ1je5wdbS8",
+    "lot_number": "65336",
+    "sold_yen": "610000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2t46aEkHsx4TFep",
+    "lot_number": "5893",
+    "sold_yen": "1550000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2t3aYYTOVyscHlJ",
+    "lot_number": "5891",
+    "sold_yen": "665000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "J9Y9piu3xN3s9Y",
+    "lot_number": "2071",
+    "sold_yen": "815000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AvmUs5FFSZookz",
+    "lot_number": "2372",
+    "sold_yen": "3303000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AvP1hN7WnieSgU",
+    "lot_number": "2373",
+    "sold_yen": "3311000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qeaQFEWNRJ0g2F",
+    "lot_number": "5657",
+    "sold_yen": "255000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzaLfr9W8rxCez6",
+    "lot_number": "65370",
+    "sold_yen": "1905000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pQBXio5YrV9074",
+    "lot_number": "5617",
+    "sold_yen": "135000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sXE3DJqgFpJRWl",
+    "lot_number": "5884",
+    "sold_yen": "1145000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sRKONpHOjsJAHW",
+    "lot_number": "5874",
+    "sold_yen": "985000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzxA5ZkAf1mq8UT",
+    "lot_number": "80261",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pkTmUdimeDSlel",
+    "lot_number": "5592",
+    "sold_yen": "1475000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AscfC4AOsRt1Kc",
+    "lot_number": "2368",
+    "sold_yen": "1247000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "J1OroozfKjNLcS",
+    "lot_number": "2059",
+    "sold_yen": "550000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "J4Z7epE8arJ9Nf",
+    "lot_number": "2063",
+    "sold_yen": "620000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8DvdAPzcwW9TVk",
+    "lot_number": "624",
+    "sold_yen": "1920000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzyWmutU3tgXzJU",
+    "lot_number": "80264",
+    "sold_yen": "128000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "IY6So6VEOuIRyQ",
+    "lot_number": "2053",
+    "sold_yen": "585000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sScUD905NLA5Eh",
+    "lot_number": "5875",
+    "sold_yen": "870000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tznC1DyUofFNvdr",
+    "lot_number": "80245",
+    "sold_yen": "41000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2q9hCPlelvM9YNg",
+    "lot_number": "5647",
+    "sold_yen": "605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "IYxYdOmViNzlvb",
+    "lot_number": "2054",
+    "sold_yen": "515000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8CB2VoGFykrW3E",
+    "lot_number": "622",
+    "sold_yen": "1390000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AqPY7Uh1ZWVyVb",
+    "lot_number": "2365",
+    "sold_yen": "2485000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2sUtnNIlpfhOulY",
+    "lot_number": "5870",
+    "sold_yen": "925000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2piCTJD72N8DVwE",
+    "lot_number": "5580",
+    "sold_yen": "885000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "IXbGIF48PT2TGa",
+    "lot_number": "2051",
+    "sold_yen": "715000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AptGBKXdx3o87a",
+    "lot_number": "2362",
+    "sold_yen": "3207000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Ap2AM3vX3JxD0P",
+    "lot_number": "2361",
+    "sold_yen": "3637000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ly35zjkkDc8yTMf",
+    "lot_number": "65280",
+    "sold_yen": "2085000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pfseTC2amZIxWh",
+    "lot_number": "5583",
+    "sold_yen": "700000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "tzmHOY92Rh57xkL",
+    "lot_number": "80243",
+    "sold_yen": "42000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pllsJVJCIWIPaG",
+    "lot_number": "5593",
+    "sold_yen": "680000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ISEKnuEsWQz5gM",
+    "lot_number": "2044",
+    "sold_yen": "945000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2q238tSc6GUBfJQ",
+    "lot_number": "5634",
+    "sold_yen": "1750000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2patcIJbeZEpeAy",
+    "lot_number": "5575",
+    "sold_yen": "275000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kKerntfIrC494KJ",
+    "lot_number": "62148",
+    "sold_yen": "523000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AlQVW2r6CBCfzs",
+    "lot_number": "2357",
+    "sold_yen": "3145000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8xBZKvQKaZ9CGV",
+    "lot_number": "614",
+    "sold_yen": "3120000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AkuEqS8i0H5NKr",
+    "lot_number": "2354",
+    "sold_yen": "3000000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2p4FNcYAfF6HZtt",
+    "lot_number": "5563",
+    "sold_yen": "1605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pPHLCXcrtjrbdn",
+    "lot_number": "5615",
+    "sold_yen": "1655000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Aj9mVINuGMxlVq",
+    "lot_number": "2351",
+    "sold_yen": "1223000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "IIeAc1xlHR6XCZ",
+    "lot_number": "2027",
+    "sold_yen": "565000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pQ0RsFDHXChF0I",
+    "lot_number": "5616",
+    "sold_yen": "480000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8ywbpWJh0APAzB",
+    "lot_number": "616",
+    "sold_yen": "1490000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "typNAwWRhJy4L1J",
+    "lot_number": "80173",
+    "sold_yen": "71000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2p3LBxxHIGu22AN",
+    "lot_number": "5561",
+    "sold_yen": "930000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2p143xf58KEW8WL",
+    "lot_number": "5558",
+    "sold_yen": "550000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "JsUh7PPK4ahHxS",
+    "lot_number": "2006",
+    "sold_yen": "485000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "JugyBZ0xw5P0mT",
+    "lot_number": "2009",
+    "sold_yen": "685000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "Ae0kKPXzjre3zH",
+    "lot_number": "2343",
+    "sold_yen": "2301000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oYGL36KkhKoG8K",
+    "lot_number": "5555",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2phII5cduOvWXDY",
+    "lot_number": "5588",
+    "sold_yen": "120000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AhjZAR3qJz0qa5",
+    "lot_number": "2340",
+    "sold_yen": "3304000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "9p67b6K8QR2BIT",
+    "lot_number": "605",
+    "sold_yen": "1250000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2skdR5na99Y6R5S",
+    "lot_number": "5818",
+    "sold_yen": "615000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "A0aizX8DW6UJdY",
+    "lot_number": "2335",
+    "sold_yen": "2466000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ly2CttBTmHOIpPU",
+    "lot_number": "65289",
+    "sold_yen": "2075000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzU5EQOUIjWgwEX",
+    "lot_number": "65426",
+    "sold_yen": "675000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "87qlHvsMQKlEeB",
+    "lot_number": "599",
+    "sold_yen": "540000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZNPpjCXuFXd5fv",
+    "lot_number": "12581",
+    "sold_yen": "1053000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "8aXi3FRqhR6svP",
+    "lot_number": "506",
+    "sold_yen": "420000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lxwO5KRZht00zQS",
+    "lot_number": "65236",
+    "sold_yen": "575000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rKSw1sRo2g5bGs",
+    "lot_number": "5788",
+    "sold_yen": "580000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "809UHO7mkDHwKt",
+    "lot_number": "502",
+    "sold_yen": "1716000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rKqqaKq8wXdHK8",
+    "lot_number": "5787",
+    "sold_yen": "1010000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oYeFcnj4Nrycbp",
+    "lot_number": "5554",
+    "sold_yen": "505000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzjn3hLiaJjHprw",
+    "lot_number": "65393",
+    "sold_yen": "650000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rCIOZyWBdMPuKm",
+    "lot_number": "5773",
+    "sold_yen": "465000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZJKyOb17hdAIMs",
+    "lot_number": "12575",
+    "sold_yen": "1164000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZKcEDTrmLwrcIN",
+    "lot_number": "12576",
+    "sold_yen": "1000000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oWSnHdZgkx1Kmo",
+    "lot_number": "5551",
+    "sold_yen": "525000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lxOVQ8xzV2j1Tuq",
+    "lot_number": "65267",
+    "sold_yen": "815000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "850SwVgspe8ewU",
+    "lot_number": "594",
+    "sold_yen": "640000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZHWbtjf3k1cN27",
+    "lot_number": "12571",
+    "sold_yen": "2968000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zZceebrNbpi7ww",
+    "lot_number": "2319",
+    "sold_yen": "2015000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6P8SJ5vdRCu8ra",
+    "lot_number": "493",
+    "sold_yen": "1416000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2o98QgWJtAucEYs",
+    "lot_number": "5496",
+    "sold_yen": "560000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2o9zW7FaK5N49UN",
+    "lot_number": "5497",
+    "sold_yen": "225000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lxmQ1p7jqIswX0q",
+    "lot_number": "65210",
+    "sold_yen": "215000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZM22YLcqIJP9u0",
+    "lot_number": "12570",
+    "sold_yen": "1236000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zYK9ot1wH7rCAb",
+    "lot_number": "2318",
+    "sold_yen": "571000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6OdH4DCGT1N0yu",
+    "lot_number": "491",
+    "sold_yen": "4425000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zYi3yKzgcNB9DQ",
+    "lot_number": "2317",
+    "sold_yen": "1337000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zXnQTjGJebUaLa",
+    "lot_number": "2315",
+    "sold_yen": "160000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oInn1hUKGNVify",
+    "lot_number": "5528",
+    "sold_yen": "380000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oTHIRcUoUp6mM2",
+    "lot_number": "5547",
+    "sold_yen": "330000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZEjqNzIUpzqVuo",
+    "lot_number": "12566",
+    "sold_yen": "1028000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zW2zoamVLhmIW0",
+    "lot_number": "2312",
+    "sold_yen": "1286000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zWVL4BfsJT4GOP",
+    "lot_number": "2314",
+    "sold_yen": "558000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Lv94kZ6XbIfUs",
+    "lot_number": "488",
+    "sold_yen": "1950000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rsKKDNgKt7cS3U",
+    "lot_number": "5757",
+    "sold_yen": "720000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZDpf99QnqXJXBI",
+    "lot_number": "12564",
+    "sold_yen": "1295000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oCu00YcikQV220",
+    "lot_number": "5518",
+    "sold_yen": "1170000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "AQdeP3TUmYkBC0",
+    "lot_number": "2309",
+    "sold_yen": "1215000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "26rtenaeqIrjByP",
+    "lot_number": "4270",
+    "sold_yen": "328000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7YgEGBy14h7Xiv",
+    "lot_number": "584",
+    "sold_yen": "970000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVPyIfLDvisws3g",
+    "lot_number": "62099",
+    "sold_yen": "3721000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "APj40C2nomDDJt",
+    "lot_number": "2307",
+    "sold_yen": "751000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "26kdJ2HcaTzLSvp",
+    "lot_number": "4267",
+    "sold_yen": "250000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6IktdjUex4MSk6",
+    "lot_number": "481",
+    "sold_yen": "1861000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lwLGi1kfCDx8lZE",
+    "lot_number": "65186",
+    "sold_yen": "130000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oAFLP7renDx6fN",
+    "lot_number": "5514",
+    "sold_yen": "190000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rbxaWyyDTy3wi3",
+    "lot_number": "5728",
+    "sold_yen": "960000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7WUnbsecAmzvtu",
+    "lot_number": "581",
+    "sold_yen": "2140000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "81ZdGUbAZ7bQWx",
+    "lot_number": "580",
+    "sold_yen": "1340000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6EfCHRWQ9kawR3",
+    "lot_number": "475",
+    "sold_yen": "536000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZxY88xzbzjAajE",
+    "lot_number": "12555",
+    "sold_yen": "3209000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2r9OBWfV3XIXCE1",
+    "lot_number": "5722",
+    "sold_yen": "1860000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Zx4Vs7GEAHTcqY",
+    "lot_number": "12553",
+    "sold_yen": "902000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oHtbkR3dIcekmS",
+    "lot_number": "5526",
+    "sold_yen": "315000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2o3eCqD22excnK4",
+    "lot_number": "5486",
+    "sold_yen": "365000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7ThCvII5FVNDWM",
+    "lot_number": "576",
+    "sold_yen": "690000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6Gw6Ss0azQoWyJ",
+    "lot_number": "470",
+    "sold_yen": "2829000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zttDQ1FaY93iEO",
+    "lot_number": "2294",
+    "sold_yen": "1880000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2rWEXH7iiJa5K0g",
+    "lot_number": "5708",
+    "sold_yen": "2655000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2puplqgwWv2EtZs",
+    "lot_number": "5500",
+    "sold_yen": "730000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nXfAfKb6RbT5ok",
+    "lot_number": "5478",
+    "sold_yen": "100000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nVTiKARiohlCzj",
+    "lot_number": "5475",
+    "sold_yen": "190000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7RtfaQX1IIpIbq",
+    "lot_number": "572",
+    "sold_yen": "1540000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "263y4uK3NPIL3Oc",
+    "lot_number": "4237",
+    "sold_yen": "193000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2636XF2BxlpUyRR",
+    "lot_number": "4236",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lwLecaBOm0egS4j",
+    "lot_number": "65185",
+    "sold_yen": "1430000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZrCNrvpsJ4Jp9U",
+    "lot_number": "12544",
+    "sold_yen": "1323000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzpgg961D6gHGFV",
+    "lot_number": "65303",
+    "sold_yen": "605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25ZPuurpcTTG0aa",
+    "lot_number": "4231",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "znApZGWICb32qp",
+    "lot_number": "2284",
+    "sold_yen": "2235000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Zo13LLTkOCXxCc",
+    "lot_number": "12539",
+    "sold_yen": "2242000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6tnmGFosp2QWgU",
+    "lot_number": "457",
+    "sold_yen": "372000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nL23JoiUEZ32Zb",
+    "lot_number": "5457",
+    "sold_yen": "2930000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZnxWW4s5kk84FR",
+    "lot_number": "12538",
+    "sold_yen": "1288000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25Viy0h1y1RdjKM",
+    "lot_number": "4224",
+    "sold_yen": "226000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25UQsjyzhwymPOr",
+    "lot_number": "4223",
+    "sold_yen": "448000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nRmmpqsDveSN0V",
+    "lot_number": "5468",
+    "sold_yen": "400000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZlhtLtfJSNSDYa",
+    "lot_number": "12533",
+    "sold_yen": "2898000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZmbFqU9gRpzBQQ",
+    "lot_number": "12535",
+    "sold_yen": "2653000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7MucZY86ln7oPH",
+    "lot_number": "564",
+    "sold_yen": "1230000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZkPnVKOtov3a2P",
+    "lot_number": "12532",
+    "sold_yen": "3241000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qjBYGgdZJnj4jJ",
+    "lot_number": "5666",
+    "sold_yen": "1270000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVw5FnWJ5ho8GzH",
+    "lot_number": "62065",
+    "sold_yen": "352000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lwvOZOeRjwTus4N",
+    "lot_number": "65150",
+    "sold_yen": "1495000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mMiqXlnhafBjTN",
+    "lot_number": "5383",
+    "sold_yen": "1830000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mMKwN4OxEyrNQ9",
+    "lot_number": "5384",
+    "sold_yen": "2005000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lHSrjTOHRzzNoeu",
+    "lot_number": "65085",
+    "sold_yen": "1640000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nzeB3KRZX62twn",
+    "lot_number": "5437",
+    "sold_yen": "1540000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Zi7OVsaSsFXgnN",
+    "lot_number": "12529",
+    "sold_yen": "2265000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "26IGO5oWxhZtXjH",
+    "lot_number": "4209",
+    "sold_yen": "145000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2qlqm28Z4GAGZ66",
+    "lot_number": "5660",
+    "sold_yen": "2225000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVvCzyehNN6hcDm",
+    "lot_number": "62064",
+    "sold_yen": "511000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVugi45Y1kaJKOl",
+    "lot_number": "62061",
+    "sold_yen": "361000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nQUgzI2n1W3jdA",
+    "lot_number": "5467",
+    "sold_yen": "515000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nufyRS35zJIaaE",
+    "lot_number": "5429",
+    "sold_yen": "440000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lwo8oD4nNdJ7f53",
+    "lot_number": "65146",
+    "sold_yen": "1160000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "26HkwzfCJP5WvuG",
+    "lot_number": "4206",
+    "sold_yen": "322000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ze5rtDI9lNfSFi",
+    "lot_number": "2269",
+    "sold_yen": "4974000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mNcCCMfO9RihMt",
+    "lot_number": "5385",
+    "sold_yen": "970000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mNEIsuH5Da9LIO",
+    "lot_number": "5386",
+    "sold_yen": "145000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6lFLvtUW6RsJh0",
+    "lot_number": "443",
+    "sold_yen": "1420000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "26Fw0enRFRRyzJk",
+    "lot_number": "4202",
+    "sold_yen": "184000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zcg59LX5ozRWTW",
+    "lot_number": "2265",
+    "sold_yen": "4525000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7HvaP6h0Y2N6tY",
+    "lot_number": "556",
+    "sold_yen": "735000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZeWa6r723y2SNq",
+    "lot_number": "12522",
+    "sold_yen": "3055000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Zeu5fIEKyfboR6",
+    "lot_number": "12521",
+    "sold_yen": "2278000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6iv7FsQ5FJxlGM",
+    "lot_number": "439",
+    "sold_yen": "1700000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nn14woZOKSar8e",
+    "lot_number": "5416",
+    "sold_yen": "1495000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zbNYj4vNUh2sXB",
+    "lot_number": "2264",
+    "sold_yen": "3351000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZiyULaC9WYNKk9",
+    "lot_number": "12520",
+    "sold_yen": "2223000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2q4iAEsoq9qPFrx",
+    "lot_number": "5639",
+    "sold_yen": "530000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2q8nr0UlOxas1UA",
+    "lot_number": "5645",
+    "sold_yen": "2400000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nCRlIuo8RvNl46",
+    "lot_number": "5442",
+    "sold_yen": "365000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6h9PajwhcOZTRL",
+    "lot_number": "436",
+    "sold_yen": "511000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVsrUIdcWmXlP3Z",
+    "lot_number": "62050",
+    "sold_yen": "796000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pZFPYISie14NUP",
+    "lot_number": "5631",
+    "sold_yen": "290000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7FGNudw71Op0IC",
+    "lot_number": "552",
+    "sold_yen": "930000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6eSlZJjWLiLua5",
+    "lot_number": "431",
+    "sold_yen": "2101000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25gYaUtRSvNSl1D",
+    "lot_number": "4186",
+    "sold_yen": "421000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mvZ3VxxHzj8W2B",
+    "lot_number": "5356",
+    "sold_yen": "750000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lw7rJ77eq0S6pmP",
+    "lot_number": "65116",
+    "sold_yen": "855000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pUeHY8B7mlU1CL",
+    "lot_number": "5622",
+    "sold_yen": "2455000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7CYetUSv5Zkg5A",
+    "lot_number": "549",
+    "sold_yen": "1690000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Z0X8Uyg6FcIzrH",
+    "lot_number": "12514",
+    "sold_yen": "3050000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z7mQiseC3CRFFx",
+    "lot_number": "2255",
+    "sold_yen": "2033000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Z0v35POPaTS6vm",
+    "lot_number": "12513",
+    "sold_yen": "1320000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z5ysXAty6ptJUb",
+    "lot_number": "2251",
+    "sold_yen": "943000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z6sED2m652aHMR",
+    "lot_number": "2253",
+    "sold_yen": "2214000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVjQ8RAQT6bgEay",
+    "lot_number": "62044",
+    "sold_yen": "3741000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6aNvuhmymz09H2",
+    "lot_number": "425",
+    "sold_yen": "1964000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7Cw9EcreAGtM9f",
+    "lot_number": "548",
+    "sold_yen": "3230000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "513kq1z31jGiwml",
+    "lot_number": "12507",
+    "sold_yen": "3088000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z3hZN1hdDTfkcu",
+    "lot_number": "2249",
+    "sold_yen": "1835000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZcFGUQTGB2Nt6J",
+    "lot_number": "12510",
+    "sold_yen": "706000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25cTkp2Uu85fZxA",
+    "lot_number": "4170",
+    "sold_yen": "178000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "z1tCs9w0GFRor9",
+    "lot_number": "2245",
+    "sold_yen": "2388000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mGRiWK76iBrwBJ",
+    "lot_number": "5374",
+    "sold_yen": "1120000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oeVfMHksV3TU6x",
+    "lot_number": "5408",
+    "sold_yen": "405000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6d4YERySO6nyoI",
+    "lot_number": "420",
+    "sold_yen": "693000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25817yIc2L8fIjb",
+    "lot_number": "4160",
+    "sold_yen": "193000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4ZZBR1gopnRdCIj",
+    "lot_number": "12501",
+    "sold_yen": "2022000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "65UhDXE71C9RsC",
+    "lot_number": "415",
+    "sold_yen": "1755000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lxlVOJFqTJQPZgK",
+    "lot_number": "65218",
+    "sold_yen": "450000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mwTeAYqexUOTUh",
+    "lot_number": "5358",
+    "sold_yen": "2295000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24YQpxOheXE22n6",
+    "lot_number": "4155",
+    "sold_yen": "331000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "251cH3XB3qyytc7",
+    "lot_number": "4158",
+    "sold_yen": "241000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24Xu93EXruJtzy5",
+    "lot_number": "4152",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yUAoBONHkIR8cJ",
+    "lot_number": "2235",
+    "sold_yen": "1670000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2pbnooa4LYg7cte",
+    "lot_number": "5577",
+    "sold_yen": "175000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lwMAtFL90C9OjSk",
+    "lot_number": "65188",
+    "sold_yen": "660000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6WPtUfYKaMSkqV",
+    "lot_number": "407",
+    "sold_yen": "2272000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lHcizk0O98j5tIZ",
+    "lot_number": "65013",
+    "sold_yen": "455000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7vIJ9rQfg8Mx2a",
+    "lot_number": "536",
+    "sold_yen": "2090000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25fBTpky6caDRZ8",
+    "lot_number": "4183",
+    "sold_yen": "262000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mnPlUDCULPTf6v",
+    "lot_number": "5341",
+    "sold_yen": "2145000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "25f0NzC7OHRNo3M",
+    "lot_number": "4182",
+    "sold_yen": "76000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kV7HoFO7aUmIDSJ",
+    "lot_number": "62021",
+    "sold_yen": "487000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7umrDiwrNdf6c0",
+    "lot_number": "533",
+    "sold_yen": "1270000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7x61DBa3J3jYQb",
+    "lot_number": "539",
+    "sold_yen": "1840000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mAY67qnCWErfnk",
+    "lot_number": "5364",
+    "sold_yen": "720000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "6V27zodGdzuoFz",
+    "lot_number": "403",
+    "sold_yen": "614000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2p6WgnyMA7BWpba",
+    "lot_number": "5568",
+    "sold_yen": "780000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2muCLqodU7oAucA",
+    "lot_number": "5353",
+    "sold_yen": "415000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7tsfXRDUOBy8jt",
+    "lot_number": "531",
+    "sold_yen": "1520000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7GAZ0EoCZq78Bi",
+    "lot_number": "554",
+    "sold_yen": "1050000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YBY5lNh01pelSi",
+    "lot_number": "12487",
+    "sold_yen": "790000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yOf5VMDYut1m2Z",
+    "lot_number": "2224",
+    "sold_yen": "2036000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yNMZ75cI1a0S6E",
+    "lot_number": "2223",
+    "sold_yen": "805000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kV45E15A3ZVWMm2",
+    "lot_number": "62016",
+    "sold_yen": "821000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24Tphxd14fhacSw",
+    "lot_number": "4146",
+    "sold_yen": "394000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24XWdSnoI9jD3hU",
+    "lot_number": "4153",
+    "sold_yen": "136000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "mQWGl6H4Wpr0i17",
+    "lot_number": "60325",
+    "sold_yen": "525000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yNkTglLrvRjo0j",
+    "lot_number": "2222",
+    "sold_yen": "981000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24HCPQzz9o6QFCd",
+    "lot_number": "4126",
+    "sold_yen": "649000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mg8KJs0osFv36K",
+    "lot_number": "5320",
+    "sold_yen": "1305000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7qhB8Qz4otCJJ7",
+    "lot_number": "527",
+    "sold_yen": "1515000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "24N4XRaQkp2jrHM",
+    "lot_number": "4135",
+    "sold_yen": "127000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kV5T2kWl7X0kI8n",
+    "lot_number": "62010",
+    "sold_yen": "703000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lHhhBv3E4uEnN5I",
+    "lot_number": "65021",
+    "sold_yen": "605000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7oVjCHffVz6hU6",
+    "lot_number": "524",
+    "sold_yen": "1305000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lHibNatwAtg5KXo",
+    "lot_number": "65023",
+    "sold_yen": "1510000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "kVU6EAW3abuZhrE",
+    "lot_number": "62006",
+    "sold_yen": "870000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7o28XgmIWXok2p",
+    "lot_number": "522",
+    "sold_yen": "690000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2mjipztefSNqpG8",
+    "lot_number": "5334",
+    "sold_yen": "280000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YvCKFL8qa0nAHy",
+    "lot_number": "12476",
+    "sold_yen": "1983000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YvaEQ3G0FQx7Ld",
+    "lot_number": "12475",
+    "sold_yen": "733000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "yHrFq33Z0Uj7UU",
+    "lot_number": "2212",
+    "sold_yen": "1999000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fuYI0rmnpZp67o",
+    "lot_number": "4098",
+    "sold_yen": "202000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "5w23pLMCncXG1x",
+    "lot_number": "386",
+    "sold_yen": "704000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fuwCjIV7VGyBa4",
+    "lot_number": "4097",
+    "sold_yen": "202000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zAJ0btHqMZA2Ie",
+    "lot_number": "2207",
+    "sold_yen": "3405000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fpxA9Q6bylfhOk",
+    "lot_number": "4089",
+    "sold_yen": "202000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "lzczCM1HboL1akr",
+    "lot_number": "65381",
+    "sold_yen": "780000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zzOXw3OTOnT4Py",
+    "lot_number": "2205",
+    "sold_yen": "2011000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zAh4lLgaiGJxLT",
+    "lot_number": "2206",
+    "sold_yen": "2219000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oAdFZnZXTkGBjs",
+    "lot_number": "5513",
+    "sold_yen": "485000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2oCWeZGDyP0LuXu",
+    "lot_number": "5519",
+    "sold_yen": "245000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7konhwQB3wCsuH",
+    "lot_number": "517",
+    "sold_yen": "1640000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hz5kRPVWXXH9mPm",
+    "lot_number": "52096",
+    "sold_yen": "2806000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2lxgr0uC55zHdWd",
+    "lot_number": "5282",
+    "sold_yen": "900000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fmP29xrACwaoai",
+    "lot_number": "4083",
+    "sold_yen": "85000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ptv0KPEpwpXw7M",
+    "lot_number": "5508",
+    "sold_yen": "775000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7jubC6Y54UVuC2",
+    "lot_number": "515",
+    "sold_yen": "920000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hz4qGav5qZ6roWG",
+    "lot_number": "52094",
+    "sold_yen": "3143000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "5qzUpavqvyNSIt",
+    "lot_number": "377",
+    "sold_yen": "2131000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "zy1Abb4PRav95c",
+    "lot_number": "2201",
+    "sold_yen": "2059000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2ftakOzBjjuIaxx",
+    "lot_number": "4094",
+    "sold_yen": "319000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2lDBKPwLMUPxZ7X",
+    "lot_number": "5293",
+    "sold_yen": "675000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fsg009IMkT2cER",
+    "lot_number": "4092",
+    "sold_yen": "181000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hz3wuv5bU1tKr51",
+    "lot_number": "52092",
+    "sold_yen": "3094000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "7j36MnwNzC61FG",
+    "lot_number": "514",
+    "sold_yen": "1070000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2fp6uj8DUUL6P5u",
+    "lot_number": "4088",
+    "sold_yen": "223000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hyZNVuLyj5EFxpY",
+    "lot_number": "52089",
+    "sold_yen": "2086000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hyZlPF483AlP4tD",
+    "lot_number": "52088",
+    "sold_yen": "2606000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2f1CpgpTyFCGJ4H",
+    "lot_number": "4046",
+    "sold_yen": "244000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2nMnkexCI8TztOc",
+    "lot_number": "5450",
+    "sold_yen": "60000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hyYrDZCevBK96AX",
+    "lot_number": "52086",
+    "sold_yen": "541000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hyXZy0TNf8rhBEC",
+    "lot_number": "52085",
+    "sold_yen": "3179000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2eUJbq7b7jFGrPi",
+    "lot_number": "4036",
+    "sold_yen": "256000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ydxsmJ2qTQreOy",
+    "lot_number": "2191",
+    "sold_yen": "1488000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "ydZycrsHo0hIKT",
+    "lot_number": "2192",
+    "sold_yen": "1156000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YkioOQ8LWydwb6",
+    "lot_number": "12457",
+    "sold_yen": "3261000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YkKuEyz3qR518q",
+    "lot_number": "12458",
+    "sold_yen": "3232000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2eIuDTKiV8sPpq0",
+    "lot_number": "4015",
+    "sold_yen": "301000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2lxIwZd4kySxHSy",
+    "lot_number": "5283",
+    "sold_yen": "515000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2lbvV86viBZ53LX",
+    "lot_number": "5246",
+    "sold_yen": "1705000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4YjQiZ8Gvsfn3eK",
+    "lot_number": "12456",
+    "sold_yen": "2804000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "4Yjod0pfeXWwyip",
+    "lot_number": "12455",
+    "sold_yen": "3219000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2o53ZLuM6bKAjvp",
+    "lot_number": "5480",
+    "sold_yen": "2715000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "hyTUHErPQIHFgbz",
+    "lot_number": "52079",
+    "sold_yen": "2602000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "5iqdogADI6zbMn",
+    "lot_number": "362",
+    "sold_yen": "511000"
+  },
+  {
+    "ts": "2026-07-04T10:56:30.570058+00:00",
+    "type": "sold_price",
+    "lot_uid": "2l75N7ue7KkUftT",
+    "lot_number": "5237",
+    "sold_yen": "1835000"
   }
 ]
