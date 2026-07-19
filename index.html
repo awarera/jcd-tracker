@@ -281,7 +281,7 @@ async function load(){
   document.getElementById('k-sold').textContent=DATA.lots.filter(l=>hasSoldPrice(l)).length;
   const gen=DATA.generated?new Date(DATA.generated):null;
   document.getElementById('updated').textContent=gen?('Updated '+gen.toLocaleString()):'';
-  document.getElementById('foot').textContent='Source: japancardirect.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
+  document.getElementById('foot').textContent='Source: igetauto.com · '+DATA.lots.length+' lots in dataset · generated '+(DATA.generated||'');
   initFilters(); updateDDLabels(); adaptDatePresets(); render();
 }
 
