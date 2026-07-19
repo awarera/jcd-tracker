@@ -22,7 +22,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-BASE = "https://auc.japancardirect.com"
+BASE = "https://auction.igetauto.com/"
 DATA_DIR = Path(__file__).parent / "data"
 SNAP_DIR = DATA_DIR / "snapshots"
 STATE_FILE = DATA_DIR / "lots_state.json"
