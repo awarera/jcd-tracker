@@ -1,9 +1,6 @@
 {
-  "ts": "2026-07-22T11:05:00.516132+00:00",
+  "ts": "2026-07-22T15:46:35.576453+00:00",
   "ok": true,
-  "mode": "prices",
-  "fetched": 600,
-  "captured": 385,
-  "page_gone": 215,
-  "remaining_priceless": 3600
+  "scraped": 3258,
+  "total_tracked": 56792
 }
