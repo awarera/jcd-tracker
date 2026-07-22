@@ -1,9 +1,9 @@
 {
-  "ts": "2026-07-21T19:22:15.971818+00:00",
+  "ts": "2026-07-21T23:46:39.831150+00:00",
   "ok": true,
   "mode": "prices",
   "fetched": 600,
-  "captured": 567,
-  "page_gone": 33,
-  "remaining_priceless": 2559
+  "captured": 542,
+  "page_gone": 58,
+  "remaining_priceless": 1992
 }
